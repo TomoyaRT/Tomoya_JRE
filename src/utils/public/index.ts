@@ -23,6 +23,10 @@ import {
   figma,
   docker,
   threejs,
+  github,
+  carrent,
+  jobit,
+  tripguide,
 } from './assets'
 import { desktop_pc, planet } from './model'
 
@@ -58,4 +62,8 @@ export {
   figma,
   docker,
   threejs,
+  github,
+  carrent,
+  jobit,
+  tripguide,
 }

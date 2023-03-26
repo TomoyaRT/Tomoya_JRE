@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import dynamic from 'next/dynamic'
 
-const ComputersCanvas = dynamic(() => import('@/components/models/Computer'), {
+const ComputersCanvas = dynamic(() => import('@/components/canvas/Computer'), {
   ssr: false,
 })
 

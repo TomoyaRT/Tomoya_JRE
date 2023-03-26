@@ -2,7 +2,7 @@ import { SectionWrapper } from '@/hoc'
 import { technologies } from '@/constants'
 import dynamic from 'next/dynamic'
 
-const BallCanvas = dynamic(() => import('@/components/models/Ball'), {
+const BallCanvas = dynamic(() => import('@/components/canvas/Ball'), {
   ssr: false,
 })
 
