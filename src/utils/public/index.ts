@@ -1,7 +1,61 @@
-import { logo, menu, close } from './assets'
+import {
+  logo,
+  menu,
+  close,
+  mobile,
+  backend,
+  creator,
+  web,
+  starbucks,
+  tesla,
+  shopify,
+  meta,
+  javascript,
+  typescript,
+  html,
+  css,
+  reactjs,
+  redux,
+  tailwind,
+  nodejs,
+  mongodb,
+  git,
+  figma,
+  docker,
+  threejs,
+} from './assets'
 import { desktop_pc, planet } from './model'
 
 const appIcon = './favicon.ico'
 const appLogo = './logo.svg'
 
-export { appLogo, appIcon, logo, menu, close, desktop_pc, planet }
+export {
+  appLogo,
+  appIcon,
+  logo,
+  menu,
+  close,
+  desktop_pc,
+  planet,
+  mobile,
+  backend,
+  creator,
+  web,
+  starbucks,
+  tesla,
+  shopify,
+  meta,
+  javascript,
+  typescript,
+  html,
+  css,
+  reactjs,
+  redux,
+  tailwind,
+  nodejs,
+  mongodb,
+  git,
+  figma,
+  docker,
+  threejs,
+}
