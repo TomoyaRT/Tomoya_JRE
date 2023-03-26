@@ -1,4 +1,9 @@
 import Head from 'next/head'
+import Navbar from '@/components/Navbar'
+import Hero from '@/components/Hero'
+import About from '@/components/About'
+import Experience from '@/components/Experience'
+import Tech from '@/components/Tech'
 
 export default function Home() {
   return (
@@ -9,9 +14,16 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+
+      <div className="relative z-0 bg-primary">
+        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+          <Navbar />
+          <Hero />
+        </div>
+        <About />
+        <Experience />
+        <Tech />
+      </div>
     </>
   )
 }
