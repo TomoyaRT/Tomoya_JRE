@@ -27,6 +27,7 @@ import {
   carrent,
   jobit,
   tripguide,
+  damaiLogo,
 } from './assets'
 import { desktop_pc, planet } from './model'
 
@@ -66,4 +67,5 @@ export {
   carrent,
   jobit,
   tripguide,
+  damaiLogo,
 }
