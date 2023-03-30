@@ -4,7 +4,7 @@ import {
   VerticalTimelineElement,
 } from 'react-vertical-timeline-component'
 import 'react-vertical-timeline-component/style.min.css'
-import { experiences } from '@/constants'
+import { experiences, copywriting } from '@/constants/Experience'
 import { SectionWrapper } from '@/hoc'
 import { textVariant } from '@/utils/motion'
 
@@ -59,8 +59,8 @@ const Experience = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className="section-sub-text">What I have done so far</p>
-        <h2 className="section-head-text">Work Experience.</h2>
+        <p className="section-sub-text">{copywriting[0]}</p>
+        <h2 className="section-head-text">{copywriting[1]}</h2>
       </motion.div>
 
       <div className="mt-20 flex flex-col">
