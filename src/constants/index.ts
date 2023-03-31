@@ -28,26 +28,26 @@ import {
 const testimonials = [
   {
     testimonial:
-      'I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.',
-    name: 'Sara Lee',
-    designation: 'CFO',
-    company: 'Acme Co',
+      'This book club has allowed me to truly appreciate the power of collective brainstorming. Every time, I am able to hear new ideas and insights. Through this exchange and learning, I am able to accelerate my passion for learning new technologies.',
+    name: 'Roger',
+    designation: 'Front-End',
+    company: 'Damai Internet',
     image: tesla,
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: 'Chris Brown',
-    designation: 'COO',
-    company: 'DEF Corp',
+      "Attending book club has made me realize that persistence, even if only a little bit, can lead to remarkable progress over several months. In the process of teaching and learning, it's easier to identify my strengths and weaknesses and feedback is crucial.",
+    name: 'Jim',
+    designation: 'Front-End',
+    company: 'Damai Internet',
     image: tesla,
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: 'Lisa Wang',
-    designation: 'CTO',
-    company: '456 Enterprises',
+      "Attending book club gives me the motivation to understand unfamiliar knowledge. During presentations, I learn how to express ideas in a simple and understandable way. By listening to members' explanations and trying to approach topics from different angles, it becomes a joyful time of growth with my peers.",
+    name: 'Karol',
+    designation: 'Full-Stack',
+    company: 'Damai Internet',
     image: tesla,
   },
 ]

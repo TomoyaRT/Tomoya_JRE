@@ -42,8 +42,8 @@ const Feedbacks = () => {
     <div className="mt-12 bg-black-100 rounded-[20px]">
       <div className="padding bg-tertiary rounded-2xl min-h-[300px]">
         <motion.div variants={textVariant()}>
-          <p className="section-sub-text">What others say</p>
-          <h2 className="section-head-text">Testimonial</h2>
+          <p className="section-sub-text">Design Pattern</p>
+          <h2 className="section-head-text">Book Club</h2>
         </motion.div>
       </div>
       <div className="padding-x -mt-20 pb-14 flex flex-wrap gap-7">
