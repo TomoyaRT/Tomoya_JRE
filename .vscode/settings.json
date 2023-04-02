@@ -1,9 +1,39 @@
 {
+  // ESLint configuration
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
+  // Prettier configuration
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
+  // TailwindCSS configuration
   "scss.validate": false,
-  "css.validate": false
+  "css.validate": false,
+  // Todo Tree configuration
+  "todo-tree.general.showActivityBarBadge": true,
+  "todo-tree.general.tags": ["NOTE", "TODO", "FIXME"],
+  "todo-tree.highlights.defaultHighlight": {
+    "type": "tag",
+    "fontWeight": "bold",
+    "foreground": "#000000",
+    "opacity": 90
+  },
+  "todo-tree.highlights.customHighlight": {
+    "NOTE": {
+      "background": "#bd71ff",
+      "iconColour": "#bd71ff",
+      "icon": "file"
+    },
+    "TODO": {
+      "background": "#2caeff",
+      "iconColour": "#2caeff",
+      "icon": "pin"
+    },
+    "FIXME": {
+      "background": "#ff2d2d",
+      "iconColour": "#ff2d2d",
+      "icon": "bug"
+    }
+  },
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)"
 }
