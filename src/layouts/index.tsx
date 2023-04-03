@@ -14,6 +14,10 @@ const routes = [
     name: 'Home',
   },
   {
+    path: '/redux',
+    name: 'Redux',
+  },
+  {
     path: '/blog',
     name: 'Blog',
   },

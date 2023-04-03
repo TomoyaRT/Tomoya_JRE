@@ -4,12 +4,18 @@ import store from '@/store/index'
 import Layout from '@/layouts'
 import '@/styles/globals.css'
 
-export default function App({ Component, pageProps }: AppProps) {
+import PageTransition from '@/layouts/PageTransition'
+
+function App({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <PageTransition>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </PageTransition>
     </Provider>
   )
 }
+
+export default App
