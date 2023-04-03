@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import testReducer from '@/store/slices/testSlice'
+import pageTransitionReducer from '@/store/slices/pageTransitionSlice'
 
 export const store = configureStore({
   reducer: {
     testReducer,
+    pageTransitionReducer,
   },
 })
 
