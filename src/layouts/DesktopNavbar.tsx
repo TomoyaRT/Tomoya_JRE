@@ -1,5 +1,9 @@
 import Link from 'next/link'
 import { useState } from 'react'
+import { useRouter } from 'next/router'
+import { useAppDispatch } from '@/hooks/useStore'
+import { updateLoading } from '@/store/slices/pageTransitionSlice'
+import { delay as _delay } from 'lodash-es'
 
 type RouteType = {
   path: string
@@ -12,6 +16,16 @@ interface Props {
 
 const DesktopNavbar = ({ routes }: Props) => {
   const [active, setActive] = useState('')
+  const router = useRouter()
+  const dispatch = useAppDispatch()
+
+  const handleClick = async (event: React.MouseEvent, href: string) => {
+    event.preventDefault()
+    dispatch(updateLoading(true))
+    router.prefetch(href)
+    _delay(() => router.push(href), 850)
+    _delay(() => dispatch(updateLoading(false)), 2000)
+  }
 
   return (
     <nav
@@ -31,7 +45,12 @@ const DesktopNavbar = ({ routes }: Props) => {
                 } hover:text-white text-[18px] font-medium cursor-pointer`}
                 onClick={() => setActive(route.name)}
               >
-                <Link href={route.path}>{route.name}</Link>
+                <Link
+                  href={route.path}
+                  onClick={(event) => handleClick(event, route.path)}
+                >
+                  {route.name}
+                </Link>
               </li>
             )
           })}

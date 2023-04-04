@@ -1,36 +1,30 @@
 import { motion } from 'framer-motion'
 import { useDimensions } from '@/hooks/useDimensions'
-import { useRef, useState } from 'react'
-import { useAppDispatch } from '@/hooks/useStore'
-import { updateTransitionComplete } from '@/store/slices/pageTransitionSlice'
+import { useRef, useState, ReactNode } from 'react'
 import {
   divide as _divide,
   ceil as _ceil,
   flow as _flow,
   range as _range,
 } from 'lodash-es'
+import { useAppSelector } from '@/hooks/useStore'
+import { delay as _delay } from 'lodash-es'
 
-// TODO 寫出這傢伙 使用 Framer Motion 搭配 xxxx.module.css
-// https://codepen.io/alphardex/pen/KKwZwqr
-// https://codepen.io/mitori/details/zLKZVZ
-
-// TODO 1. 停止使用者滾動行為
-// TODO 2. 監測目前的視窗高度
-// TODO 3. 開始動畫
+interface Props {
+  children: ReactNode
+}
 
 const staggerConfig = {
   initial: {},
   startLoading: {
     transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2,
+      staggerChildren: 0.05,
       ease: 'circOut',
     },
   },
   endLoading: {
     transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2,
+      staggerChildren: 0.05,
       ease: 'circOut',
     },
   },
@@ -42,24 +36,26 @@ const fadeInConfig = {
   startLoading: {
     y: '0%',
     transition: {
-      duration: 0.6,
+      duration: 0.5,
     },
   },
   endLoading: {
     y: '100%',
     transition: {
-      duration: 0.4,
+      duration: 0.5,
     },
   },
 }
 
-const PageTransitionAnimation = () => {
-  const dispatch = useAppDispatch()
+const PageTransition = () => {
   const pageContainerRef = useRef(null)
   const [isLoading, setIsLoading] = useState(false)
   const { width, height } = useDimensions(pageContainerRef)
   const getWidthFlow = _flow(_divide, _ceil)
 
+  // 第一段動畫時間 -> (7*0.05) + 0.5 = 0.85
+  // delay -> 0.3
+  // 第二段動畫時間 -> (7*0.05) + 0.5 = 0.85
   const lineNumber = 7
   const lineBgColor = '#000000'
   const lineWidth = `${getWidthFlow(width, lineNumber)}px`
@@ -71,16 +67,8 @@ const PageTransitionAnimation = () => {
       variants={staggerConfig}
       initial="initial"
       animate={isLoading ? 'endLoading' : 'startLoading'}
-      onAnimationStart={(type) => {
-        if (type === 'endLoading') return
-        dispatch(updateTransitionComplete(false))
-      }}
-      onAnimationComplete={(type) => {
-        setIsLoading(true)
-        if (type === 'startLoading') return
-        dispatch(updateTransitionComplete(true))
-      }}
-      className="absolute top-0 left-0 w-[100vw] h-[100vh] z-50 flex"
+      onAnimationComplete={() => _delay(() => setIsLoading(true), 300)}
+      className={`absolute top-0 left-0 w-[100vw] h-[100vh] flex z-50`}
     >
       {_range(lineNumber).map((i) => {
         return (
@@ -96,6 +84,21 @@ const PageTransitionAnimation = () => {
         )
       })}
     </motion.div>
+  )
+}
+
+const PageTransitionAnimation = (props: Props) => {
+  const { children } = props
+  const pageTransitionReducer = useAppSelector(
+    (state) => state.pageTransitionReducer
+  )
+  const loading = pageTransitionReducer.loading
+
+  return (
+    <>
+      {loading && <PageTransition />}
+      {children}
+    </>
   )
 }
 
