@@ -1,18 +1,13 @@
 import { motion } from 'framer-motion'
 import { useDimensions } from '@/hooks/useDimensions'
-import { useRef, useState, ReactNode } from 'react'
+import { useRef, useState } from 'react'
 import {
   divide as _divide,
   ceil as _ceil,
   flow as _flow,
   range as _range,
 } from 'lodash-es'
-import { useAppSelector } from '@/hooks/useStore'
 import { delay as _delay } from 'lodash-es'
-
-interface Props {
-  children: ReactNode
-}
 
 const staggerConfig = {
   initial: {},
@@ -87,19 +82,4 @@ const PageTransition = () => {
   )
 }
 
-const PageTransitionAnimation = (props: Props) => {
-  const { children } = props
-  const pageTransitionReducer = useAppSelector(
-    (state) => state.pageTransitionReducer
-  )
-  const loading = pageTransitionReducer.loading
-
-  return (
-    <>
-      {loading && <PageTransition />}
-      {children}
-    </>
-  )
-}
-
-export default PageTransitionAnimation
+export default PageTransition
