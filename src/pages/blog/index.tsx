@@ -11,7 +11,7 @@ const Blog = () => {
     <div className="bg-primary">
       <div className="mx-auto max-w-[1024px]">
         <Stagger stagger={0.2} delay={0}>
-          <div className="pt-24 grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="pt-24 grid grid-cols-1 mobile:grid-cols-2 lg:grid-cols-3 gap-10">
             {posts.map((post, index) => (
               <PostCard key={`post-${index}`} index={index} {...post} />
             ))}
