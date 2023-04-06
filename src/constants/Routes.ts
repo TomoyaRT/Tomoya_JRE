@@ -10,10 +10,6 @@ export const routes: Route[] = [
     name: 'Home',
   },
   {
-    path: '/redux',
-    name: 'Redux',
-  },
-  {
     path: '/blog',
     name: 'Blog',
   },

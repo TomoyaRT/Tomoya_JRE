@@ -5,19 +5,21 @@ import { routes } from '@/constants/Routes'
 
 const DesktopNavbar: React.FC = () => {
   const router = useRouter()
-  const [active, setActive] = useState(router.pathname)
-  useEffect(() => setActive(router.pathname), [router.pathname])
+  const { pathname } = router
+  const [active, setActive] = useState(pathname)
+  useEffect(() => setActive(pathname), [pathname])
 
   return (
     <nav className="w-full flex items-center mobile:px-16 px-6 py-5 fixed top-0 z-20 bg-primary">
       <div className="w-full flex justify-between items-center max-w-7xl">
         <ul className="list-none flex flex-row gap-10">
           {routes.map((route) => {
+            const { path, name } = route
             return (
               <Link
-                key={route.path}
-                isActive={active === route.path}
-                route={{ name: route.name, path: route.path }}
+                key={path}
+                isActive={active === path}
+                route={{ name: name, path: path }}
               />
             )
           })}

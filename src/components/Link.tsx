@@ -2,11 +2,7 @@ import { useAppDispatch } from '@/hooks/useStore'
 import { useRouter } from 'next/router'
 import { updateLoading } from '@/store/slices/pageTransitionSlice'
 import { delay as _delay } from 'lodash-es'
-
-type Route = {
-  path: string
-  name: string
-}
+import { Route } from '@/types'
 
 interface Props {
   route: Route
