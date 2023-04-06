@@ -1,9 +1,18 @@
-import { Suspense, useEffect, useState } from 'react'
+import { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
-import CanvasLoader from '@/components/canvas/Loader'
 
-const Computer = ({ isMobile }) => {
+import useViewport from '@/hooks/useViewport'
+import CanvasLoader from '@/components/canvas/Loader'
+import { computer } from '@/constants/Canvas'
+
+interface ComputerProps {
+  computerScale: number
+  computerPosition: number[]
+  lightPosition: [number, number, number]
+}
+const Computer = (props: ComputerProps) => {
+  const { computerScale, computerPosition, lightPosition } = props
   const computer = useGLTF('./desktop_pc/scene.gltf')
 
   return (
@@ -12,7 +21,7 @@ const Computer = ({ isMobile }) => {
         <pointLight intensity={1} />
         <hemisphereLight intensity={0.15} groundColor="black" />
         <spotLight
-          position={[-20, 50, 10]}
+          position={lightPosition}
           angle={0.12}
           penumbra={1}
           intensity={1}
@@ -21,8 +30,8 @@ const Computer = ({ isMobile }) => {
         />
         <primitive
           object={computer.scene}
-          scale={isMobile ? 0.7 : 0.75}
-          position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
+          scale={computerScale}
+          position={computerPosition}
           rotation={[-0.01, -0.2, -0.1]}
         />
       </mesh>
@@ -31,28 +40,10 @@ const Computer = ({ isMobile }) => {
 }
 
 const ComputerCanvas = () => {
-  const [isMobile, setIsMobile] = useState(false)
-
-  useEffect(() => {
-    // add a listener for changes to the screen size
-    const mediaQuery = window.matchMedia('(max-width: 500px)')
-
-    // set the initial value of the `isMobile` state variable
-    setIsMobile(mediaQuery.matches)
-
-    // define a callback function to handle changes to the media query
-    const handleMediaQueryChange = (event) => {
-      setIsMobile(event.matches)
-    }
-
-    // add the callback function as a listener for changes to the media query
-    mediaQuery.addEventListener('change', handleMediaQueryChange)
-
-    return () => {
-      // remove the listener when the component is unmounted
-      mediaQuery.removeEventListener('change', handleMediaQueryChange)
-    }
-  }, [])
+  const { width } = useViewport()
+  const computerScale = computer.scale(width)
+  const computerPosition = computer.position(width)
+  const lightPosition = computer.lightPosition(width)
 
   return (
     <Canvas
@@ -67,7 +58,11 @@ const ComputerCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Computer isMobile={isMobile} />
+        <Computer
+          computerScale={computerScale}
+          computerPosition={computerPosition}
+          lightPosition={lightPosition}
+        />
         <Preload all />
       </Suspense>
     </Canvas>

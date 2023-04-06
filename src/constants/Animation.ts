@@ -1,3 +1,5 @@
+import { Transition, Animate } from '@/types'
+
 const mobileNavbar = {
   // menu button
   buttonVariants: {
@@ -62,4 +64,19 @@ const mobileNavbar = {
   },
 }
 
-export { mobileNavbar }
+interface ScrollDownButton {
+  animate: Animate
+  transition: Transition
+}
+const scrollDownButton: ScrollDownButton = {
+  animate: {
+    y: [0, 24, 0],
+  },
+  transition: {
+    duration: 1.5,
+    repeat: Infinity,
+    repeatType: 'loop',
+  },
+}
+
+export { mobileNavbar, scrollDownButton }
