@@ -1,17 +1,32 @@
-import { motion } from 'framer-motion'
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from 'react-vertical-timeline-component'
 import 'react-vertical-timeline-component/style.min.css'
-import { experiences, copywriting } from '@/constants/Experience'
-import { SectionWrapper } from '@/hoc'
-import { textVariant } from '@/utils/motion'
+import Image from 'next/image'
 
-const Icon = ({ icon, company_name }) => {
+import { SectionWrapper } from '@/hoc'
+import SectionText from '@/components/home/SectionText'
+import { journey } from '@/constants/Text'
+
+interface JourneyCardProps {
+  title: string
+  company_name: string
+  icon: string
+  iconBg: string
+  date: string
+  points: string[]
+}
+
+const Icon = ({
+  icon,
+  company_name,
+}: Pick<JourneyCardProps, 'icon' | 'company_name'>) => {
   return (
     <div className="flex justify-center items-center w-full h-full">
-      <img
+      <Image
+        width={50}
+        height={50}
         src={icon}
         alt={company_name}
         className="w-[60%] h-[60%] object-contain"
@@ -20,8 +35,8 @@ const Icon = ({ icon, company_name }) => {
   )
 }
 
-const ExperienceCard = (props) => {
-  const { date, iconBg, icon, company_name, title, points } = props.experience
+const JourneyCard = (props: JourneyCardProps) => {
+  const { date, iconBg, icon, company_name, title, points } = props
   const iconInfo = { icon, company_name }
   return (
     <VerticalTimelineElement
@@ -55,18 +70,15 @@ const ExperienceCard = (props) => {
   )
 }
 
-const Experience = () => {
+const Journey = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className="section-sub-text">{copywriting[0]}</p>
-        <h2 className="section-head-text">{copywriting[1]}</h2>
-      </motion.div>
+      <SectionText title={journey.title} subTitle={journey.subTitle} />
 
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>
-          {experiences.map((experience, index) => (
-            <ExperienceCard key={index} experience={experience} />
+          {journey.data.map((item, index) => (
+            <JourneyCard key={index} {...item} />
           ))}
         </VerticalTimeline>
       </div>
@@ -74,4 +86,4 @@ const Experience = () => {
   )
 }
 
-export default SectionWrapper(Experience, 'work')
+export default SectionWrapper(Journey, '')

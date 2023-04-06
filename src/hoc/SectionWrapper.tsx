@@ -1,14 +1,11 @@
 import { motion } from 'framer-motion'
-import { staggerContainer } from '@/utils/motion'
-import { FC } from 'react'
 
-const SectionWrapper = (Component: FC, idName: string) => {
+const SectionWrapper = (Component: React.FC, idName: string) => {
   return function HOC() {
     return (
       <motion.section
-        variants={staggerContainer()}
         initial="hidden"
-        whileInView="show"
+        whileInView="visible"
         viewport={{ once: true, amount: 0.25 }}
         className="padding max-w-7xl mx-auto relative z-0"
       >
