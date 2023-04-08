@@ -3,10 +3,10 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 
 import SectionWrapper from '@/hoc/SectionWrapper'
-import { about, aboutCards } from '@/constants/Text'
-import SectionText from '@/components/home/SectionText'
 import { fadeIn } from '@/utils/FramerMotion'
 import { Direction, Type, Ease } from '@/types'
+import { Text } from '@/constants'
+const { about, aboutCards } = Text
 
 interface CardProps {
   index: number
@@ -54,7 +54,13 @@ const Card = (props: CardProps) => {
 const About: React.FC = () => {
   return (
     <>
-      <SectionText title={about[0]} subTitle={about[1]} />
+      <motion.div
+        variants={fadeIn(Direction.Up, Type.Spring, 0, 1.25, Ease.Linear)}
+      >
+        <p className="hero-head-text">{about[0]}</p>
+        <h2 className="hero-sub-text">{about[1]}</h2>
+      </motion.div>
+
       <motion.p
         variants={fadeIn(Direction.None, Type.Spring, 0.1, 1, Ease.EaseOut)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"

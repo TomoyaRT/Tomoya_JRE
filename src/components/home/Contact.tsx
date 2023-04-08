@@ -8,7 +8,8 @@ import { ReactNode } from 'react'
 import SectionWrapper from '@/hoc/SectionWrapper'
 import { fadeIn } from '@/utils/FramerMotion'
 import { Direction, Type, Ease } from '@/types'
-import { contact } from '@/constants/Text'
+import { Text } from '@/constants'
+const { contact } = Text
 const EarthCanvas = dynamic(() => import('@/components/canvas/Earth'), {
   ssr: false,
 })

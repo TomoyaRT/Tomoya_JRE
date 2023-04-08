@@ -1,4 +1,5 @@
-import { hero as heroText } from '@/constants/Text'
+import { Text } from '@/constants'
+const { hero: heroText } = Text
 
 const HeroText: React.FC = () => {
   return (

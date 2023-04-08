@@ -1,6 +1,7 @@
 import PostCard from '@/components/blog/PostCard'
-import { posts } from '@/constants/blog'
 import Stagger from '@/components/animation/Stagger'
+import { Text } from '@/constants'
+const { posts } = Text
 
 // 首頁 -> Blog -> Post 3篇文章
 // Blog -> Post 全部文章 (可以考慮做個假Loading無線滾動與視圖內Dom渲染)

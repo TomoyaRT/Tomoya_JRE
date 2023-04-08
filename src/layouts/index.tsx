@@ -7,7 +7,8 @@ import PageTransition from '@/components/PageTransition'
 
 import useMediaQuery from '@/hooks/useMediaQuery'
 import { useAppSelector } from '@/hooks/useStore'
-import { head } from '@/constants/Head'
+import { Text } from '@/constants'
+const { head } = Text
 
 const Layout = (props: PropsWithChildren) => {
   const isMobile = useMediaQuery('(max-width: 500px)')

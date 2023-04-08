@@ -1,6 +1,7 @@
-import SectionWrapper from '@/hoc/SectionWrapper'
-import { technologies } from '@/constants'
 import dynamic from 'next/dynamic'
+import SectionWrapper from '@/hoc/SectionWrapper'
+import { Text } from '@/constants'
+const { technologies } = Text
 
 const BallCanvas = dynamic(() => import('@/components/canvas/Ball'), {
   ssr: false,

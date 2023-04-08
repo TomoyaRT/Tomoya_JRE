@@ -2,8 +2,9 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { fadeIn } from '@/utils/FramerMotion'
 import { Direction, Type, Ease } from '@/types'
-import { bookClub } from '@/constants/Text'
 import SectionWrapper from '@/hoc/SectionWrapper'
+import { Text } from '@/constants'
+const { bookClub } = Text
 
 interface Props {
   index: number

@@ -1,7 +1,8 @@
 import Link from '@/components/Link'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
-import { routes } from '@/constants/Routes'
+import { Routes } from '@/constants'
+const { routes } = Routes
 
 const DesktopNavbar: React.FC = () => {
   const router = useRouter()
