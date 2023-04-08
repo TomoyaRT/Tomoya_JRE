@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { fadeIn } from '@/utils/FramerMotion'
 import { Direction, Type, Ease } from '@/types'
 import { bookClub } from '@/constants/Text'
-import { SectionWrapper } from '@/hoc'
+import SectionWrapper from '@/hoc/SectionWrapper'
 
 interface Props {
   index: number

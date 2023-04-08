@@ -5,7 +5,7 @@ import {
 import 'react-vertical-timeline-component/style.min.css'
 import Image from 'next/image'
 
-import { SectionWrapper } from '@/hoc'
+import SectionWrapper from '@/hoc/SectionWrapper'
 import SectionText from '@/components/home/SectionText'
 import { journey } from '@/constants/Text'
 

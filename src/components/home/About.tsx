@@ -2,7 +2,7 @@ import Tilt from 'react-parallax-tilt'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
-import { SectionWrapper } from '@/hoc'
+import SectionWrapper from '@/hoc/SectionWrapper'
 import { about, aboutCards } from '@/constants/Text'
 import SectionText from '@/components/home/SectionText'
 import { fadeIn } from '@/utils/FramerMotion'

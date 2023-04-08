@@ -2,7 +2,7 @@ import Tilt from 'react-parallax-tilt'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { github } from '@/utils/public'
-import { SectionWrapper } from '@/hoc'
+import SectionWrapper from '@/hoc/SectionWrapper'
 import { fadeIn, textVariant } from '@/utils/motion'
 import { projects } from '@/constants'
 

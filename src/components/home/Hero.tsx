@@ -8,8 +8,6 @@ const ComputersCanvas = dynamic(() => import('@/components/canvas/Computer'), {
   ssr: false,
 })
 
-// TODO 先給一張圖片 等他 Loading 再換 3D modal
-
 const Hero: React.FC = () => {
   return (
     <div className="bg-home-pattern bg-cover bg-no-repeat bg-center">

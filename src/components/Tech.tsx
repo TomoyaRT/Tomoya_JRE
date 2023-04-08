@@ -1,4 +1,4 @@
-import { SectionWrapper } from '@/hoc'
+import SectionWrapper from '@/hoc/SectionWrapper'
 import { technologies } from '@/constants'
 import dynamic from 'next/dynamic'
 
