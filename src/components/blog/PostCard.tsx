@@ -1,13 +1,23 @@
 import Image from 'next/image'
 import Tilt from 'react-parallax-tilt'
+import { motion } from 'framer-motion'
 
 import { PostCardProps } from '@/types/blog'
-import FadeIn from '@/components/animation/FadeIn'
+import { fadeIn } from '@/utils/FramerMotion'
+import { Direction, Type, Ease } from '@/types'
 
 const PostCard = (props: PostCardProps) => {
-  const { name, description, tags, image } = props
+  const { index, name, description, tags, image } = props
   return (
-    <FadeIn>
+    <motion.div
+      variants={fadeIn(
+        Direction.Down,
+        Type.Tween,
+        index * 0.2,
+        0.75,
+        Ease.BackOut
+      )}
+    >
       <Tilt
         tiltReverse={true}
         className="bg-tertiary p-5 rounded-2xl sm:max-w-[360px] w-full"
@@ -35,7 +45,7 @@ const PostCard = (props: PostCardProps) => {
           ))}
         </div>
       </Tilt>
-    </FadeIn>
+    </motion.div>
   )
 }
 

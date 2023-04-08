@@ -4,10 +4,13 @@ import {
 } from 'react-vertical-timeline-component'
 import 'react-vertical-timeline-component/style.min.css'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 import SectionWrapper from '@/hoc/SectionWrapper'
-import SectionText from '@/components/home/SectionText'
-import { journey } from '@/constants/Text'
+import { fadeIn } from '@/utils/FramerMotion'
+import { Direction, Type, Ease } from '@/types'
+import { Text } from '@/constants'
+const { journey } = Text
 
 interface JourneyCardProps {
   title: string
@@ -73,7 +76,12 @@ const JourneyCard = (props: JourneyCardProps) => {
 const Journey: React.FC = () => {
   return (
     <>
-      <SectionText title={journey.title} subTitle={journey.subTitle} />
+      <motion.div
+        variants={fadeIn(Direction.Up, Type.Spring, 0, 1.25, Ease.Linear)}
+      >
+        <p className="hero-head-text">{journey.title}</p>
+        <h2 className="hero-sub-text">{journey.subTitle}</h2>
+      </motion.div>
 
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>
