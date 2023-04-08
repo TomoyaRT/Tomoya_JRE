@@ -7,3 +7,7 @@
 @import './customComponents.css';
 @import './customStyles.css';
 
+body {
+  height: 100%;
+  background: #050816;
+}
