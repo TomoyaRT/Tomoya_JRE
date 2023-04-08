@@ -1,90 +1,126 @@
 import dynamic from 'next/dynamic'
-import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
-import { SectionWrapper } from '@/hoc'
+import { useForm, SubmitHandler } from 'react-hook-form'
+import * as yup from 'yup'
+import { yupResolver } from '@hookform/resolvers/yup'
+import { ReactNode } from 'react'
+
+import SectionWrapper from '@/hoc/SectionWrapper'
 import { fadeIn } from '@/utils/FramerMotion'
 import { Direction, Type, Ease } from '@/types'
-// import { about, aboutCards } from '@/constants/Text'
-
+import { contact } from '@/constants/Text'
 const EarthCanvas = dynamic(() => import('@/components/canvas/Earth'), {
   ssr: false,
 })
 
-const Contact = () => {
-  const formRef = useRef()
-  const [form, setForm] = useState({
-    name: '',
-    email: '',
-    message: '',
+interface FormValues {
+  name: string
+  email: string
+  message: string
+}
+
+const schema = yup.object().shape({
+  name: yup.string().required(),
+  email: yup.string().email().required(),
+  message: yup.string().required(),
+})
+
+interface FormWrapperProps {
+  children: ReactNode
+  title: string
+  errorMessage: string | undefined
+}
+const FormWrapper = (props: FormWrapperProps) => {
+  const { children, errorMessage, title } = props
+  return (
+    <label className="flex flex-col relative">
+      <span className="text-white font-medium">{title}</span>
+      {children}
+      {errorMessage && (
+        <span className="absolute -bottom-6 left-0 text-rose-600">
+          {errorMessage}
+        </span>
+      )}
+    </label>
+  )
+}
+
+const Form: React.FC = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormValues>({
+    resolver: yupResolver(schema),
   })
-  const [loading, setLoading] = useState(false)
 
-  const handleChange = (e) => {}
-  const handleSubmit = (e) => {}
+  const onSubmit: SubmitHandler<FormValues> = (data) => {
+    console.log(data)
+  }
+  return (
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="mt-12 flex flex-col gap-10"
+    >
+      <FormWrapper
+        title={contact.form.name.title}
+        errorMessage={errors?.name && errors.name.message}
+      >
+        <input
+          type="text"
+          {...register('name')}
+          placeholder={contact.form.name.placeholder}
+          className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
+        />
+      </FormWrapper>
 
+      <FormWrapper
+        title={contact.form.email.title}
+        errorMessage={errors?.email && errors.email.message}
+      >
+        <input
+          type="email"
+          {...register('email')}
+          placeholder={contact.form.email.placeholder}
+          className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
+        />
+      </FormWrapper>
+
+      <FormWrapper
+        title={contact.form.message.title}
+        errorMessage={errors?.message && errors.message.message}
+      >
+        <textarea
+          {...register('message')}
+          placeholder={contact.form.message.placeholder}
+          className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
+        />
+      </FormWrapper>
+
+      <button
+        type="submit"
+        className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
+      >
+        {contact.form.button[0]}
+      </button>
+    </form>
+  )
+}
+
+const Contact = () => {
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
       <motion.div
-        variants={fadeIn(Direction.Right, Type.Tween, 0.2, 1, Ease.EaseOut)}
-        className="flex-[0.7 ] bg-black-100 p-8 rounded-2xl"
+        variants={fadeIn(Direction.Right, Type.Tween, 0.2, 0.75, Ease.EaseOut)}
+        className="flex-[0.7] bg-black-100 p-8 rounded-2xl"
       >
-        <p className="section-sub-text">Get in touch</p>
-        <h3 className="section-head-text">Contact.</h3>
-
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className="mt-12 flex flex-col gap-8"
-        >
-          {/* Name */}
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-b">Your Name</span>
-            <input
-              type="text"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              placeholder="What's your name?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
-            />
-          </label>
-          {/* Email */}
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-b">Your Email</span>
-            <input
-              type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              placeholder="What's your email?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
-            />
-          </label>
-          {/* Message */}
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-b">Your Message</span>
-            <textarea
-              rows="7"
-              name="message"
-              value={form.message}
-              onChange={handleChange}
-              placeholder="What do you want to say?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
-            />
-          </label>
-          {/* Submit Button */}
-          <button
-            type="submit"
-            className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
-          >
-            {loading ? 'Sending...' : 'Send'}
-          </button>
-        </form>
+        <p className="section-sub-text">{contact.subTitle}</p>
+        <h3 className="section-head-text">{contact.title}</h3>
+        <Form />
       </motion.div>
 
-      {/* 3D Earth */}
       <motion.div
-        variants={fadeIn(Direction.Left, Type.Tween, 0.2, 1, Ease.EaseOut)}
+        variants={fadeIn(Direction.Left, Type.Tween, 0.2, 0.75, Ease.EaseOut)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
       >
         <EarthCanvas />
