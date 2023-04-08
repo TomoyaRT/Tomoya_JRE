@@ -119,4 +119,24 @@ const bookClub = {
   ],
 }
 
-export { hero, about, aboutCards, journey, bookClub }
+const contact = {
+  title: 'Book Club',
+  subTitle: 'Design Pattern',
+  form: {
+    name: {
+      title: 'Your Name',
+      placeholder: "What's your name?",
+    },
+    email: {
+      title: 'Your Email',
+      placeholder: "What's your email?",
+    },
+    message: {
+      title: 'Your Message',
+      placeholder: 'What do you want to say?',
+    },
+    button: ['Send', 'Sending...'],
+  },
+}
+
+export { hero, about, aboutCards, journey, bookClub, contact }

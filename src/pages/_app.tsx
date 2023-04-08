@@ -4,16 +4,12 @@ import store from '@/store/index'
 import Layout from '@/layouts'
 import '@/styles/globals.css'
 
-import PageTransition from '@/layouts/PageTransition'
-
 function App({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
-      <PageTransition>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </PageTransition>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </Provider>
   )
 }
