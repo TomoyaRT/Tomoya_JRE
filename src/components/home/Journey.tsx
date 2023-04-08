@@ -70,7 +70,7 @@ const JourneyCard = (props: JourneyCardProps) => {
   )
 }
 
-const Journey = () => {
+const Journey: React.FC = () => {
   return (
     <>
       <SectionText title={journey.title} subTitle={journey.subTitle} />

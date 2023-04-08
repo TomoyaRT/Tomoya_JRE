@@ -88,4 +88,35 @@ const journey = {
   ],
 }
 
-export { hero, about, aboutCards, journey }
+const bookClub = {
+  title: 'Book Club',
+  subTitle: 'Design Pattern',
+  thoughts: [
+    {
+      testimonial:
+        'This book club has allowed me to truly appreciate the power of collective brainstorming. Every time, I am able to hear new ideas and insights. Through this exchange and learning, I am able to accelerate my passion for learning new technologies.',
+      name: 'Roger',
+      designation: 'Front-End',
+      company: 'Damai Internet',
+      image: damaiLogo,
+    },
+    {
+      testimonial:
+        "Attending book club has made me realize that persistence, even if only a little bit, can lead to remarkable progress over several months. In the process of teaching and learning, it's easier to identify my strengths and weaknesses and feedback is crucial.",
+      name: 'Jim',
+      designation: 'Front-End',
+      company: 'Damai Internet',
+      image: damaiLogo,
+    },
+    {
+      testimonial:
+        "Attending book club gives me the motivation to understand unfamiliar knowledge. During presentations, I learn how to express ideas in a simple and understandable way. By listening to members' explanations and trying to approach topics from different angles, it becomes a joyful time of growth with my peers.",
+      name: 'Karol',
+      designation: 'Full-Stack',
+      company: 'Damai Internet',
+      image: damaiLogo,
+    },
+  ],
+}
+
+export { hero, about, aboutCards, journey, bookClub }

@@ -9,7 +9,7 @@ import useMediaQuery from '@/hooks/useMediaQuery'
 import { useAppSelector } from '@/hooks/useStore'
 import { head } from '@/constants/Head'
 
-const Layout: React.FC = (props: PropsWithChildren) => {
+const Layout = (props: PropsWithChildren) => {
   const isMobile = useMediaQuery('(max-width: 500px)')
   const Navbar = isMobile ? <MobileNavbar /> : <DesktopNavbar />
   const pageTransitionReducer = useAppSelector(

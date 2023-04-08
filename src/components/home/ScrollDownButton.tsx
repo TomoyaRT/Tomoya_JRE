@@ -1,7 +1,7 @@
 import { scrollDownButton } from '@/constants/Animation'
 import { motion } from 'framer-motion'
 
-const ScrollDownButton = () => {
+const ScrollDownButton: React.FC = () => {
   return (
     <div className="absolute bottom-24 sm:bottom-12 mb:bottom-5 w-full flex justify-center items-center">
       <a href="#about">

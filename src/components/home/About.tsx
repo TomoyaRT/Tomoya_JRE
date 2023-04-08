@@ -14,6 +14,21 @@ interface CardProps {
   icon: string
 }
 
+const CardContent = ({ icon, title }: Omit<CardProps, 'index'>) => {
+  return (
+    <div className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
+      <Image
+        src={icon}
+        alt={title}
+        width={50}
+        height={50}
+        className="w-16 h-16 object-contain"
+      />
+      <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>
+    </div>
+  )
+}
+
 const Card = (props: CardProps) => {
   const { index, title, icon } = props
   return (
@@ -29,25 +44,14 @@ const Card = (props: CardProps) => {
           )}
           className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
         >
-          <div className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
-            <Image
-              src={icon}
-              alt={title}
-              width={50}
-              height={50}
-              className="w-16 h-16 object-contain"
-            />
-            <h3 className="text-white text-[20px] font-bold text-center">
-              {title}
-            </h3>
-          </div>
+          <CardContent title={title} icon={icon} />
         </motion.div>
       </Tilt>
     </>
   )
 }
 
-const About = () => {
+const About: React.FC = () => {
   return (
     <>
       <SectionText title={about[0]} subTitle={about[1]} />
