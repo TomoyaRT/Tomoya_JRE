@@ -6,10 +6,6 @@ export const routes: Route[] = [
     name: 'Root',
   },
   {
-    path: '/home',
-    name: 'Home',
-  },
-  {
     path: '/blog',
     name: 'Blog',
   },
