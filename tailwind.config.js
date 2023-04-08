@@ -18,7 +18,7 @@ module.exports = {
         mobile: '500px',
       },
       backgroundImage: {
-        'hero-pattern': "url('/assets/herobg.png')",
+        'home-pattern': "url('/assets/herobg.png')",
       },
     },
   },
