@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.0.1",
     "@react-spring/web": "^9.7.1",
     "@react-three/drei": "^9.58.4",
     "@react-three/fiber": "^8.12.0",
@@ -31,11 +32,13 @@
     "postcss-import": "^15.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.43.9",
     "react-parallax-tilt": "^1.7.119",
     "react-redux": "^8.0.5",
     "react-vertical-timeline-component": "^3.6.0",
     "three": "^0.150.1",
-    "typescript": "5.0.2"
+    "typescript": "5.0.2",
+    "yup": "^1.0.2"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.56.0",
