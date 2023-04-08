@@ -63,7 +63,7 @@ const PageTransition = () => {
       initial="initial"
       animate={isLoading ? 'endLoading' : 'startLoading'}
       onAnimationComplete={() => _delay(() => setIsLoading(true), 300)}
-      className={`absolute top-0 left-0 w-[100vw] h-[100vh] flex z-50`}
+      className={`fixed top-0 left-0 w-[100vw] h-[100vh] flex z-50`}
     >
       {_range(lineNumber).map((i) => {
         return (
