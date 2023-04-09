@@ -3,7 +3,7 @@ import { Route } from '@/types'
 export const routes: Route[] = [
   {
     path: '/',
-    name: 'Root',
+    name: 'Home',
   },
   {
     path: '/blog',
