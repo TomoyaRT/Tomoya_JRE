@@ -1,0 +1,7 @@
+{
+  "Routes": {
+    "Home": "首頁",
+    "Blog": "文章",
+    "Portfolio": "作品集"
+  }
+}

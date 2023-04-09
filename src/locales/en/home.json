@@ -1,0 +1,7 @@
+{
+  "Routes": {
+    "Home": "Home",
+    "Blog": "Blog",
+    "Portfolio": "Portfolio"
+  }
+}

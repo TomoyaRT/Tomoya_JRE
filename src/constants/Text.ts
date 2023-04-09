@@ -21,6 +21,22 @@ import {
   jobit,
   tripguide,
 } from '@/utils/public'
+import { Route } from '@/types'
+
+const routes: Route[] = [
+  {
+    path: '/',
+    name: 'Home',
+  },
+  {
+    path: '/blog',
+    name: 'Blog',
+  },
+  {
+    path: '/portfolio',
+    name: 'Portfolio',
+  },
+]
 
 const head = {
   title: 'My Portfolio Website',
@@ -386,6 +402,7 @@ const posts = [
 ]
 
 export {
+  routes,
   head,
   hero,
   about,

@@ -2,8 +2,7 @@ import { useRef } from 'react'
 import { motion, useCycle } from 'framer-motion'
 import { useDimensions } from '@/hooks/useDimensions'
 import { Animation } from '@/constants'
-import { Routes } from '@/constants'
-const { routes } = Routes
+import { routes } from '@/constants/Text'
 const { mobileNavbar } = Animation
 
 interface PathProps {
