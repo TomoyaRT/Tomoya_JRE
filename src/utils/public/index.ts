@@ -28,6 +28,9 @@ import {
   jobit,
   tripguide,
   damaiLogo,
+  American,
+  Japan,
+  Taiwan,
 } from './assets'
 import { desktop_pc, planet } from './model'
 
@@ -68,4 +71,7 @@ export {
   jobit,
   tripguide,
   damaiLogo,
+  American,
+  Japan,
+  Taiwan,
 }
