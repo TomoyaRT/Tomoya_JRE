@@ -20,7 +20,7 @@ import {
   carrent,
   jobit,
   tripguide,
-} from '@/utils/public'
+} from '@/constants/Public'
 import { Route } from '@/types'
 
 const routes: Route[] = [

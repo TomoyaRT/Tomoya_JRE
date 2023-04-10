@@ -2,7 +2,7 @@ import Link from '@/components/Link'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
-import { American, Taiwan } from '@/utils/public/assets'
+import { American, Taiwan } from '@/constants/Public'
 import { useTranslation } from 'next-i18next'
 import { routes } from '@/constants/Text'
 

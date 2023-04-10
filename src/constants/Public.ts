@@ -30,3 +30,9 @@ export const damaiLogo = '/assets/damai_logo.png'
 export const American = '/assets/American.png'
 export const Japan = '/assets/Japan.webp'
 export const Taiwan = '/assets/Taiwan.jpeg'
+
+export const desktop_pc = './desktop_pc/scene.gltf'
+export const planet = './planet/scene.gltf'
+
+export const appIcon = './favicon.ico'
+export const appLogo = './logo.svg'
