@@ -1,12 +1,12 @@
 import Tilt from 'react-parallax-tilt'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { useTranslation } from 'next-i18next'
 
 import SectionWrapper from '@/hoc/SectionWrapper'
 import { fadeIn } from '@/utils/FramerMotion'
 import { Direction, Type, Ease } from '@/types'
-import { Text } from '@/constants'
-const { about, aboutCards } = Text
+import { Home } from '@/constants'
 
 interface CardProps {
   index: number
@@ -15,6 +15,8 @@ interface CardProps {
 }
 
 const CardContent = ({ icon, title }: Omit<CardProps, 'index'>) => {
+  const { t } = useTranslation('Home')
+
   return (
     <div className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
       <Image
@@ -24,7 +26,9 @@ const CardContent = ({ icon, title }: Omit<CardProps, 'index'>) => {
         height={50}
         className="w-16 h-16 object-contain"
       />
-      <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>
+      <h3 className="text-white text-[20px] font-bold text-center">
+        {t(title)}
+      </h3>
     </div>
   )
 }
@@ -52,24 +56,26 @@ const Card = (props: CardProps) => {
 }
 
 const About: React.FC = () => {
+  const { t } = useTranslation('Home')
+
   return (
     <>
       <motion.div
         variants={fadeIn(Direction.Up, Type.Spring, 0, 1.25, Ease.Linear)}
       >
-        <p className="hero-head-text">{about[0]}</p>
-        <h2 className="hero-sub-text">{about[1]}</h2>
+        <p className="hero-head-text">{t(Home.About[0])}</p>
+        <h2 className="hero-sub-text">{t(Home.About[1])}</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn(Direction.None, Type.Spring, 0.1, 1, Ease.EaseOut)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        {about[2]}
+        {t(Home.About[2])}
       </motion.p>
 
       <div className="mt-20 grid mobile:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-        {aboutCards.map((service, index) => (
+        {Home.AboutCards.map((service, index) => (
           <Card key={service.title} index={index} {...service} />
         ))}
       </div>

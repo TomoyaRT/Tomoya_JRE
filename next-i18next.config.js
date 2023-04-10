@@ -9,6 +9,6 @@ module.exports = {
     typeof window === 'undefined'
       ? path.resolve('./src/locales')
       : './src/locales',
-  ns: ['home'],
+  ns: ['Home'],
   defaultNS: false,
 }

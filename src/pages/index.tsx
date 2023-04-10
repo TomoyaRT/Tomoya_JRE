@@ -32,13 +32,13 @@ const Home: React.FC = () => {
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   if (!locale) {
-    throw new Error('locale is required')
+    throw new Error('locale is undefined')
   }
-  const home = await serverSideTranslations(locale, ['home'])
+  const Home = await serverSideTranslations(locale, ['Home'])
 
   return {
     props: {
-      ...home,
+      ...Home,
     },
   }
 }

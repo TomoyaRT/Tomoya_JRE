@@ -3,5 +3,60 @@
     "Home": "首頁",
     "Blog": "文章",
     "Portfolio": "作品集"
+  },
+  "Head": {
+    "Title": "我的網站",
+    "Description": "關於我在前端的紀錄"
+  },
+  "Hero": ["嗨!我是", "煒皓", "我是一名前端工程師", "特別喜歡網頁互動特效"],
+  "About": [
+    "簡介",
+    "概述",
+    "這是我的第一個個人網站，我希望透過它，人們可以在短時間內認識我。以下是我期望這個網站包括的內容。"
+  ],
+  "AboutCards": {
+    "Home": "首頁",
+    "Blog": "文章",
+    "Portfolio": "作品集",
+    "Resume": "履歷"
+  },
+  "Journey": {
+    "Title": "學習歷程",
+    "SubTitle": "我在軟體業的經驗",
+    "SelfTaught": {
+      "Title": "自學程式",
+      "CompanyName": "家裡",
+      "Date": "2021年01月 - 2021年11月",
+      "Points": [
+        "購買 hexschool 的課程自學前端技能",
+        "購買 tenlong 書局的書籍學習 JavaScript 與 Vue",
+        "看 Youtuber Amos 的教學影片學習 HTML 與 CSS"
+      ]
+    },
+    "FrontEndDeveloper": {
+      "Title": "前端工程師",
+      "CompanyName": "大麥網路股份有限公司",
+      "IconBg": "#ffffff",
+      "Date": "2021年01月 - 2023年02月",
+      "Points": [
+        "負責開發與維護訂餐網站的前後台專案",
+        "開發訂位服務，並串接Line LIFF與行事曆功能，提供使用者更方便地使用訂位服務。",
+        "串接 JKO Pay 金流與 JKO APP 的服務，提供更多元的支付方式。",
+        "串接 Bank SinoPac 金流，開發儲值金服務，包括 QR Code 掃碼，儲值金方案等服務。"
+      ]
+    },
+    "Relearning": {
+      "Title": "重新學習",
+      "CompanyName": "家裡",
+      "IconBg": "#ffffff",
+      "Date": "2021年02月 - 2023年05月",
+      "Points": [
+        "購買 Udemy 平台的 Next.js 課程學習 SSR, SSG, ISR 與 API Routes 的相關知識",
+        "購買 HiSKIO 的 React 課程學習 React, React Router, Redux 的相關知識",
+        "購買 Three.js Journey 的 Three.js 課程學習 3D 網站製作的基礎知識",
+        "透過 Youtube 與 官方文件學習使用 Framer Motion 與 Anime.js 建構動畫",
+        "建構屬於自己的個人網站，開始經營屬於軟體業的個人品牌。"
+      ]
+    }
   }
 }

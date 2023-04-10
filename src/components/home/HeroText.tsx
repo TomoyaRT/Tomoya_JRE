@@ -1,15 +1,18 @@
-import { Text } from '@/constants'
-const { hero: heroText } = Text
+import { useTranslation } from 'next-i18next'
+import { Home } from '@/constants'
 
 const HeroText: React.FC = () => {
+  const { t } = useTranslation('Home')
+
   return (
     <div>
       <h1 className="hero-head-text">
-        {heroText[0]} <span className="text-[#915eff]">{heroText[1]}</span>
+        {t(Home.Hero[0])}
+        <span className="text-[#915eff]">{t(Home.Hero[1])}</span>
       </h1>
       <p className="hero-sub-text mt-2 text-white-100">
-        {heroText[2]}
-        <br className="sm:block hidden" /> {heroText[3]}
+        {t(Home.Hero[2])}
+        <br className="sm:block hidden" /> {t(Home.Hero[3])}
       </p>
     </div>
   )
