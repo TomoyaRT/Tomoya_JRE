@@ -2,7 +2,7 @@ import { useRef } from 'react'
 import { motion, useCycle } from 'framer-motion'
 import { useDimensions } from '@/hooks/useDimensions'
 import { Animation } from '@/constants'
-import { routes } from '@/constants/Text'
+import { Routes } from '@/constants/Home'
 const { mobileNavbar } = Animation
 
 interface PathProps {
@@ -64,7 +64,7 @@ const Navigation = () => (
     variants={mobileNavbar.ulVariants}
     className="absolute w-full h-full top-0 left-0 flex flex-col gap-10 justify-center items-center"
   >
-    {routes.map((i) => (
+    {Routes.map((i) => (
       <MenuItem i={i.name} key={i.name} />
     ))}
   </motion.ul>

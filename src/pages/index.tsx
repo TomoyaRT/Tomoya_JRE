@@ -4,10 +4,11 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import dynamic from 'next/dynamic'
 import Hero from '@/components/home/Hero'
 import About from '@/components/home/About'
+import Portfolio from '@/components/home/Portfolio'
 import Journey from '@/components/home/Journey'
 import BookClub from '@/components/home/BookClub'
 import Contact from '@/components/home/Contact'
-import Work from '@/components/home/Work'
+import WorkExperience from '@/components/home/WorkExperience'
 const StarsCanvas = dynamic(() => import('@/components/canvas/Stars'), {
   ssr: false,
 })
@@ -19,8 +20,9 @@ const Home: React.FC = () => {
         <Hero />
       </div>
       <About />
+      <Portfolio />
       <Journey />
-      <Work />
+      <WorkExperience />
       <BookClub />
       <div className="relative z-0">
         <Contact />

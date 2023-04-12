@@ -14,16 +14,16 @@
     "I am a front-end engineer, who",
     "enjoys web interaction effects."
   ],
-  "About": [
-    "Introduction",
-    "Overview",
-    "This is my first personal website, and I hope that through it, people can get to know me in a short amount of time. Here is what I expect the website to include."
-  ],
+  "About": {
+    "Title": "Introduction",
+    "SubTitle": "About Me",
+    "Description": "I have been working in the software industry for one and a half years. Below are the technologies and tools that I am proficient in."
+  },
   "AboutCards": {
-    "Home": "Home",
-    "Blog": "Blog",
-    "Portfolio": "Portfolio",
-    "Resume": "Resume"
+    "FrontEnd": "Front-end",
+    "Animation": "Animation",
+    "BackEnd": "Back-end",
+    "Other": "Other"
   },
   "Journey": {
     "Title": "Learning Journey",
@@ -63,5 +63,44 @@
         "Learn how to create animations using Framer Motion and Anime.js by watching tutorial videos on YouTube and reading the official documentation."
       ]
     }
+  },
+  "BookClub": {
+    "Title": "Book Club",
+    "SubTitle": "Design Pattern",
+    "Roger": {
+      "Testimonial": "This book club has allowed me to truly appreciate the power of collective brainstorming. Every time, I am able to hear new ideas and insights. Through this exchange and learning, I am able to accelerate my passion for learning new technologies.",
+      "Name": "Roger",
+      "Designation": "Front-End",
+      "Company": "Damai Internet"
+    },
+    "Jim": {
+      "Testimonial": "It made me realize that as long as I persist, even just a little bit, the results can be remarkable after a few months. Through the process of teaching and learning, it is easier to see my blind spots and strengths. Feedback is crucial.",
+      "Name": "Jim",
+      "Designation": "Front-End",
+      "Company": "Damai Internet"
+    },
+    "Karol": {
+      "Testimonial": "Reading clubs give me the motivation to understand unfamiliar knowledge. Through presentations, I learn how to express myself in a simple and understandable way. Listening to other members' explanations and trying to think from different perspectives is a joyful time of growth with my peers.",
+      "Name": "Karol",
+      "Designation": "Full-Stack",
+      "Company": "Damai Internet"
+    }
+  },
+  "Contact": {
+    "Title": "Contact Me",
+    "SubTitle": "If you have any questions or ideas for me, please feel free to contact me.",
+    "Name": {
+      "Title": "Name",
+      "Placeholder": "Enter your name"
+    },
+    "Email": {
+      "Title": "Email",
+      "Placeholder": "Enter your email"
+    },
+    "Message": {
+      "Title": "Message",
+      "Placeholder": "Enter your message"
+    },
+    "Button": ["Send", "Sending..."]
   }
 }

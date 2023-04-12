@@ -1,7 +1,6 @@
 import PostCard from '@/components/blog/PostCard'
 import Stagger from '@/components/animation/Stagger'
-import { Text } from '@/constants'
-const { posts } = Text
+import { Home } from '@/constants'
 
 // 首頁 -> Blog -> Post 3篇文章
 // Blog -> Post 全部文章 (可以考慮做個假Loading無線滾動與視圖內Dom渲染)
@@ -13,7 +12,7 @@ const Blog = () => {
       <div className="mx-auto max-w-[1024px]">
         <Stagger stagger={0.2} delay={0}>
           <div className="pt-24 grid grid-cols-1 mobile:grid-cols-2 lg:grid-cols-3 gap-10">
-            {posts.map((post, index) => (
+            {Home.posts.map((post, index) => (
               <PostCard key={`post-${index}`} index={index} {...post} />
             ))}
           </div>

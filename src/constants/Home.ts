@@ -30,23 +30,100 @@ const Head = {
   icon: appIcon,
 }
 const Hero = ['Hero.0', 'Hero.1', 'Hero.2', 'Hero.3']
-const About = ['About.0', 'About.1', 'About.2']
+const About = {
+  title: 'About.Title',
+  subTitle: 'About.SubTitle',
+  description: 'About.Description',
+}
 const AboutCards = [
   {
-    title: 'AboutCards.Home',
+    title: 'AboutCards.FrontEnd',
     icon: web,
+    description: ['Vue', 'Vuex', 'React', 'Redux', 'Next.js', 'TypeScript'],
   },
   {
-    title: 'AboutCards.Portfolio',
+    title: 'AboutCards.Animation',
     icon: mobile,
+    description: ['Framer Motion', 'GSAP', 'Anime.js', 'Canvas', 'Three.js'],
   },
   {
-    title: 'AboutCards.Blog',
+    title: 'AboutCards.BackEnd',
     icon: backend,
+    description: ['Node.js', 'Express', 'Mongo DB'],
   },
   {
-    title: 'AboutCards.Resume',
+    title: 'AboutCards.Other',
     icon: creator,
+    description: [
+      'Jest',
+      'Cypress',
+      'Git',
+      'Docker',
+      'SOLID',
+      'Design Patterns',
+    ],
+  },
+]
+const Portfolio = [
+  {
+    name: 'Car Rent',
+    description:
+      'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
+    tags: [
+      {
+        name: 'react',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'mongodb',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'tailwind',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: carrent,
+  },
+  {
+    name: 'Job IT',
+    description:
+      'Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.',
+    tags: [
+      {
+        name: 'react',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'restapi',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'scss',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: jobit,
+  },
+  {
+    name: 'Trip Guide',
+    description:
+      'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
+    tags: [
+      {
+        name: 'nextjs',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'supabase',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'css',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: tripguide,
   },
 ]
 const Journey = {
@@ -104,55 +181,50 @@ const Journey = {
     },
   ],
 }
-
-const bookClub = {
-  title: 'Book Club',
-  subTitle: 'Design Pattern',
+const BookClub = {
+  title: 'BookClub.Title',
+  subTitle: 'BookClub.SubTitle',
   thoughts: [
     {
-      testimonial:
-        'This book club has allowed me to truly appreciate the power of collective brainstorming. Every time, I am able to hear new ideas and insights. Through this exchange and learning, I am able to accelerate my passion for learning new technologies.',
-      name: 'Roger',
-      designation: 'Front-End',
-      company: 'Damai Internet',
+      testimonial: 'BookClub.Roger.Testimonial',
+      name: 'BookClub.Roger.Name',
+      designation: 'BookClub.Roger.Designation',
+      company: 'BookClub.Roger.Company',
       image: damaiLogo,
     },
     {
-      testimonial:
-        "Attending book club has made me realize that persistence, even if only a little bit, can lead to remarkable progress over several months. In the process of teaching and learning, it's easier to identify my strengths and weaknesses and feedback is crucial.",
-      name: 'Jim',
-      designation: 'Front-End',
-      company: 'Damai Internet',
+      testimonial: 'BookClub.Jim.Testimonial',
+      name: 'BookClub.Jim.Name',
+      designation: 'BookClub.Jim.Designation',
+      company: 'BookClub.Jim.Company',
       image: damaiLogo,
     },
     {
-      testimonial:
-        "Attending book club gives me the motivation to understand unfamiliar knowledge. During presentations, I learn how to express ideas in a simple and understandable way. By listening to members' explanations and trying to approach topics from different angles, it becomes a joyful time of growth with my peers.",
-      name: 'Karol',
-      designation: 'Full-Stack',
-      company: 'Damai Internet',
+      testimonial: 'BookClub.Karol.Testimonial',
+      name: 'BookClub.Karol.Name',
+      designation: 'BookClub.Karol.Designation',
+      company: 'BookClub.Karol.Company',
       image: damaiLogo,
     },
   ],
 }
-
-const contact = {
-  title: 'Book Club',
-  subTitle: 'Design Pattern',
+const Contact = {
+  title: 'Contact.Title',
+  subTitle: 'Contact.SubTitle',
   form: {
     name: {
-      title: 'Your Name',
-      placeholder: "What's your name?",
+      title: 'Contact.Name.Title',
+      placeholder: 'Contact.Name.Placeholder',
     },
     email: {
-      title: 'Your Email',
-      placeholder: "What's your email?",
+      title: 'Contact.Email.Title',
+      placeholder: 'Contact.Email.Placeholder',
     },
     message: {
-      title: 'Your Message',
-      placeholder: 'What do you want to say?',
+      title: 'Contact.Message.Title',
+      placeholder: 'Contact.Message.Placeholder',
     },
-    button: ['Send', 'Sending...'],
+    button: ['Contact.Button.0', 'Contact.Button.1'],
   },
 }
 
@@ -324,9 +396,10 @@ export {
   Head,
   Hero,
   About,
+  Portfolio,
   AboutCards,
   Journey,
-  bookClub,
-  contact,
+  BookClub,
+  Contact,
   posts,
 }
