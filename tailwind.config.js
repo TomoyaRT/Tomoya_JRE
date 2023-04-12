@@ -20,6 +20,14 @@ module.exports = {
       backgroundImage: {
         'home-pattern': "url('/assets/herobg.png')",
       },
+      cursor: {
+        'cards-stack':
+          "url('https://uploads.codesandbox.io/uploads/user/b3e56831-8b98-4fee-b941-0e27f39883ab/Ad1_-cursor.png') 39 39, auto",
+      },
+      shadow: {
+        'cards-stack':
+          '0 12.5px 40px -10px rgba(58, 50, 73, 0.511), 0 10px 10px -10px rgba(50, 50, 73, 0.3);',
+      },
     },
   },
   plugins: [require('@tailwindcss/line-clamp')],
