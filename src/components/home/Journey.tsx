@@ -4,12 +4,10 @@ import {
 } from 'react-vertical-timeline-component'
 import 'react-vertical-timeline-component/style.min.css'
 import Image from 'next/image'
-import { motion } from 'framer-motion'
 import { useTranslation } from 'next-i18next'
 
+import SectionHead from '@/components/home/SectionHead'
 import SectionWrapper from '@/hoc/SectionWrapper'
-import { fadeIn } from '@/utils/FramerMotion'
-import { Direction, Type, Ease } from '@/types'
 import { Home } from '@/constants'
 
 interface JourneyCardProps {
@@ -80,12 +78,11 @@ const Journey: React.FC = () => {
 
   return (
     <>
-      <motion.div
-        variants={fadeIn(Direction.Up, Type.Spring, 0, 1.25, Ease.Linear)}
-      >
-        <p className="hero-head-text">{t(Home.Journey.title)}</p>
-        <h2 className="hero-sub-text">{t(Home.Journey.subTitle)}</h2>
-      </motion.div>
+      <SectionHead
+        title={t(Home.Journey.title)}
+        subTitle={t(Home.Journey.subTitle)}
+        styleType="hero"
+      />
 
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>

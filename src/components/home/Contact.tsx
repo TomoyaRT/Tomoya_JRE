@@ -4,12 +4,12 @@ import { useForm, SubmitHandler } from 'react-hook-form'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { ReactNode } from 'react'
+import { useTranslation } from 'next-i18next'
 
 import SectionWrapper from '@/hoc/SectionWrapper'
 import { fadeIn } from '@/utils/FramerMotion'
 import { Direction, Type, Ease } from '@/types'
-import { Text } from '@/constants'
-const { contact } = Text
+import { Home } from '@/constants'
 const EarthCanvas = dynamic(() => import('@/components/canvas/Earth'), {
   ssr: false,
 })
@@ -47,6 +47,7 @@ const FormWrapper = (props: FormWrapperProps) => {
 }
 
 const Form: React.FC = () => {
+  const { t } = useTranslation('Home')
   const {
     register,
     handleSubmit,
@@ -64,36 +65,36 @@ const Form: React.FC = () => {
       className="mt-12 flex flex-col gap-10"
     >
       <FormWrapper
-        title={contact.form.name.title}
+        title={t(Home.Contact.form.name.title)}
         errorMessage={errors?.name && errors.name.message}
       >
         <input
           type="text"
           {...register('name')}
-          placeholder={contact.form.name.placeholder}
+          placeholder={`${t(Home.Contact.form.name.placeholder)}`}
           className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
         />
       </FormWrapper>
 
       <FormWrapper
-        title={contact.form.email.title}
+        title={t(Home.Contact.form.email.title)}
         errorMessage={errors?.email && errors.email.message}
       >
         <input
           type="email"
           {...register('email')}
-          placeholder={contact.form.email.placeholder}
+          placeholder={`${t(Home.Contact.form.email.placeholder)}`}
           className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
         />
       </FormWrapper>
 
       <FormWrapper
-        title={contact.form.message.title}
+        title={t(Home.Contact.form.message.title)}
         errorMessage={errors?.message && errors.message.message}
       >
         <textarea
           {...register('message')}
-          placeholder={contact.form.message.placeholder}
+          placeholder={`${t(Home.Contact.form.message.placeholder)}`}
           className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
         />
       </FormWrapper>
@@ -102,21 +103,23 @@ const Form: React.FC = () => {
         type="submit"
         className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
       >
-        {contact.form.button[0]}
+        {t(Home.Contact.form.button[0])}
       </button>
     </form>
   )
 }
 
 const Contact = () => {
+  const { t } = useTranslation('Home')
+
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
       <motion.div
         variants={fadeIn(Direction.Right, Type.Tween, 0.2, 0.75, Ease.EaseOut)}
         className="flex-[0.7] bg-black-100 p-8 rounded-2xl"
       >
-        <p className="section-sub-text">{contact.subTitle}</p>
-        <h3 className="section-head-text">{contact.title}</h3>
+        <p className="section-sub-text">{t(Home.Contact.subTitle)}</p>
+        <h3 className="section-head-text">{t(Home.Contact.title)}</h3>
         <Form />
       </motion.div>
 
