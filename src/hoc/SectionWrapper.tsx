@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { motion } from '@/plugins/FramerMotion'
 
 const SectionWrapper = (Component: React.FC, idName: string) => {
   return function HOC() {

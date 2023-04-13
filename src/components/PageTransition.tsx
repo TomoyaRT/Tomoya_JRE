@@ -1,13 +1,7 @@
-import { motion } from 'framer-motion'
+import { motion } from '@/plugins/FramerMotion'
 import { useDimensions } from '@/hooks/useDimensions'
 import { useRef, useState } from 'react'
-import {
-  divide as _divide,
-  ceil as _ceil,
-  flow as _flow,
-  range as _range,
-} from 'lodash-es'
-import { delay as _delay } from 'lodash-es'
+import { range, flow, ceil, divide, delay } from '@/plugins/Lodash'
 
 const staggerConfig = {
   initial: {},
@@ -46,7 +40,7 @@ const PageTransition = () => {
   const pageContainerRef = useRef(null)
   const [isLoading, setIsLoading] = useState(false)
   const { width, height } = useDimensions(pageContainerRef)
-  const getWidthFlow = _flow(_divide, _ceil)
+  const getWidthFlow = flow(divide, ceil)
 
   // 第一段動畫時間 -> (7*0.05) + 0.5 = 0.85
   // delay -> 0.3
@@ -62,10 +56,10 @@ const PageTransition = () => {
       variants={staggerConfig}
       initial="initial"
       animate={isLoading ? 'endLoading' : 'startLoading'}
-      onAnimationComplete={() => _delay(() => setIsLoading(true), 300)}
+      onAnimationComplete={() => delay(() => setIsLoading(true), 300)}
       className={`fixed top-0 left-0 w-[100vw] h-[100vh] flex z-50`}
     >
-      {_range(lineNumber).map((i) => {
+      {range(lineNumber).map((i) => {
         return (
           <motion.div
             key={i}

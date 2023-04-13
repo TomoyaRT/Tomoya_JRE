@@ -90,7 +90,7 @@ const Languages = () => {
           className="cursor-pointer text-gray-900 relative select-none py-2 pl-3 pr-9"
           id="listbox-option-0"
           role="option"
-          onClick={() => languageButtonHandler('ch')}
+          onClick={() => languageButtonHandler('zh-TW')}
         >
           <div className="flex items-center">
             <Image
@@ -103,7 +103,7 @@ const Languages = () => {
             <span className="font-normal ml-3 block truncate">Chinese</span>
           </div>
 
-          {language === 'ch' && (
+          {language === 'zh-TW' && (
             <span className="text-indigo-600 absolute inset-y-0 right-0 flex items-center pr-4">
               <svg
                 className="h-5 w-5"
@@ -150,7 +150,9 @@ const DesktopNavbar: React.FC = () => {
         <div className="flex">
           <Languages />
           <button className="rounded-md border-2 text-white px-3 py-1">
-            Resume
+            <a href="/resume/Roger.pdf" download>
+              Resume
+            </a>
           </button>
         </div>
       </div>

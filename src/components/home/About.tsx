@@ -1,5 +1,5 @@
 import Tilt from 'react-parallax-tilt'
-import { motion } from 'framer-motion'
+import { motion } from '@/plugins/FramerMotion'
 import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
 
@@ -24,13 +24,13 @@ const CardContent = ({
   const { t } = useTranslation('Home')
 
   const containerHoverStyles =
-    'group hover:bg-primary hover:transition hover:ease-in hover:duration-500'
+    'group hover:bg-primary hover:transition hover:ease-in hover:duration-300'
   const imgHoverStyles =
-    'group-hover:opacity-0 group-hover:-z-10 group-hover:transition group-hover:duration-300'
+    'group-hover:opacity-0 group-hover:-z-10 group-hover:ease-in group-hover:transition group-hover:duration-300'
   const h3HoverStyles =
-    'group-hover:opacity-0 group-hover:-z-10 group-hover:transition group-hover:duration-300'
+    'group-hover:opacity-0 group-hover:-z-10 group-hover:ease-in group-hover:transition group-hover:duration-300'
   const skillsHoverStyles =
-    'group-hover:opacity-100 group-hover:z-10 group-hover:transition group-hover:duration-300'
+    'group-hover:opacity-100 group-hover:z-10 group-hover:ease-in group-hover:transition group-hover:duration-300'
 
   return (
     <div

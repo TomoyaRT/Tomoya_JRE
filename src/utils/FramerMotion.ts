@@ -1,23 +1,23 @@
-import { constant as _constant, cond as _cond } from 'lodash-es'
+import { constant, cond } from '@/plugins/Lodash'
 import { Direction, Ease, Type } from '@/types'
 
 const getAxisValue = (value = 0) => {
-  return _cond([
+  return cond([
     [
       (direction: Direction) => direction === Direction.Left,
-      _constant({ x: value, y: 0 }),
+      constant({ x: value, y: 0 }),
     ],
     [
       (direction: Direction) => direction === Direction.Right,
-      _constant({ x: -value, y: 0 }),
+      constant({ x: -value, y: 0 }),
     ],
     [
       (direction: Direction) => direction === Direction.Up,
-      _constant({ x: 0, y: value }),
+      constant({ x: 0, y: value }),
     ],
     [
       (direction: Direction) => direction === Direction.Down,
-      _constant({ x: 0, y: -value }),
+      constant({ x: 0, y: -value }),
     ],
   ])
 }

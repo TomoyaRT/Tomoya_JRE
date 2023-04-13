@@ -1,7 +1,7 @@
 import { useAppDispatch } from '@/hooks/useStore'
 import { useRouter } from 'next/router'
 import { updateLoading } from '@/store/slices/pageTransitionSlice'
-import { delay as _delay } from 'lodash-es'
+import { delay } from '@/plugins/Lodash'
 import { Route } from '@/types'
 
 interface Props {
@@ -19,8 +19,8 @@ const Link = (props: Props) => {
     event.preventDefault()
     dispatch(updateLoading(true))
     router.prefetch(path)
-    _delay(() => router.push(path), 850)
-    _delay(() => dispatch(updateLoading(false)), 2000)
+    delay(() => router.push(path), 850)
+    delay(() => dispatch(updateLoading(false)), 2000)
   }
 
   return (

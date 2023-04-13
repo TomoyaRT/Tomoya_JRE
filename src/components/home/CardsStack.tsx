@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { divide as _divide, round as _round } from 'lodash-es'
 import { useSprings, animated, to as interpolate } from '@react-spring/web'
 import { useDrag } from '@use-gesture/react'
 

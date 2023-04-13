@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { motion } from '@/plugins/FramerMotion'
 import { fadeIn } from '@/utils/FramerMotion'
 import { Direction, Type, Ease } from '@/types'
 

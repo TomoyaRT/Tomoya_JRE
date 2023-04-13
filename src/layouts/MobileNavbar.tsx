@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { motion, useCycle } from 'framer-motion'
+import { motion, useCycle } from '@/plugins/FramerMotion'
 import { useDimensions } from '@/hooks/useDimensions'
 import { Animation } from '@/constants'
 import { Routes } from '@/constants/Home'

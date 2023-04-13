@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { motion } from '@/plugins/FramerMotion'
 import { ReactNode } from 'react'
 
 interface Props {

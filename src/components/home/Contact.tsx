@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic'
-import { motion } from 'framer-motion'
+import { motion } from '@/plugins/FramerMotion'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'

@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { motion } from '@/plugins/FramerMotion'
 import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
 

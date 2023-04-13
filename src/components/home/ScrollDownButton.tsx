@@ -1,5 +1,5 @@
 import { Animation } from '@/constants'
-import { motion } from 'framer-motion'
+import { motion } from '@/plugins/FramerMotion'
 const { scrollDownButton } = Animation
 
 const ScrollDownButton: React.FC = () => {
