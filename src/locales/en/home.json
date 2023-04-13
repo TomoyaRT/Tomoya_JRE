@@ -25,6 +25,10 @@
     "BackEnd": "Back-end",
     "Other": "Other"
   },
+  "Portfolio": {
+    "Title": "Portfolio",
+    "SubTitle": "Discover My Technical Abilities"
+  },
   "Journey": {
     "Title": "Learning Journey",
     "SubTitle": "My experience in the software industry.",
@@ -63,6 +67,18 @@
         "Learn how to create animations using Framer Motion and Anime.js by watching tutorial videos on YouTube and reading the official documentation."
       ]
     }
+  },
+  "WorkExperience": {
+    "Title": "Work Experience",
+    "SubTitle": "View My Latest Work Experience",
+    "Description": [
+      "Developing and maintaining the front-end and back-end of an online food ordering system for approximately 3,000 restaurants.",
+      "Individually creating the iMenu reservation system and its back-end, currently used by approximately 80 restaurants.",
+      "Integrating StreetPay payment system for both web and app interfaces, currently used by approximately 161 restaurants.",
+      "Developing the front-end for integrating and working with E.SUN bank and MyWallet payment systems.",
+      "Optimizing iMenu's menu image rendering issue, improving FPS from 15 to 55.",
+      "Optimizing front-end project packaging, reducing size from 1719KiB to 544KiB."
+    ]
   },
   "BookClub": {
     "Title": "Book Club",
