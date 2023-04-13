@@ -26,7 +26,7 @@ const TiltImgCard = (props: TiltImgCardProps) => {
           alt={name}
           width={320}
           height={260}
-          className="object-cover rounded-2xl"
+          className="w-[320px] h-[260px] object-cover rounded-2xl"
         />
       </div>
       <div className="mt-5">
