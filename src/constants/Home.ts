@@ -64,68 +64,72 @@ const AboutCards = [
     ],
   },
 ]
-const Portfolio = [
-  {
-    name: 'Car Rent',
-    description:
-      'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
-    tags: [
-      {
-        name: 'react',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'mongodb',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'tailwind',
-        color: 'pink-text-gradient',
-      },
-    ],
-    image: carrent,
-  },
-  {
-    name: 'Job IT',
-    description:
-      'Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.',
-    tags: [
-      {
-        name: 'react',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'restapi',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'scss',
-        color: 'pink-text-gradient',
-      },
-    ],
-    image: jobit,
-  },
-  {
-    name: 'Trip Guide',
-    description:
-      'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
-    tags: [
-      {
-        name: 'nextjs',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'supabase',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'css',
-        color: 'pink-text-gradient',
-      },
-    ],
-    image: tripguide,
-  },
-]
+const Portfolio = {
+  title: 'Portfolio.Title',
+  subTitle: 'Portfolio.SubTitle',
+  data: [
+    {
+      name: 'Car Rent',
+      description:
+        'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
+      tags: [
+        {
+          name: 'react',
+          color: 'blue-text-gradient',
+        },
+        {
+          name: 'mongodb',
+          color: 'green-text-gradient',
+        },
+        {
+          name: 'tailwind',
+          color: 'pink-text-gradient',
+        },
+      ],
+      image: carrent,
+    },
+    {
+      name: 'Job IT',
+      description:
+        'Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.',
+      tags: [
+        {
+          name: 'react',
+          color: 'blue-text-gradient',
+        },
+        {
+          name: 'restapi',
+          color: 'green-text-gradient',
+        },
+        {
+          name: 'scss',
+          color: 'pink-text-gradient',
+        },
+      ],
+      image: jobit,
+    },
+    {
+      name: 'Trip Guide',
+      description:
+        'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
+      tags: [
+        {
+          name: 'nextjs',
+          color: 'blue-text-gradient',
+        },
+        {
+          name: 'supabase',
+          color: 'green-text-gradient',
+        },
+        {
+          name: 'css',
+          color: 'pink-text-gradient',
+        },
+      ],
+      image: tripguide,
+    },
+  ],
+}
 const Journey = {
   title: 'Journey.Title',
   subTitle: 'Journey.SubTitle',
@@ -137,11 +141,8 @@ const Journey = {
       iconBg: '#ffffff',
       date: 'Journey.SelfTaught.Date',
       points: [
-        // 購買 hexschool 的課程自學前端技能
         'Journey.SelfTaught.Points.0',
-        // 購買 tenlong 書局的書籍學習 JavaScript 與 Vue
         'Journey.SelfTaught.Points.1',
-        // 看 Youtuber Amos 的教學影片學習 HTML 與 CSS
         'Journey.SelfTaught.Points.2',
       ],
     },
@@ -152,13 +153,9 @@ const Journey = {
       iconBg: '#ffffff',
       date: 'Journey.FrontEndDeveloper.Date',
       points: [
-        // 負責開發與維護訂餐網站的前後台專案
         'Journey.FrontEndDeveloper.Points.0',
-        // 開發訂位服務，並串接Line LIFF與行事曆功能，提供使用者更方便地使用訂位服務。
         'Journey.FrontEndDeveloper.Points.1',
-        // 串接 JKO Pay 金流與 JKO APP 的服務，提供更多元的支付方式。
         'Journey.FrontEndDeveloper.Points.2',
-        // 串接 Bank SinoPac 金流，開發儲值金服務，包括 QR Code 掃碼，儲值金方案等服務。
         'Journey.FrontEndDeveloper.Points.3',
       ],
     },
@@ -169,17 +166,34 @@ const Journey = {
       iconBg: '#ffffff',
       date: 'Journey.Relearning.Date',
       points: [
-        // 購買 Udemy 平台的 Next.js 課程學習 SSR, SSG, ISR 與 API Routes 的相關知識
         'Journey.Relearning.Points.0',
-        // 購買 HiSKIO 的 React 課程學習 React, React Router, Redux 的相關知識
         'Journey.Relearning.Points.1',
-        // 購買 Three.js Journey 的 Three.js 課程學習 3D 網站製作的基礎知識
         'Journey.Relearning.Points.2',
-        // 透過 Youtube 與 官方文件學習使用 Framer Motion 與 Anime.js 建構動畫
         'Journey.Relearning.Points.3',
       ],
     },
   ],
+}
+const WorkExperience = {
+  title: 'WorkExperience.Title',
+  subTitle: 'WorkExperience.SubTitle',
+  data: {
+    images: [
+      './work/menu_page.png',
+      './work/qrcode_page.png',
+      './work/wallet_page.png',
+      './work/menu_page.png',
+      './work/menu_page.png',
+    ],
+    description: [
+      'WorkExperience.Description.0',
+      'WorkExperience.Description.1',
+      'WorkExperience.Description.2',
+      'WorkExperience.Description.3',
+      'WorkExperience.Description.4',
+      'WorkExperience.Description.5',
+    ],
+  },
 }
 const BookClub = {
   title: 'BookClub.Title',
@@ -399,6 +413,7 @@ export {
   Portfolio,
   AboutCards,
   Journey,
+  WorkExperience,
   BookClub,
   Contact,
   posts,
