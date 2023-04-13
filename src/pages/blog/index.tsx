@@ -2,9 +2,8 @@ import PostCard from '@/components/blog/PostCard'
 import Stagger from '@/components/animation/Stagger'
 import { Home } from '@/constants'
 
-// 首頁 -> Blog -> Post 3篇文章
-// Blog -> Post 全部文章 (可以考慮做個假Loading無線滾動與視圖內Dom渲染)
-// 將 PostCard.tsx 寫成一個共用 Card -> Home, Blog使用
+import type { GetStaticProps } from 'next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const Blog = () => {
   return (
@@ -20,6 +19,19 @@ const Blog = () => {
       </div>
     </div>
   )
+}
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  if (!locale) {
+    throw new Error('locale is undefined')
+  }
+  const Home = await serverSideTranslations(locale, ['Home'])
+
+  return {
+    props: {
+      ...Home,
+    },
+  }
 }
 
 export default Blog
