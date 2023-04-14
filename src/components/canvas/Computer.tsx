@@ -9,7 +9,7 @@ import { computer } from '@/constants/Canvas'
 interface ComputerProps {
   computerScale: number
   computerPosition: number[]
-  lightPosition: [number, number, number]
+  lightPosition: number[] | any
 }
 const Computer = (props: ComputerProps) => {
   const { computerScale, computerPosition, lightPosition } = props

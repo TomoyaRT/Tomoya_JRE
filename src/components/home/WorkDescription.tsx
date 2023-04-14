@@ -12,11 +12,11 @@ const Item = ({ index, text }: ItemProps) => {
     <motion.div
       className="text-slate-500 text-[18px] text-start hover:text-white hover:transition hover:duration-300"
       variants={fadeIn(
-        Direction.Down,
+        Direction.Right,
         Type.Spring,
-        index * 0.3,
-        0.8,
-        Ease.EaseInOut
+        index * 0.2,
+        0.6,
+        Ease.EaseOut
       )}
     >
       {text}

@@ -1,15 +1,25 @@
 import { useState, useRef, Suspense } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { PointMaterial, Points, Preload } from '@react-three/drei'
-import * as random from 'maath/random/dist/maath-random.esm'
+import { random } from 'maath'
 
-const Stars = (props) => {
+type elType = {
+  rotation: {
+    x: number
+    y: number
+  }
+}
+
+const Stars = (props: any) => {
   const ref = useRef()
   const sphere = random.inSphere(new Float32Array(4500), { radius: 1.2 })
 
   useFrame((state, delta) => {
-    ref.current.rotation.x -= delta / 10
-    ref.current.rotation.y -= delta / 15
+    if (ref.current) {
+      const el: elType = ref.current
+      el.rotation.x -= delta / 10
+      el.rotation.y -= delta / 15
+    }
   })
 
   return (

@@ -1,6 +1,8 @@
 import React, { useRef, useEffect } from 'react'
 
-const ParticlesText = (props) => {
+type Props = {}
+
+const ParticlesText = (props: Props) => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
@@ -19,26 +21,35 @@ const ParticlesText = (props) => {
       },
     }
     const Mouse = {
-      x: null,
-      y: null,
+      x: 0,
+      y: 0,
       radius: 65,
     }
-    const particleArray = []
+    const particleArray: Particle[] = []
 
     // Canvas | Context
-    const canvas = canvasRef.current
+    const canvas = canvasRef.current as HTMLCanvasElement
     canvas.width = Size.width
     canvas.height = Size.height
-    const context = canvas.getContext('2d', { willReadFrequently: true })
+    const context = canvas.getContext('2d', {
+      willReadFrequently: true,
+    }) as CanvasRenderingContext2D
     context.fillStyle = Text.fillStyle
     context.font = Text.font
     context.fillText(Text.fillText.text, Text.fillText.x, Text.fillText.y)
 
     const textCoordinates = context.getImageData(0, 0, 100, 30)
-    let animationFrameId
+    let animationFrameId: number
 
     class Particle {
-      constructor(x, y) {
+      x: number
+      y: number
+      size: number
+      baseX: number
+      baseY: number
+      density: number
+
+      constructor(x: number, y: number) {
         this.x = x
         this.y = y
         this.size = 2
