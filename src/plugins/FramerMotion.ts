@@ -1,3 +1,3 @@
-import { motion, useCycle } from 'framer-motion'
+import { motion, useCycle, useAnimationControls } from 'framer-motion'
 
-export { motion, useCycle }
+export { motion, useCycle, useAnimationControls }
