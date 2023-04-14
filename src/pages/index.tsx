@@ -16,9 +16,7 @@ const StarsCanvas = dynamic(() => import('@/components/canvas/Stars'), {
 const Home: React.FC = () => {
   return (
     <div className="relative z-0">
-      <div className="home-pattern bg-cover bg-no-repeat bg-center">
-        <Hero />
-      </div>
+      <Hero />
       <About />
       <Portfolio />
       <Journey />
