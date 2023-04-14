@@ -1,6 +1,6 @@
 import SectionWrapper from '@/hoc/SectionWrapper'
 import CardsStack from '@/components/home/CardsStack'
-import SectionHead from '@/components/home/SectionHead'
+import SectionHead from '@/components/animation/SectionHead'
 import WorkDescription from '@/components/home/WorkDescription'
 import { useTranslation } from 'next-i18next'
 import { WorkExperience as WorkExperienceText } from '@/constants/Home'

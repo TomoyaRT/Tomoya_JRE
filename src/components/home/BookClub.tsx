@@ -2,7 +2,7 @@ import { motion } from '@/plugins/FramerMotion'
 import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
 
-import SectionHead from '@/components/home/SectionHead'
+import SectionHead from '@/components/animation/SectionHead'
 import { fadeIn } from '@/utils/FramerMotion'
 import { Direction, Type, Ease } from '@/types'
 import SectionWrapper from '@/hoc/SectionWrapper'

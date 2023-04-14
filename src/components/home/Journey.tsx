@@ -6,7 +6,7 @@ import 'react-vertical-timeline-component/style.min.css'
 import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
 
-import SectionHead from '@/components/home/SectionHead'
+import SectionHead from '@/components/animation/SectionHead'
 import SectionWrapper from '@/hoc/SectionWrapper'
 import { Journey as JourneyText } from '@/constants/Home'
 

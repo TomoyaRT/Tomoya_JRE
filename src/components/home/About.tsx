@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
 
 import SectionWrapper from '@/hoc/SectionWrapper'
-import SectionHead from '@/components/home/SectionHead'
+import SectionHead from '@/components/animation/SectionHead'
 import { fadeIn } from '@/utils/FramerMotion'
 import { Direction, Type, Ease } from '@/types'
 import { About as AboutText, AboutCards } from '@/constants/Home'

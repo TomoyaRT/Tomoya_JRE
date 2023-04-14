@@ -1,7 +1,7 @@
 import { useTranslation } from 'next-i18next'
 import { motion } from '@/plugins/FramerMotion'
 
-import SectionHead from '@/components/home/SectionHead'
+import SectionHead from '@/components/animation/SectionHead'
 import { Portfolio as PortfolioText } from '@/constants/Home'
 import SectionWrapper from '@/hoc/SectionWrapper'
 import TiltImgCard from '@/components/TiltImgCard'
