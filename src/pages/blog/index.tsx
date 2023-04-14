@@ -1,6 +1,6 @@
 import PostCard from '@/components/blog/PostCard'
 import Stagger from '@/components/animation/Stagger'
-import { Home } from '@/constants'
+import { posts } from '@/constants/Home'
 
 import type { GetStaticProps } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
@@ -11,7 +11,7 @@ const Blog = () => {
       <div className="mx-auto max-w-[1024px]">
         <Stagger stagger={0.2} delay={0}>
           <div className="pt-24 grid grid-cols-1 mobile:grid-cols-2 lg:grid-cols-3 gap-10">
-            {Home.posts.map((post, index) => (
+            {posts.map((post, index) => (
               <PostCard key={`post-${index}`} index={index} {...post} />
             ))}
           </div>

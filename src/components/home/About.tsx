@@ -7,7 +7,7 @@ import SectionWrapper from '@/hoc/SectionWrapper'
 import SectionHead from '@/components/home/SectionHead'
 import { fadeIn } from '@/utils/FramerMotion'
 import { Direction, Type, Ease } from '@/types'
-import { Home } from '@/constants'
+import { About as AboutText, AboutCards } from '@/constants/Home'
 
 interface CardProps {
   index: number
@@ -87,19 +87,19 @@ const About: React.FC = () => {
   return (
     <>
       <SectionHead
-        title={t(Home.About.title)}
-        subTitle={t(Home.About.subTitle)}
+        title={t(AboutText.title)}
+        subTitle={t(AboutText.subTitle)}
         styleType="hero"
       />
       <motion.p
         variants={fadeIn(Direction.None, Type.Spring, 0.1, 1, Ease.EaseOut)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        {t(Home.About.description)}
+        {t(AboutText.description)}
       </motion.p>
 
       <div className="mt-20 grid mobile:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-        {Home.AboutCards.map((item, index) => (
+        {AboutCards.map((item, index) => (
           <Card key={item.title} index={index} {...item} />
         ))}
       </div>

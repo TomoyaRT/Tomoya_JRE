@@ -4,8 +4,7 @@ import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
 
 import useViewport from '@/hooks/useViewport'
 import CanvasLoader from '@/components/canvas/Loader'
-import { Canvas as CanvasConstants } from '@/constants'
-const { computer } = CanvasConstants
+import { computer } from '@/constants/Canvas'
 
 interface ComputerProps {
   computerScale: number

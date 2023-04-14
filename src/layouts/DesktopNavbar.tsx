@@ -2,9 +2,9 @@ import Link from '@/components/Link'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
-import { Public } from '@/constants'
+import { American, Taiwan } from '@/constants/Public'
 import { useTranslation } from 'next-i18next'
-import { Home } from '@/constants'
+import { Routes } from '@/constants/Routes'
 
 const Languages = () => {
   const router = useRouter()
@@ -33,7 +33,7 @@ const Languages = () => {
             width={50}
             height={50}
             alt=""
-            src={language === 'en' ? Public.American : Public.Taiwan}
+            src={language === 'en' ? American : Taiwan}
             className="h-5 w-5 flex-shrink-0 rounded-full"
           />
           {isActive && (
@@ -63,7 +63,7 @@ const Languages = () => {
               width={50}
               height={50}
               alt=""
-              src={Public.American}
+              src={American}
               className="h-5 w-5 flex-shrink-0"
             />
             <span className="font-normal ml-3 block truncate">English</span>
@@ -97,7 +97,7 @@ const Languages = () => {
               width={50}
               height={50}
               alt=""
-              src={Public.Taiwan}
+              src={Taiwan}
               className="h-5 w-5 flex-shrink-0"
             />
             <span className="font-normal ml-3 block truncate">Chinese</span>
@@ -136,7 +136,7 @@ const DesktopNavbar: React.FC = () => {
     <nav className="w-full flex items-center mobile:px-16 px-6 py-5 fixed top-0 z-20 bg-primary">
       <div className="w-full flex justify-between items-center max-w-7xl">
         <ul className="list-none flex flex-row gap-10">
-          {Home.Routes.map((route) => {
+          {Routes.map((route) => {
             const { path, name } = route
             return (
               <Link

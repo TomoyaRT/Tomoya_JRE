@@ -3,8 +3,8 @@ import CardsStack from '@/components/home/CardsStack'
 import SectionHead from '@/components/home/SectionHead'
 import WorkDescription from '@/components/home/WorkDescription'
 import { useTranslation } from 'next-i18next'
-import { Home } from '@/constants'
-const { title, subTitle, data } = Home.WorkExperience
+import { WorkExperience as WorkExperienceText } from '@/constants/Home'
+const { title, subTitle, data } = WorkExperienceText
 
 const WorkExperience = () => {
   const { t } = useTranslation('Home')

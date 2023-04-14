@@ -7,12 +7,13 @@ import DesktopNavbar from '@/layouts/DesktopNavbar'
 import PageTransition from '@/components/PageTransition'
 import useMediaQuery from '@/hooks/useMediaQuery'
 import { useAppSelector } from '@/hooks/useStore'
-import { Home } from '@/constants'
+import { Head as HeadText } from '@/constants/Home'
 
 const Layout = (props: PropsWithChildren) => {
   const { t } = useTranslation('Home')
   const isMobile = useMediaQuery('(max-width: 500px)')
-  const Navbar = isMobile ? <MobileNavbar /> : <DesktopNavbar />
+  const Navbar =
+    isMobile !== null ? isMobile ? <MobileNavbar /> : <DesktopNavbar /> : null
   const pageTransitionReducer = useAppSelector(
     (state) => state.pageTransitionReducer
   )
@@ -21,9 +22,9 @@ const Layout = (props: PropsWithChildren) => {
   return (
     <>
       <Head
-        title={t(Home.Head.title)}
-        description={t(Home.Head.description)}
-        icon={Home.Head.icon}
+        title={t(HeadText.title)}
+        description={t(HeadText.description)}
+        icon={HeadText.icon}
       />
       {isLoading && <PageTransition />}
       {Navbar}

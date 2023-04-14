@@ -6,7 +6,7 @@ import SectionHead from '@/components/home/SectionHead'
 import { fadeIn } from '@/utils/FramerMotion'
 import { Direction, Type, Ease } from '@/types'
 import SectionWrapper from '@/hoc/SectionWrapper'
-import { Home } from '@/constants'
+import { BookClub as BookClubText } from '@/constants/Home'
 
 interface Props {
   index: number
@@ -66,13 +66,13 @@ const BookClub = () => {
     <div className="mt-12 bg-black-100 rounded-[20px]">
       <div className="padding bg-tertiary rounded-2xl min-h-[300px]">
         <SectionHead
-          title={t(Home.BookClub.title)}
-          subTitle={t(Home.BookClub.subTitle)}
+          title={t(BookClubText.title)}
+          subTitle={t(BookClubText.subTitle)}
           styleType="section"
         />
       </div>
       <div className="padding-x -mt-20 pb-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {Home.BookClub.thoughts.map((testimonial, index) => (
+        {BookClubText.thoughts.map((testimonial, index) => (
           <Card key={testimonial.name} index={index} {...testimonial} />
         ))}
       </div>

@@ -10,20 +10,6 @@ import {
   appIcon,
 } from '@/constants/Public'
 
-const Routes = [
-  {
-    path: '/',
-    name: 'Routes.Home',
-  },
-  {
-    path: '/blog',
-    name: 'Routes.Blog',
-  },
-  {
-    path: '/portfolio',
-    name: 'Routes.Portfolio',
-  },
-]
 const Head = {
   title: 'Head.Title',
   description: 'Head.Description',
@@ -406,7 +392,6 @@ const posts = [
 ]
 
 export {
-  Routes,
   Head,
   Hero,
   About,

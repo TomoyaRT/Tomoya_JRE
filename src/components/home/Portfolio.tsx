@@ -2,7 +2,7 @@ import { useTranslation } from 'next-i18next'
 import { motion } from '@/plugins/FramerMotion'
 
 import SectionHead from '@/components/home/SectionHead'
-import { Home } from '@/constants'
+import { Portfolio as PortfolioText } from '@/constants/Home'
 import SectionWrapper from '@/hoc/SectionWrapper'
 import TiltImgCard from '@/components/TiltImgCard'
 import { fadeIn } from '@/utils/FramerMotion'
@@ -14,12 +14,12 @@ const Portfolio = () => {
   return (
     <>
       <SectionHead
-        title={t(Home.Portfolio.title)}
-        subTitle={t(Home.Portfolio.subTitle)}
+        title={t(PortfolioText.title)}
+        subTitle={t(PortfolioText.subTitle)}
         styleType="hero"
       />
       <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        {Home.Portfolio.data.map((item, index) => (
+        {PortfolioText.data.map((item, index) => (
           <motion.div
             className="mx-auto"
             key={item.name}

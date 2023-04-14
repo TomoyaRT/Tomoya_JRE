@@ -9,7 +9,7 @@ import { useTranslation } from 'next-i18next'
 import SectionWrapper from '@/hoc/SectionWrapper'
 import { fadeIn } from '@/utils/FramerMotion'
 import { Direction, Type, Ease } from '@/types'
-import { Home } from '@/constants'
+import { Contact as ContactText } from '@/constants/Home'
 const EarthCanvas = dynamic(() => import('@/components/canvas/Earth'), {
   ssr: false,
 })
@@ -65,36 +65,36 @@ const Form: React.FC = () => {
       className="mt-12 flex flex-col gap-10"
     >
       <FormWrapper
-        title={t(Home.Contact.form.name.title)}
+        title={t(ContactText.form.name.title)}
         errorMessage={errors?.name && errors.name.message}
       >
         <input
           type="text"
           {...register('name')}
-          placeholder={`${t(Home.Contact.form.name.placeholder)}`}
+          placeholder={`${t(ContactText.form.name.placeholder)}`}
           className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
         />
       </FormWrapper>
 
       <FormWrapper
-        title={t(Home.Contact.form.email.title)}
+        title={t(ContactText.form.email.title)}
         errorMessage={errors?.email && errors.email.message}
       >
         <input
           type="email"
           {...register('email')}
-          placeholder={`${t(Home.Contact.form.email.placeholder)}`}
+          placeholder={`${t(ContactText.form.email.placeholder)}`}
           className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
         />
       </FormWrapper>
 
       <FormWrapper
-        title={t(Home.Contact.form.message.title)}
+        title={t(ContactText.form.message.title)}
         errorMessage={errors?.message && errors.message.message}
       >
         <textarea
           {...register('message')}
-          placeholder={`${t(Home.Contact.form.message.placeholder)}`}
+          placeholder={`${t(ContactText.form.message.placeholder)}`}
           className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
         />
       </FormWrapper>
@@ -103,7 +103,7 @@ const Form: React.FC = () => {
         type="submit"
         className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
       >
-        {t(Home.Contact.form.button[0])}
+        {t(ContactText.form.button[0])}
       </button>
     </form>
   )
@@ -118,8 +118,8 @@ const Contact = () => {
         variants={fadeIn(Direction.Right, Type.Tween, 0.2, 0.75, Ease.EaseOut)}
         className="flex-[0.7] bg-black-100 p-8 rounded-2xl"
       >
-        <p className="section-sub-text">{t(Home.Contact.subTitle)}</p>
-        <h3 className="section-head-text">{t(Home.Contact.title)}</h3>
+        <p className="section-sub-text">{t(ContactText.subTitle)}</p>
+        <h3 className="section-head-text">{t(ContactText.title)}</h3>
         <Form />
       </motion.div>
 

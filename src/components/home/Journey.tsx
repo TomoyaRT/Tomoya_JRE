@@ -8,7 +8,7 @@ import { useTranslation } from 'next-i18next'
 
 import SectionHead from '@/components/home/SectionHead'
 import SectionWrapper from '@/hoc/SectionWrapper'
-import { Home } from '@/constants'
+import { Journey as JourneyText } from '@/constants/Home'
 
 interface JourneyCardProps {
   title: string
@@ -79,14 +79,14 @@ const Journey: React.FC = () => {
   return (
     <>
       <SectionHead
-        title={t(Home.Journey.title)}
-        subTitle={t(Home.Journey.subTitle)}
+        title={t(JourneyText.title)}
+        subTitle={t(JourneyText.subTitle)}
         styleType="hero"
       />
 
-      <div className="mt-20 flex flex-col">
+      <div className="mt-20 flex flex-col overflow-hidden">
         <VerticalTimeline>
-          {Home.Journey.data.map((item, index) => (
+          {JourneyText.data.map((item, index) => (
             <JourneyCard key={index} {...item} />
           ))}
         </VerticalTimeline>
