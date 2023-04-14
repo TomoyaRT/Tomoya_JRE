@@ -37,7 +37,7 @@ const StarsCanvas = () => {
       >
         <Suspense fallback={null}>
           <Stars />
-          <Preload all />
+          <Preload />
         </Suspense>
       </Canvas>
     </div>
