@@ -2,9 +2,10 @@ import { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
 import CanvasLoader from '@/components/canvas/Loader'
+import { Planet_Model } from '@/constants/Public'
 
 const Earth = () => {
-  const earth = useGLTF('./planet/scene.gltf')
+  const earth = useGLTF(Planet_Model)
 
   return (
     <primitive
@@ -19,6 +20,7 @@ const Earth = () => {
 const EarthCanvas = () => {
   return (
     <Canvas
+      className="cursor-pointer"
       shadows
       frameloop="demand"
       gl={{ preserveDrawingBuffer: true }}

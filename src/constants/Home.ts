@@ -1,19 +1,29 @@
 import {
-  mobile,
-  backend,
-  creator,
-  web,
-  carrent,
-  jobit,
-  tripguide,
-  damaiLogo,
-  appIcon,
+  Front_End,
+  Animation,
+  Back_End,
+  Other,
+  Damai_Logo,
+  Damai_Menu_Page,
+  Damai_QR_Code_Page,
+  Damai_Wallet_Page,
+  App_Icon,
+  Easy_Eat,
+  Mask_Map,
+  Tomoya_JRE,
 } from '@/constants/Public'
+
+const Colors = {
+  white: '#FFFFFF',
+  blue: 'blue-text-gradient',
+  green: 'green-text-gradient',
+  pink: 'pink-text-gradient',
+}
 
 const Head = {
   title: 'Head.Title',
   description: 'Head.Description',
-  icon: appIcon,
+  icon: App_Icon,
 }
 const Hero = ['Hero.0', 'Hero.1', 'Hero.2', 'Hero.3']
 const About = {
@@ -24,22 +34,22 @@ const About = {
 const AboutCards = [
   {
     title: 'AboutCards.FrontEnd',
-    icon: web,
-    description: ['Vue', 'Vuex', 'React', 'Redux', 'Next.js', 'TypeScript'],
+    icon: Front_End,
+    description: ['TypeScript', 'Vue', 'Vuex', 'React', 'Redux', 'Next.js'],
   },
   {
     title: 'AboutCards.Animation',
-    icon: mobile,
+    icon: Animation,
     description: ['Framer Motion', 'GSAP', 'Anime.js', 'Canvas', 'Three.js'],
   },
   {
     title: 'AboutCards.BackEnd',
-    icon: backend,
+    icon: Back_End,
     description: ['Node.js', 'Express', 'Mongo DB'],
   },
   {
     title: 'AboutCards.Other',
-    icon: creator,
+    icon: Other,
     description: [
       'Jest',
       'Cypress',
@@ -55,64 +65,112 @@ const Portfolio = {
   subTitle: 'Portfolio.SubTitle',
   data: [
     {
-      name: 'Car Rent',
+      name: 'Tomoya-JRE',
       description:
-        'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
+        '這是我第一個建立的個人網站。目的是為了有一個空間能紀錄我在前端的點點滴滴，也期望縮短別人認識我的時間成本。(順便學習 NextJS 與 TS)',
       tags: [
         {
-          name: 'react',
-          color: 'blue-text-gradient',
+          name: 'Next.js',
+          color: Colors.blue,
         },
         {
-          name: 'mongodb',
-          color: 'green-text-gradient',
+          name: 'TypeScript',
+          color: Colors.blue,
         },
         {
-          name: 'tailwind',
-          color: 'pink-text-gradient',
+          name: 'Redux',
+          color: Colors.blue,
+        },
+        {
+          name: 'Tailwind CSS',
+          color: Colors.green,
+        },
+        {
+          name: 'Framer Motion',
+          color: Colors.green,
+        },
+        {
+          name: 'Canvas',
+          color: Colors.green,
+        },
+        {
+          name: 'Three.js',
+          color: Colors.green,
+        },
+        {
+          name: 'i18n',
+          color: Colors.pink,
         },
       ],
-      image: carrent,
+      image: Tomoya_JRE,
     },
     {
-      name: 'Job IT',
+      name: 'Mask-Map',
       description:
-        'Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.',
+        '在第一次面試後，我發現我並沒有狀態管理的觀念後，就花了兩週的時間去學習Vuex並建立了這個小專案，希望透過做中學更了解狀態管理。',
       tags: [
         {
-          name: 'react',
-          color: 'blue-text-gradient',
+          name: 'JavaScript',
+          color: Colors.blue,
         },
         {
-          name: 'restapi',
-          color: 'green-text-gradient',
+          name: 'Vue2',
+          color: Colors.blue,
         },
         {
-          name: 'scss',
-          color: 'pink-text-gradient',
+          name: 'Vuex',
+          color: Colors.blue,
+        },
+        {
+          name: 'SCSS',
+          color: Colors.green,
+        },
+        {
+          name: 'Bootstrap',
+          color: Colors.green,
+        },
+        {
+          name: 'Leaflet',
+          color: Colors.pink,
         },
       ],
-      image: jobit,
+      image: Mask_Map,
     },
     {
-      name: 'Trip Guide',
+      name: 'Easy-Eat',
       description:
-        'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
+        '這是我第一個寫的專案。目的是為了能夠成為前端工程師! 並希望打好CSS的基礎，所以這個網站大部分都是純手刻的樣式。',
       tags: [
         {
-          name: 'nextjs',
-          color: 'blue-text-gradient',
+          name: 'JavaScript',
+          color: Colors.blue,
         },
         {
-          name: 'supabase',
-          color: 'green-text-gradient',
+          name: 'Vue2',
+          color: Colors.blue,
         },
         {
-          name: 'css',
-          color: 'pink-text-gradient',
+          name: 'Vue Router',
+          color: Colors.blue,
+        },
+        {
+          name: 'SCSS',
+          color: Colors.green,
+        },
+        {
+          name: 'Chart',
+          color: Colors.green,
+        },
+        {
+          name: 'Vee-Validate',
+          color: Colors.pink,
+        },
+        {
+          name: 'Axios',
+          color: Colors.pink,
         },
       ],
-      image: tripguide,
+      image: Easy_Eat,
     },
   ],
 }
@@ -123,8 +181,8 @@ const Journey = {
     {
       title: 'Journey.SelfTaught.Title',
       company_name: 'Journey.SelfTaught.CompanyName',
-      icon: web,
-      iconBg: '#ffffff',
+      icon: Damai_Logo,
+      iconBg: Colors.white,
       date: 'Journey.SelfTaught.Date',
       points: [
         'Journey.SelfTaught.Points.0',
@@ -135,8 +193,8 @@ const Journey = {
     {
       title: 'Journey.FrontEndDeveloper.Title',
       company_name: 'Journey.FrontEndDeveloper.CompanyName',
-      icon: damaiLogo,
-      iconBg: '#ffffff',
+      icon: Damai_Logo,
+      iconBg: Colors.white,
       date: 'Journey.FrontEndDeveloper.Date',
       points: [
         'Journey.FrontEndDeveloper.Points.0',
@@ -148,8 +206,8 @@ const Journey = {
     {
       title: 'Journey.Relearning.Title',
       company_name: 'Journey.Relearning.CompanyName',
-      icon: web,
-      iconBg: '#ffffff',
+      icon: Damai_Logo,
+      iconBg: Colors.white,
       date: 'Journey.Relearning.Date',
       points: [
         'Journey.Relearning.Points.0',
@@ -165,11 +223,11 @@ const WorkExperience = {
   subTitle: 'WorkExperience.SubTitle',
   data: {
     images: [
-      './work/menu_page.png',
-      './work/qrcode_page.png',
-      './work/wallet_page.png',
-      './work/menu_page.png',
-      './work/menu_page.png',
+      Damai_Menu_Page,
+      Damai_QR_Code_Page,
+      Damai_Wallet_Page,
+      Damai_QR_Code_Page,
+      Damai_Wallet_Page,
     ],
     description: [
       'WorkExperience.Description.0',
@@ -190,21 +248,21 @@ const BookClub = {
       name: 'BookClub.Roger.Name',
       designation: 'BookClub.Roger.Designation',
       company: 'BookClub.Roger.Company',
-      image: damaiLogo,
+      image: Damai_Logo,
     },
     {
       testimonial: 'BookClub.Jim.Testimonial',
       name: 'BookClub.Jim.Name',
       designation: 'BookClub.Jim.Designation',
       company: 'BookClub.Jim.Company',
-      image: damaiLogo,
+      image: Damai_Logo,
     },
     {
       testimonial: 'BookClub.Karol.Testimonial',
       name: 'BookClub.Karol.Name',
       designation: 'BookClub.Karol.Designation',
       company: 'BookClub.Karol.Company',
-      image: damaiLogo,
+      image: Damai_Logo,
     },
   ],
 }
@@ -228,169 +286,6 @@ const Contact = {
   },
 }
 
-const posts = [
-  {
-    name: 'Car Rent',
-    description:
-      'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
-    tags: [
-      {
-        name: 'react',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'mongodb',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'tailwind',
-        color: 'pink-text-gradient',
-      },
-    ],
-    image: carrent,
-  },
-  {
-    name: 'Car Rent',
-    description:
-      'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
-    tags: [
-      {
-        name: 'react',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'mongodb',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'tailwind',
-        color: 'pink-text-gradient',
-      },
-    ],
-    image: carrent,
-  },
-  {
-    name: 'Car Rent',
-    description:
-      'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
-    tags: [
-      {
-        name: 'react',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'mongodb',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'tailwind',
-        color: 'pink-text-gradient',
-      },
-    ],
-    image: carrent,
-  },
-  {
-    name: 'Car Rent',
-    description:
-      'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
-    tags: [
-      {
-        name: 'react',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'mongodb',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'tailwind',
-        color: 'pink-text-gradient',
-      },
-    ],
-    image: carrent,
-  },
-  {
-    name: 'Car Rent',
-    description:
-      'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
-    tags: [
-      {
-        name: 'react',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'mongodb',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'tailwind',
-        color: 'pink-text-gradient',
-      },
-    ],
-    image: carrent,
-  },
-  {
-    name: 'Car Rent',
-    description:
-      'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
-    tags: [
-      {
-        name: 'react',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'mongodb',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'tailwind',
-        color: 'pink-text-gradient',
-      },
-    ],
-    image: carrent,
-  },
-  {
-    name: 'Job IT',
-    description:
-      'Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.',
-    tags: [
-      {
-        name: 'react',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'restapi',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'scss',
-        color: 'pink-text-gradient',
-      },
-    ],
-    image: jobit,
-  },
-  {
-    name: 'Trip Guide',
-    description:
-      'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
-    tags: [
-      {
-        name: 'nextjs',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'supabase',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'css',
-        color: 'pink-text-gradient',
-      },
-    ],
-    image: tripguide,
-  },
-]
-
 export {
   Head,
   Hero,
@@ -401,5 +296,4 @@ export {
   WorkExperience,
   BookClub,
   Contact,
-  posts,
 }

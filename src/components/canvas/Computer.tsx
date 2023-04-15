@@ -5,6 +5,7 @@ import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
 import useViewport from '@/hooks/useViewport'
 import CanvasLoader from '@/components/canvas/Loader'
 import { computer } from '@/constants/Canvas'
+import { Computer_Model } from '@/constants/Public'
 
 interface ComputerProps {
   computerScale: number
@@ -13,7 +14,7 @@ interface ComputerProps {
 }
 const Computer = (props: ComputerProps) => {
   const { computerScale, computerPosition, lightPosition } = props
-  const computer = useGLTF('./desktop_pc/scene.gltf')
+  const computer = useGLTF(Computer_Model)
 
   return (
     <>

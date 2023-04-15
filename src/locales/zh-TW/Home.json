@@ -1,18 +1,22 @@
 {
   "Routes": {
     "Home": "首頁",
-    "Blog": "文章",
-    "Portfolio": "作品集"
+    "Blog": "文章"
   },
   "Head": {
     "Title": "我的網站",
-    "Description": "關於我在前端的紀錄"
+    "Description": "我在前端領域中所獲得的成就"
   },
-  "Hero": ["嗨!我是", "煒皓", "我是一名前端工程師", "特別喜歡網頁互動特效"],
+  "Hero": [
+    "嗨!我是",
+    "煒皓",
+    "我是一名前端工程師",
+    "我正在精進前端領域的道路上。"
+  ],
   "About": {
-    "Title": "介紹",
+    "Title": "簡介",
     "SubTitle": "關於我",
-    "Description": "正式踏入軟體業已經過了一年半，以下是我比較擅長的技術與工具。"
+    "Description": "目前我已經在前端領域有一年多的經驗了，以下是我最近正在學習與曾經使用過的技術。"
   },
   "AboutCards": {
     "FrontEnd": "前端",
@@ -22,7 +26,7 @@
   },
   "Portfolio": {
     "Title": "作品集",
-    "SubTitle": "了解我的技術線"
+    "SubTitle": "做中學"
   },
   "Journey": {
     "Title": "學習歷程",

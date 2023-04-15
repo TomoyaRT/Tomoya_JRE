@@ -2,7 +2,7 @@ import Link from '@/components/Link'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
-import { American, Taiwan } from '@/constants/Public'
+import { EN, TW } from '@/constants/Public'
 import { useTranslation } from 'next-i18next'
 import { Routes } from '@/constants/Routes'
 
@@ -33,7 +33,7 @@ const Languages = () => {
             width={50}
             height={50}
             alt=""
-            src={language === 'en' ? American : Taiwan}
+            src={language === 'en' ? EN : TW}
             className="h-5 w-5 flex-shrink-0 rounded-full"
           />
           {isActive && (
@@ -63,7 +63,7 @@ const Languages = () => {
               width={50}
               height={50}
               alt=""
-              src={American}
+              src={EN}
               className="h-5 w-5 flex-shrink-0"
             />
             <span className="font-normal ml-3 block truncate">English</span>
@@ -97,7 +97,7 @@ const Languages = () => {
               width={50}
               height={50}
               alt=""
-              src={Taiwan}
+              src={TW}
               className="h-5 w-5 flex-shrink-0"
             />
             <span className="font-normal ml-3 block truncate">Chinese</span>
@@ -147,7 +147,7 @@ const DesktopNavbar: React.FC = () => {
             )
           })}
         </ul>
-        <div className="flex">
+        <div className="flex items-center">
           <Languages />
           <button className="rounded-md border-2 text-white px-3 py-1">
             <a href="/resume/Roger.pdf" download>
