@@ -7,6 +7,7 @@ import { ReactNode } from 'react'
 import { useTranslation } from 'next-i18next'
 
 import SectionWrapper from '@/hoc/SectionWrapper'
+import SectionHead from '@/components/animation/SectionHead'
 import { fadeIn } from '@/utils/FramerMotion'
 import { Direction, Type, Ease } from '@/types'
 import { Contact as ContactText } from '@/constants/Home'
@@ -114,15 +115,14 @@ const Contact = () => {
 
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
-      <motion.div
-        variants={fadeIn(Direction.Right, Type.Tween, 0.2, 0.75, Ease.EaseOut)}
-        className="flex-[0.7] bg-black-100 p-8 rounded-2xl"
-      >
-        <p className="section-sub-text">{t(ContactText.subTitle)}</p>
-        <h3 className="section-head-text">{t(ContactText.title)}</h3>
+      <div className="flex-[0.7] bg-black-100 p-8 rounded-2xl">
+        <SectionHead
+          title={t(ContactText.title)}
+          subTitle={t(ContactText.subTitle)}
+          styleType="section"
+        />
         <Form />
-      </motion.div>
-
+      </div>
       <motion.div
         variants={fadeIn(Direction.Left, Type.Tween, 0.2, 0.75, Ease.EaseOut)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
