@@ -13,19 +13,25 @@ const SectionHead = (props: Props) => {
   const { title, subTitle, styleType } = props
   const subTitleSplit = subTitle.split('')
   const titleSplit = title.split('')
+  const getChar = (char: string) => (char === ' ' ? '\u00a0' : char)
+  const useStyles =
+    styleType === 'hero'
+      ? ['hero-title-text', 'hero-sub-title-text']
+      : ['section-title-text', 'section-sub-title-text']
 
   return (
     <motion.div
+      className="select-none"
       variants={fadeIn(Direction.Down, Type.Spring, 0, 1, Ease.EaseOut)}
     >
-      <p className={`${styleType}-sub-text`}>
-        {subTitleSplit.map((text) => (
-          <TextSpan key={text}>{text}</TextSpan>
+      <p className={useStyles[1]}>
+        {subTitleSplit.map((char, idx) => (
+          <TextSpan key={idx}>{getChar(char)}</TextSpan>
         ))}
       </p>
-      <h2 className={`${styleType}-head-text`}>
-        {titleSplit.map((text) => (
-          <TextSpan key={text}>{text}</TextSpan>
+      <h2 className={useStyles[0]}>
+        {titleSplit.map((char, idx) => (
+          <TextSpan key={idx}>{getChar(char)}</TextSpan>
         ))}
       </h2>
     </motion.div>
