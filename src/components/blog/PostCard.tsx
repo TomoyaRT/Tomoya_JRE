@@ -11,6 +11,8 @@ const PostCard = (props: PostCardProps) => {
 
   return (
     <motion.div
+      initial="hidden"
+      whileInView="visible"
       variants={fadeIn(
         Direction.Down,
         Type.Tween,
