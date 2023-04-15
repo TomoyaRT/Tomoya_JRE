@@ -1,29 +1,34 @@
 import React, { useRef, useEffect } from 'react'
 
-type Props = {}
+type Props = {
+  text: string
+  color: string
+  font: string
+}
 
 const ParticlesText = (props: Props) => {
+  const { text, color, font } = props
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
     // Setting
     const Size = {
-      width: 500,
-      height: 200,
+      width: 190,
+      height: 100,
     }
     const Text = {
-      fillStyle: 'white',
-      font: '20px Arial',
+      fillStyle: color,
+      font: `30px ${font}`,
       fillText: {
-        text: "I'm Roger",
-        x: 0,
-        y: 20,
+        text,
+        x: 5,
+        y: 35,
       },
     }
     const Mouse = {
       x: 0,
       y: 0,
-      radius: 65,
+      radius: 30,
     }
     const particleArray: Particle[] = []
 
@@ -38,7 +43,7 @@ const ParticlesText = (props: Props) => {
     context.font = Text.font
     context.fillText(Text.fillText.text, Text.fillText.x, Text.fillText.y)
 
-    const textCoordinates = context.getImageData(0, 0, 100, 30)
+    const textCoordinates = context.getImageData(0, 0, 100, 100)
     let animationFrameId: number
 
     class Particle {
@@ -52,15 +57,16 @@ const ParticlesText = (props: Props) => {
       constructor(x: number, y: number) {
         this.x = x
         this.y = y
-        this.size = 2
+        this.size = 3.5
         this.baseX = this.x
         this.baseY = this.y
-        this.density = Math.random() * 30 + 15
+        this.density = Math.random() * 30 + 10
       }
 
       draw() {
         context.beginPath()
-        context.arc(this.x, this.y, this.size, 0, Math.PI * 2)
+        context.rect(this.x, this.y, this.size, this.size)
+        // context.arc(this.x, this.y, this.size, 0, Math.PI * 2)
         context.closePath()
         context.fill()
       }
@@ -99,7 +105,7 @@ const ParticlesText = (props: Props) => {
             textCoordinates.data[y * 4 * textCoordinates.width + x * 4 + 3] >
             128
           ) {
-            particleArray.push(new Particle(x * 5, y * 5))
+            particleArray.push(new Particle(x * 2, y * 2))
           }
         }
       }
@@ -128,11 +134,9 @@ const ParticlesText = (props: Props) => {
     })
 
     return () => window.cancelAnimationFrame(animationFrameId)
-  }, [])
+  }, [text])
 
-  return (
-    <canvas className="absolute top-0 left-0 z-20" ref={canvasRef} {...props} />
-  )
+  return <canvas ref={canvasRef} />
 }
 
 export default ParticlesText
