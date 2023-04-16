@@ -20,11 +20,11 @@ const HeroDescription = () => {
           <div>{t(Hero[0])}</div>
           <ParticlesText text={t(Hero[1])} color={'#7737ff'} font={'Arial'} />
         </div>
-        <p className="font-medium text-white text-[20px]">
+        <div className="font-medium text-white text-[20px]">
           {t(Hero[2])}
           <br />
-          {t(Hero[3])}
-        </p>
+          <p className="w-[450px]">{t(Hero[3])}</p>
+        </div>
       </div>
     </div>
   )

@@ -11,7 +11,6 @@ const ParticlesText = (props: Props) => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
-    // Setting
     const Size = {
       width: 190,
       height: 100,
@@ -32,7 +31,6 @@ const ParticlesText = (props: Props) => {
     }
     const particleArray: Particle[] = []
 
-    // Canvas | Context
     const canvas = canvasRef.current as HTMLCanvasElement
     canvas.width = Size.width
     canvas.height = Size.height
@@ -57,7 +55,7 @@ const ParticlesText = (props: Props) => {
       constructor(x: number, y: number) {
         this.x = x
         this.y = y
-        this.size = 3.5
+        this.size = 2
         this.baseX = this.x
         this.baseY = this.y
         this.density = Math.random() * 30 + 10
@@ -65,8 +63,7 @@ const ParticlesText = (props: Props) => {
 
       draw() {
         context.beginPath()
-        context.rect(this.x, this.y, this.size, this.size)
-        // context.arc(this.x, this.y, this.size, 0, Math.PI * 2)
+        context.arc(this.x, this.y, this.size, 0, Math.PI * 2)
         context.closePath()
         context.fill()
       }
@@ -110,6 +107,7 @@ const ParticlesText = (props: Props) => {
         }
       }
     }
+
     // 更新粒子的繪製
     function animate() {
       context.clearRect(0, 0, canvas.width, canvas.height)
