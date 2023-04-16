@@ -1,4 +1,5 @@
-import { PropsWithChildren } from 'react'
+import type { PropsWithChildren } from 'react'
+import { useState } from 'react'
 import { useTranslation } from 'next-i18next'
 
 import Head from '@/layouts/Head'
@@ -8,8 +9,11 @@ import PageTransition from '@/components/PageTransition'
 import useMediaQuery from '@/hooks/useMediaQuery'
 import { useAppSelector } from '@/hooks/useStore'
 import { Head as HeadText } from '@/constants/Home'
+import { delay } from '@/plugins/Lodash'
+import FirstLoading from '@/components/FirstLoading'
 
 const Layout = (props: PropsWithChildren) => {
+  const [firstLoading, setFirstLoading] = useState(true)
   const { t } = useTranslation('Home')
   const isMobile = useMediaQuery('(max-width: 500px)')
   const Navbar =
@@ -19,6 +23,11 @@ const Layout = (props: PropsWithChildren) => {
   )
   const isLoading = pageTransitionReducer.loading
 
+  function firstLoadingHandler() {
+    delay(() => setFirstLoading(false), 5000)
+    return <FirstLoading />
+  }
+
   return (
     <>
       <Head
@@ -26,6 +35,7 @@ const Layout = (props: PropsWithChildren) => {
         description={t(HeadText.description)}
         icon={HeadText.icon}
       />
+      {firstLoading && firstLoadingHandler()}
       {isLoading && <PageTransition />}
       {Navbar}
       {props.children}
