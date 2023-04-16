@@ -1,7 +1,6 @@
 import { motion } from '@/plugins/FramerMotion'
-import { useDimensions } from '@/hooks/useDimensions'
-import { useRef, useState } from 'react'
-import { range, flow, ceil, divide, delay } from '@/plugins/Lodash'
+import { useState } from 'react'
+import { range, delay } from '@/plugins/Lodash'
 
 const staggerConfig = {
   initial: {},
@@ -37,22 +36,18 @@ const fadeInConfig = {
 }
 
 const PageTransition = () => {
-  const pageContainerRef = useRef(null)
   const [isLoading, setIsLoading] = useState(false)
-  const { width, height } = useDimensions(pageContainerRef)
-  const getWidthFlow = flow(divide, ceil)
 
   // 第一段動畫時間 -> (7*0.05) + 0.5 = 0.85
   // delay -> 0.3
   // 第二段動畫時間 -> (7*0.05) + 0.5 = 0.85
   const lineNumber = 7
   const lineBgColor = '#000000'
-  const lineWidth = `${getWidthFlow(width, lineNumber)}px`
-  const lineHeight = `${height}px`
+  const lineWidth = '100vw'
+  const lineHeight = '100vh'
 
   return (
     <motion.div
-      ref={pageContainerRef}
       variants={staggerConfig}
       initial="initial"
       animate={isLoading ? 'endLoading' : 'startLoading'}

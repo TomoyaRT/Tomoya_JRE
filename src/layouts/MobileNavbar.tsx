@@ -1,6 +1,4 @@
-import { useRef } from 'react'
 import { motion, useCycle } from '@/plugins/FramerMotion'
-import { useDimensions } from '@/hooks/useDimensions'
 import { mobileNavbar } from '@/constants/Animation'
 import { Routes } from '@/constants/Routes'
 import { useTranslation } from 'next-i18next'
@@ -50,23 +48,19 @@ const MenuItem = ({ name, path, toggleOpen }: MenuItemProps) => {
 
 const MobileNavbar: React.FC = () => {
   const [isOpen, toggleOpen] = useCycle(false, true)
-  const containerRef = useRef(null)
-  const { height } = useDimensions(containerRef)
+  const height = '100vh'
 
   return (
     <motion.nav
-      className={`fixed top-0 right-0 w-full h-full ${
-        isOpen ? 'z-30' : 'z-20'
-      } overflow-hidden`}
-      initial={false}
+      className="fixed top-0 right-0 w-full h-full z-30 overflow-hidden"
+      initial="closed"
       animate={isOpen ? 'open' : 'closed'}
       custom={height}
-      ref={containerRef}
     >
       <motion.div
         className={`${
           isOpen ? 'z-10' : 'z-0'
-        } absolute top-0 right-0 w-[100vw] h-[100vh] bg-indigo-900`}
+        } absolute top-0 right-0 w-full h-full bg-indigo-900`}
         variants={mobileNavbar.circleVariants}
       />
       <motion.ul
