@@ -1,52 +1,52 @@
 {
   "Routes": {
-    "Home": "Home",
-    "Blog": "Blog"
+    "Home": "ホーム",
+    "Blog": "ブログ"
   },
   "Head": {
     "Title": "JRE",
-    "Description": "Do what I enjoy and enjoy life."
+    "Description": "好きなことをして、人生を楽しむ。"
   },
   "Hero": [
-    "Hi, I`m",
-    "Roger",
-    "I am a frontend engineer.",
-    "I am enthusiastic about learning technologies in the front-end field and hope to contribute to society through this skill."
+    "こんにちは！私は",
+    "ともや",
+    "私はフロントエンドエンジニアです。",
+    "私はフロントエンド分野の技術を学ぶことに熱心であり、このスキルを社会に貢献するために活用したいと思っています。"
   ],
   "About": {
-    "Title": "Introduction",
-    "SubTitle": "About Technology",
-    "Description": "I have over a year of experience in the frontend field, and below are the technologies I have used or am currently learning."
+    "Title": "紹介",
+    "SubTitle": "技術について",
+    "Description": "私はフロントエンドの分野で1年以上の経験があり、以下は私が使用したことがあるまたは現在学んでいる技術です。"
   },
   "AboutCards": {
-    "FrontEnd": "Front-end",
-    "Animation": "Animation",
-    "BackEnd": "Back-end",
-    "Other": "Other"
+    "FrontEnd": "フロントエンド",
+    "Animation": "アニメーション",
+    "BackEnd": "バックエンド",
+    "Other": "その他"
   },
   "Portfolio": {
-    "Title": "Portfolio",
-    "SubTitle": "Learning by doing"
+    "Title": "ポートフォリオ",
+    "SubTitle": "作りながら学ぶ"
   },
   "Journey": {
-    "Title": "Learning Journey",
-    "SubTitle": "My experience in the software industry.",
+    "Title": "学習歴程",
+    "SubTitle": "ソフトウェア業界での経験",
     "SelfTaught": {
-      "Title": "Self-Taught Programming",
-      "CompanyName": "Home",
+      "Title": "プログラミング独学",
+      "CompanyName": "家",
       "IconBg": "#ffffff",
-      "Date": "January 2021 - November 2021",
+      "Date": "2021年1月から　2021年11月まで",
       "Points": [
-        "Purchase Hexschool's courses to learn front-end skills through self-study.",
-        "Buy books from Tenlong Bookstore to learn JavaScript and Vue.",
-        "Learn HTML and CSS by watching Amos's tutorial videos on YouTube."
+        "Hexschoolというサイトでコースを購入して、フロントエンドのスキルを学びました。",
+        "本屋のサイトでJavaScriptとVueを学ぶための書籍を購入して勉強しました。",
+        "ユーチューブの動画を見ながらHTMLとCSSを学びました。"
       ]
     },
     "FrontEndDeveloper": {
-      "Title": "Front-end Developer",
+      "Title": "フロントエンドエンジニア",
       "CompanyName": "DAMAI Internet",
       "IconBg": "#ffffff",
-      "Date": "November 2021 - February 2023",
+      "Date": "2021年11月から　2023年2月まで",
       "Points": [
         "Responsible for developing and maintaining the front-end and back-end of a food ordering website project.",
         "Develop a reservation service and integrate Line LIFF and calendar functions to provide users with a more convenient booking experience.",
