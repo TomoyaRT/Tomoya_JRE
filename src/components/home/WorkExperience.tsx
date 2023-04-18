@@ -13,7 +13,7 @@ const WorkExperience = () => {
   return (
     <div className="flex flex-col">
       <SectionHead title={t(title)} subTitle={t(subTitle)} styleType="hero" />
-      <div className="w-full mt-10 flex flex-col md:flex-row  justify-between  items-center">
+      <div className="w-full mt-10 flex flex-col lg:flex-row  justify-between items-center">
         <div className="w-[55vw] h-[45vh] min-w-[350px] min-h-[350px] mb-10 md:min-w-0 md:min-h-0 md:mb-0 md:w-[45vw] md:h-[55vh] lg:w-[35vw] lg:h-[55vh]">
           <WorkDescription data={description} />
         </div>

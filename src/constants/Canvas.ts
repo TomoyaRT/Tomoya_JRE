@@ -20,10 +20,8 @@ const computer = {
     [(width: number) => width > 800, constant([0, -3.25, -1])],
     [(width: number) => width > 700, constant([0, -3, -0.75])],
     [(width: number) => width > 600, constant([0, -2.5, -0.65])],
-    [(width: number) => width > 500, constant([0, -2, -0.5])],
-    [(width: number) => width > 400, constant([0, -1, -0.45])],
-    [(width: number) => width > 300, constant([0, -1, -0.45])],
-    [() => true, constant([0, -1, -0.45])],
+    [(width: number) => width > 500, constant([0, -2.5, -0.5])],
+    [() => true, constant([0, -2, -0.45])],
   ]),
   lightPosition: cond([
     [(width: number) => width > 1280, constant([-20, 50, 10])],

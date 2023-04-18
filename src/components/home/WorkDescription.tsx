@@ -10,7 +10,10 @@ type ItemProps = {
 const Item = ({ index, text }: ItemProps) => {
   return (
     <motion.div
-      className="text-slate-500 text-[18px] text-start hover:text-white hover:transition hover:duration-300"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.25 }}
+      className="text-slate-500 text-[16px] text-start hover:text-white hover:transition hover:duration-300"
       variants={fadeIn(
         Direction.Right,
         Type.Spring,
@@ -39,7 +42,7 @@ const DisplayPanel = ({ data }: DisplayPanelProps) => {
       className="w-full h-full select-none"
     >
       <div className="w-full h-full green-pink-gradient p-[2px] rounded-[20px] shadow-card">
-        <div className="w-full h-full bg-tertiary rounded-[20px] p-6 flex flex-col justify-between">
+        <div className="w-full h-full bg-tertiary rounded-[20px] p-4 flex flex-col justify-between">
           {data.map((text, index) => (
             <Item key={text} index={index} text={text} />
           ))}
