@@ -1,4 +1,4 @@
-import { Post_01, Post_02, Post_03 } from '@/constants/Public'
+import { Tomoya_JRE } from '@/constants/Public'
 
 const Posts = [
   {
@@ -19,7 +19,7 @@ const Posts = [
         color: 'pink-text-gradient',
       },
     ],
-    image: Post_01,
+    image: Tomoya_JRE,
   },
   {
     name: 'Post 02',
@@ -39,7 +39,7 @@ const Posts = [
         color: 'pink-text-gradient',
       },
     ],
-    image: Post_02,
+    image: Tomoya_JRE,
   },
   {
     name: 'Post 03',
@@ -59,7 +59,7 @@ const Posts = [
         color: 'pink-text-gradient',
       },
     ],
-    image: Post_03,
+    image: Tomoya_JRE,
   },
   {
     name: 'Post 04',
@@ -79,7 +79,7 @@ const Posts = [
         color: 'pink-text-gradient',
       },
     ],
-    image: Post_01,
+    image: Tomoya_JRE,
   },
   {
     name: 'Post 05',
@@ -99,7 +99,7 @@ const Posts = [
         color: 'pink-text-gradient',
       },
     ],
-    image: Post_02,
+    image: Tomoya_JRE,
   },
   {
     name: 'Post 06',
@@ -119,8 +119,10 @@ const Posts = [
         color: 'pink-text-gradient',
       },
     ],
-    image: Post_03,
+    image: Tomoya_JRE,
   },
 ]
 
-export { Posts }
+const UnderDevelopment = 'UnderDevelopment'
+
+export { Posts, UnderDevelopment }

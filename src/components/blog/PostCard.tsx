@@ -11,13 +11,14 @@ const PostCard = (props: PostCardProps) => {
 
   return (
     <motion.div
+      className="mx-auto"
       initial="hidden"
       whileInView="visible"
       variants={fadeIn(
         Direction.Down,
         Type.Tween,
-        index * 0.2,
-        0.75,
+        index * 0.1,
+        0.65,
         Ease.BackOut
       )}
     >
