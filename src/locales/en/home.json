@@ -26,7 +26,10 @@
   },
   "Portfolio": {
     "Title": "Portfolio",
-    "SubTitle": "Learning by doing"
+    "SubTitle": "Learning by doing",
+    "TomoyaJRE": "This is my first personal website. Its purpose is to have a space to record my experiences and learning in front-end development, and also to shorten the time cost for others to get to know me.",
+    "MaskMap": "During the first interview, I realized that I didn't have a concept of state management. Therefore, I spent two weeks using the Vuex framework to implement this project and understand and familiarize myself with state management.",
+    "EasyEat": "This is my first project, with the aim of becoming a front-end engineer! I hope to establish a solid foundation in CSS, so most of the styles on this website are hand-coded."
   },
   "Journey": {
     "Title": "Learning Journey",
@@ -55,7 +58,7 @@
       ]
     },
     "Relearning": {
-      "Title": "Relearning",
+      "Title": "Learning",
       "CompanyName": "Home",
       "IconBg": "#ffffff",
       "Date": "February 2023 - May 2023",
@@ -63,13 +66,14 @@
         "Purchase the Next.js course on Udemy to learn about SSR, SSG, ISR, and API Routes related knowledge.",
         "Purchase the React course on HiSKIO to learn about React, React Router, and Redux related knowledge.",
         "Purchase the Three.js course on Three.js Journey to learn the basics of creating 3D websites.",
-        "Learn how to create animations using Framer Motion and Anime.js by watching tutorial videos on YouTube and reading the official documentation."
+        "Learn how to create animations using Framer Motion by watching tutorial videos on YouTube and reading the official documentation.",
+        "Build a personal website and start developing a personal brand in the software industry."
       ]
     }
   },
   "WorkExperience": {
     "Title": "Work Experience",
-    "SubTitle": "View My Latest Work Experience",
+    "SubTitle": "DAMAI Internet",
     "Description": [
       "Developing and maintaining the front-end and back-end of an online food ordering system for approximately 3,000 restaurants.",
       "Individually creating the iMenu reservation system and its back-end, currently used by approximately 80 restaurants.",
@@ -83,19 +87,19 @@
     "Title": "Book Club",
     "SubTitle": "Design Pattern",
     "Roger": {
-      "Testimonial": "This book club has allowed me to truly appreciate the power of collective brainstorming. Every time, I am able to hear new ideas and insights. Through this exchange and learning, I am able to accelerate my passion for learning new technologies.",
+      "Testimonial": "Attending this book club has allowed me to deeply appreciate the power of collective thinking! Every time, I am able to hear new ideas and inspirations. Through this exchange and learning, it enables me to accelerate and maintain a passionate approach to learning new skills.",
       "Name": "Roger",
       "Designation": "Front-End",
       "Company": "Damai Internet"
     },
     "Jim": {
-      "Testimonial": "It made me realize that as long as I persist, even just a little bit, the results can be remarkable after a few months. Through the process of teaching and learning, it is easier to see my blind spots and strengths. Feedback is crucial.",
+      "Testimonial": "It made me realize that if I persist, even just a little bit, I can achieve significant results in a few months. Through the process of teaching and learning, I am able to see my blind spots and strengths more clearly, and feedback is also important.",
       "Name": "Jim",
       "Designation": "Front-End",
       "Company": "Damai Internet"
     },
     "Karol": {
-      "Testimonial": "Reading clubs give me the motivation to understand unfamiliar knowledge. Through presentations, I learn how to express myself in a simple and understandable way. Listening to other members' explanations and trying to think from different perspectives is a joyful time of growth with my peers.",
+      "Testimonial": "Reading group provides motivation for me to understand unfamiliar knowledge, teaches me how to express myself in a simple and clear way through presentations, and allows me to learn from members' explanations and try to think from different perspectives. It is a happy time where we can grow together with our peers.",
       "Name": "Karol",
       "Designation": "Full-Stack",
       "Company": "Damai Internet"
@@ -103,7 +107,7 @@
   },
   "Contact": {
     "Title": "Contact Me",
-    "SubTitle": "If you have any questions or ideas for me, please feel free to contact me.",
+    "SubTitle": "If you have any questions for me, please feel free to contact me.",
     "Name": {
       "Title": "Name",
       "Placeholder": "Enter your name"

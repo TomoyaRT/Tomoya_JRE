@@ -26,7 +26,10 @@
   },
   "Portfolio": {
     "Title": "作品集",
-    "SubTitle": "做中學"
+    "SubTitle": "做中學",
+    "TomoyaJRE": "這是我第一個建立的個人網站。目的是為了有一個空間能記錄我在前端的點點滴滴，也期望縮短別人認識我的時間成本。",
+    "MaskMap": "在第一場的面試時，發覺自己並沒有狀態管理的觀念。因此花了兩週的時間透過Vuex的架構並實作這個專案，來認識並熟悉狀態管理。",
+    "EasyEat": "這是我第一個寫的專案。目的是為了能夠成為前端工程師! 並希望能打好CSS的基礎，所以這個網站大部分都是純手刻的樣式。"
   },
   "Journey": {
     "Title": "學習歷程",
@@ -62,14 +65,14 @@
         "購買 Udemy 平台的 Next.js 課程學習 SSR, SSG, ISR 與 API Routes 的相關知識",
         "購買 HiSKIO 的 React 課程學習 React, React Router, Redux 的相關知識",
         "購買 Three.js Journey 的 Three.js 課程學習 3D 網站製作的基礎知識",
-        "透過 Youtube 與 官方文件學習使用 Framer Motion 與 Anime.js 建構動畫",
+        "透過 Youtube 與 官方文件學習使用 Framer Motion 建構動畫",
         "建構屬於自己的個人網站，開始經營屬於軟體業的個人品牌。"
       ]
     }
   },
   "WorkExperience": {
     "Title": "工作經歷",
-    "SubTitle": "瀏覽我的最新工作經驗",
+    "SubTitle": "大麥網路",
     "Description": [
       "負責開發與維護訂餐網站的前後台專案，實際使用店家約3000間。",
       "獨自開發iMenu訂位前後台，上線後實際使用店家約80間。",
@@ -103,7 +106,7 @@
   },
   "Contact": {
     "Title": "聯絡我",
-    "SubTitle": "如果您對我有任何問題或想法，歡迎與我聯繫。",
+    "SubTitle": "如果您對我有任何問題，歡迎與我聯繫。",
     "Name": {
       "Title": "姓名",
       "Placeholder": "輸入您的姓名"

@@ -26,7 +26,10 @@
   },
   "Portfolio": {
     "Title": "ポートフォリオ",
-    "SubTitle": "作りながら学ぶ"
+    "SubTitle": "作りながら学ぶ",
+    "TomoyaJRE": "これは私が作成した最初の個人ウェブサイトです。目的は、フロントエンドに関する私の経験や成果を記録する場所を持つことであり、他の人が私を知るための時間を短縮することも期待しています。",
+    "MaskMap": "初めの面接で、状態管理の概念を持っていなかったことに気づきました。そこで、Vuexフレームワークを使用してこのプロジェクトを実装し、状態管理を理解し、熟知するために2週間を費やしました。",
+    "EasyEat": "これは私が初めて作ったプロジェクトです。フロントエンドエンジニアになるためのもので、CSSの基礎をしっかりと身につけたいと思っています。そのため、このウェブサイトのほとんどのスタイルは手書きです。"
   },
   "Journey": {
     "Title": "学習歴程",
@@ -46,76 +49,77 @@
       "Title": "フロントエンドエンジニア",
       "CompanyName": "DAMAI Internet",
       "IconBg": "#ffffff",
-      "Date": "2021年11月から　2023年2月まで",
+      "Date": "2021年11月から　2023年3月まで",
       "Points": [
-        "Responsible for developing and maintaining the front-end and back-end of a food ordering website project.",
-        "Develop a reservation service and integrate Line LIFF and calendar functions to provide users with a more convenient booking experience.",
-        "Integrate JKO Pay payment system with JKO APP service to provide a more diverse payment method.",
-        "Integrate Bank SinoPac's payment system and develop a stored value service that includes QR code scanning, stored value plans, and other related services."
+        "フード注文ウェブサイトのフロントエンドとバックエンドの開発および保守を担当しました。",
+        "予約サービスの開発と、Line LIFFとカレンダー機能の連携を行い、利用者がより便利に予約サービスを利用できるようにします。",
+        "JKO Payの決済とJKO APPの連携により、より多様な決済方法を提供します。",
+        "Bank SinoPacの決済システムを統合し、チャージ金額サービスを開発することを目的として、QRコードを利用したチャージ、チャージプラン等のサービスを提供します。"
       ]
     },
     "Relearning": {
-      "Title": "Relearning",
-      "CompanyName": "Home",
+      "Title": "学習",
+      "CompanyName": "家",
       "IconBg": "#ffffff",
-      "Date": "February 2023 - May 2023",
+      "Date": "2023年3月から2023年5月まで",
       "Points": [
-        "Purchase the Next.js course on Udemy to learn about SSR, SSG, ISR, and API Routes related knowledge.",
-        "Purchase the React course on HiSKIO to learn about React, React Router, and Redux related knowledge.",
-        "Purchase the Three.js course on Three.js Journey to learn the basics of creating 3D websites.",
-        "Learn how to create animations using Framer Motion and Anime.js by watching tutorial videos on YouTube and reading the official documentation."
+        "UdemyのNext.jsコースを購入して、SSR、SSG、ISR、およびAPIルートに関する知識を学びました。",
+        "HiSKIOのReactコースを購入して、React、React Router、Reduxの関連知識を学びました。",
+        "Three.js JourneyのThree.jsコースを購入し、3Dウェブサイト制作の基礎知識を学んでいます。",
+        "YouTubeと公式ドキュメントを使って、Framer Motionを使用したアニメーションの構築を学ぶ。",
+        "自分の個人サイトを構築し、ソフトウェア業界の個人ブランドを展開する。"
       ]
     }
   },
   "WorkExperience": {
     "Title": "Work Experience",
-    "SubTitle": "View My Latest Work Experience",
+    "SubTitle": "DAMAI Internet",
     "Description": [
-      "Developing and maintaining the front-end and back-end of an online food ordering system for approximately 3,000 restaurants.",
-      "Individually creating the iMenu reservation system and its back-end, currently used by approximately 80 restaurants.",
-      "Integrating StreetPay payment system for both web and app interfaces, currently used by approximately 161 restaurants.",
-      "Developing the front-end for integrating and working with E.SUN bank and MyWallet payment systems.",
-      "Optimizing iMenu's menu image rendering issue, improving FPS from 15 to 55.",
-      "Optimizing front-end project packaging, reducing size from 1719KiB to 544KiB."
+      "オンライン注文サイトのフロントエンドおよびバックエンドプロジェクトの開発とメンテナンスを担当し、店舗約3000店舗を実際に使用しています。",
+      "独自でiMenuの予約前後のシステムを開発し、店舗約80件で実際に利用されています。",
+      "ウェブとアプリを連携させた街口支払いを導入し、実際に店舗161件で利用されました。",
+      "永豊金融とマイウォレットのフロントエンドを単独で連携・開発する。",
+      "メニュー画像の描画時に白い画面が表示される問題を解決し、FPS を15から55に向上させる。",
+      "フロントエンドプロジェクトの圧縮最適化（1719KiB → 544KiB）"
     ]
   },
   "BookClub": {
-    "Title": "Book Club",
-    "SubTitle": "Design Pattern",
+    "Title": "読書会",
+    "SubTitle": "デザインパターン",
     "Roger": {
-      "Testimonial": "This book club has allowed me to truly appreciate the power of collective brainstorming. Every time, I am able to hear new ideas and insights. Through this exchange and learning, I am able to accelerate my passion for learning new technologies.",
+      "Testimonial": "この読書会に参加することで、多様な意見や発想を聞くことができ、集団の力を体感することができました。このような交流や学習を通じて、新しい技術を学び続けることができ、学ぶ意欲を保ちながら成長できると感じました。",
       "Name": "Roger",
-      "Designation": "Front-End",
+      "Designation": "フロントエンド",
       "Company": "Damai Internet"
     },
     "Jim": {
-      "Testimonial": "It made me realize that as long as I persist, even just a little bit, the results can be remarkable after a few months. Through the process of teaching and learning, it is easier to see my blind spots and strengths. Feedback is crucial.",
+      "Testimonial": "少しでも継続すれば、数ヶ月後には見違えるような成果を得られることに気づかせてくれた。教えることも学ぶことも、自分の盲点や長所がより見えやすくなり、フィードバックも重要であることを学んだ。",
       "Name": "Jim",
-      "Designation": "Front-End",
+      "Designation": "フロントエンド",
       "Company": "Damai Internet"
     },
     "Karol": {
-      "Testimonial": "Reading clubs give me the motivation to understand unfamiliar knowledge. Through presentations, I learn how to express myself in a simple and understandable way. Listening to other members' explanations and trying to think from different perspectives is a joyful time of growth with my peers.",
+      "Testimonial": "読書会は、未知の知識を理解するための動機を与え、発表を通じてわかりやすく表現する方法を学び、メンバーの説明を聞いて、異なる視点で考えることを試み、一緒に成長できる楽しい時間です。",
       "Name": "Karol",
-      "Designation": "Full-Stack",
+      "Designation": "フルスタック",
       "Company": "Damai Internet"
     }
   },
   "Contact": {
-    "Title": "Contact Me",
-    "SubTitle": "If you have any questions or ideas for me, please feel free to contact me.",
+    "Title": "お問い合わせ",
+    "SubTitle": "もしご質問がございましたら、お気軽にご連絡ください。",
     "Name": {
-      "Title": "Name",
-      "Placeholder": "Enter your name"
+      "Title": "名前",
+      "Placeholder": "あなたの名前を入力してください"
     },
     "Email": {
-      "Title": "Email",
-      "Placeholder": "Enter your email"
+      "Title": "メール",
+      "Placeholder": "あなたのEメールを入力してください"
     },
     "Message": {
-      "Title": "Message",
-      "Placeholder": "Enter your message"
+      "Title": "メッセージ",
+      "Placeholder": "あなたのメッセージを入力してください"
     },
-    "Button": ["Send", "Sending..."]
+    "Button": ["送信", "送信中..."]
   }
 }
