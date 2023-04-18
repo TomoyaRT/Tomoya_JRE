@@ -13,12 +13,13 @@ module.exports = {
       },
       boxShadow: {
         card: '0px 35px 120px -15px #211e35',
+        portfolio: '0px 0px 20px #FFF',
       },
       screens: {
         mobile: '500px',
       },
       backgroundImage: {
-        'home-pattern': "url('/assets/herobg.png')",
+        'home-pattern': "url('/assets/Hero_Background.png')",
       },
       cursor: {
         'cards-stack':
