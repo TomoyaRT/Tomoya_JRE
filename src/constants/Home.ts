@@ -66,8 +66,7 @@ const Portfolio = {
   data: [
     {
       name: 'Tomoya-JRE',
-      description:
-        '這是我第一個建立的個人網站。目的是為了有一個空間能紀錄我在前端的點點滴滴，也期望縮短別人認識我的時間成本。(順便學習 NextJS 與 TS)',
+      description: 'Portfolio.TomoyaJRE',
       tags: [
         {
           name: 'Next.js',
@@ -106,8 +105,7 @@ const Portfolio = {
     },
     {
       name: 'Mask-Map',
-      description:
-        '在第一次面試後，我發現我並沒有狀態管理的觀念後，就花了兩週的時間去學習Vuex並建立了這個小專案，希望透過做中學更了解狀態管理。',
+      description: 'Portfolio.MaskMap',
       tags: [
         {
           name: 'JavaScript',
@@ -138,8 +136,7 @@ const Portfolio = {
     },
     {
       name: 'Easy-Eat',
-      description:
-        '這是我第一個寫的專案。目的是為了能夠成為前端工程師! 並希望打好CSS的基礎，所以這個網站大部分都是純手刻的樣式。',
+      description: 'Portfolio.EasyEat',
       tags: [
         {
           name: 'JavaScript',

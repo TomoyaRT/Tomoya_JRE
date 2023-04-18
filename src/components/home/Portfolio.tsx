@@ -31,7 +31,7 @@ const Portfolio = () => {
               Ease.BackOut
             )}
           >
-            <TiltImgCard {...item} />
+            <TiltImgCard {...item} description={t(item.description)} />
           </motion.div>
         ))}
       </div>
