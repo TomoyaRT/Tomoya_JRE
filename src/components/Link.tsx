@@ -1,6 +1,6 @@
 import { useAppDispatch } from '@/hooks/useStore'
 import { useRouter } from 'next/router'
-import { updateLoading } from '@/store/slices/pageTransitionSlice'
+import { setLoading } from '@/store/slices/loadingSlice'
 import { delay } from '@/plugins/Lodash'
 import { Route } from '@/types'
 
@@ -17,10 +17,10 @@ const Link = (props: Props) => {
 
   const handleClick = async (event: React.MouseEvent, path: string) => {
     event.preventDefault()
-    dispatch(updateLoading(true))
+    if (path === router.asPath) return
+    dispatch(setLoading({ loading: true, type: 'Page' }))
     router.prefetch(path)
     delay(() => router.push(path), 850)
-    delay(() => dispatch(updateLoading(false)), 2000)
   }
 
   return (

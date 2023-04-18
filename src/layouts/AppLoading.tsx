@@ -1,6 +1,10 @@
 import styles from '@/styles/modules/FirstLoading.module.css'
-import { motion } from '@/plugins/FramerMotion'
+
 import { range } from '@/plugins/Lodash'
+import { motion } from '@/plugins/FramerMotion'
+import { useAppSelector } from '@/hooks/useStore'
+import { useAppDispatch } from '@/hooks/useStore'
+import { setLoading } from '@/store/slices/loadingSlice'
 
 const staggerConfig = {
   open: {},
@@ -24,19 +28,28 @@ const fadeInConfig = {
   },
 }
 
-const FirstLoading = () => {
+const AppLoading = () => {
+  const dispatch = useAppDispatch()
+  const loadingReducer = useAppSelector((state) => state.loadingReducer)
+  const isLoading = loadingReducer.isLoading
+
   const lineNumber = 7
   const lineBgColor = '#000000'
   const lineWidth = '100vw'
   const lineHeight = '100vh'
 
+  function onAnimationCompleteHandler() {
+    dispatch(setLoading({ loading: false, type: 'App' }))
+  }
+
   return (
-    <>
+    <div className={`${isLoading ? 'block' : 'hidden'}`}>
       <motion.div
         variants={staggerConfig}
         initial="open"
         animate="close"
         className="fixed top-0 left-0 w-[100vw] h-[100vh] flex z-40"
+        onAnimationComplete={onAnimationCompleteHandler}
       >
         {range(lineNumber).map((i) => {
           return (
@@ -71,8 +84,8 @@ const FirstLoading = () => {
           <path d="M598.005 60.47C598.005 52.93 599.348 46.3433 602.035 40.71C604.808 35.0767 608.578 30.7433 613.345 27.71C618.111 24.6767 623.398 23.16 629.205 23.16C633.885 23.16 638.045 24.1567 641.685 26.15C645.411 28.0567 648.315 30.7 650.395 34.08V0.800003H676.005V97H650.395V86.86C648.401 90.24 645.585 92.9267 641.945 94.92C638.305 96.9133 634.015 97.91 629.075 97.91C623.268 97.91 617.981 96.3933 613.215 93.36C608.535 90.3267 604.808 85.9933 602.035 80.36C599.348 74.64 598.005 68.01 598.005 60.47ZM650.525 60.47C650.525 55.79 649.225 52.1067 646.625 49.42C644.111 46.7333 640.991 45.39 637.265 45.39C633.451 45.39 630.288 46.7333 627.775 49.42C625.261 52.02 624.005 55.7033 624.005 60.47C624.005 65.15 625.261 68.8767 627.775 71.65C630.288 74.3367 633.451 75.68 637.265 75.68C640.991 75.68 644.111 74.3367 646.625 71.65C649.225 68.9633 650.525 65.2367 650.525 60.47Z" />
         </svg>
       </div>
-    </>
+    </div>
   )
 }
 
-export default FirstLoading
+export default AppLoading

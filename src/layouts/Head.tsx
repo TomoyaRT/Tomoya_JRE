@@ -1,13 +1,12 @@
 import NextHead from 'next/head'
+import { useTranslation } from 'next-i18next'
+import { Head as HeadText } from '@/constants/Home'
 
-type Props = {
-  title: string
-  description: string
-  icon: string
-}
-
-const Head: React.FC<Props> = (props) => {
-  const { title, description, icon } = props
+const Head: React.FC = () => {
+  const { t } = useTranslation('Home')
+  const title = t(HeadText.title)
+  const description = t(HeadText.description)
+  const icon = HeadText.icon
 
   return (
     <NextHead>
