@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "compress-desktop-gltf-to-glb": "gltf-pipeline -i ./public/3d_model/desktop_pc/scene.gltf -o ./public/3d_model/desktop_pc/scene.glb -d",
+    "compress-planet-gltf-to-glb": "gltf-pipeline -i ./public/3d_model/planet/scene.gltf -o ./public/3d_model/planet/scene.glb -d"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.0.1",
@@ -26,6 +28,7 @@
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
     "framer-motion": "^10.8.5",
+    "gltf-pipeline": "^4.0.2",
     "i18next": "^22.4.14",
     "lodash-es": "^4.17.21",
     "maath": "^0.5.3",
