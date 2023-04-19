@@ -1,7 +1,8 @@
 {
   "Routes": {
     "Home": "首頁",
-    "Blog": "部落格"
+    "Blog": "部落格",
+    "Contact": "聯絡我"
   },
   "Head": {
     "Title": "JRE",
