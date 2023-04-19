@@ -7,10 +7,12 @@ import { Route } from '@/types'
 interface Props {
   route: Route
   isActive: boolean
+  clickEvent?: (path: string) => void
 }
 
 const Link = (props: Props) => {
   const { path, name } = props.route
+  const { clickEvent } = props
   const isActive = props.isActive
   const dispatch = useAppDispatch()
   const router = useRouter()
@@ -18,6 +20,7 @@ const Link = (props: Props) => {
   const handleClick = async (event: React.MouseEvent, path: string) => {
     event.preventDefault()
     if (path === router.asPath) return
+    clickEvent && clickEvent(path)
     dispatch(setLoading({ loading: true, type: 'Page' }))
     router.prefetch(path)
     delay(() => router.push(path), 850)

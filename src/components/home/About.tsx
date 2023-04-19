@@ -24,9 +24,9 @@ const CardContent = ({
   const { t } = useTranslation('Home')
 
   const containerHoverStyles =
-    'group hover:bg-primary hover:transition hover:ease-in hover:duration-300'
+    'group hover:bg-primary hover:transition hover:ease-in hover:duration-300 active:bg-primary active:transition active:ease-in active:duration-300'
   const imgHoverStyles =
-    'group-hover:opacity-0 group-hover:-z-10 group-hover:ease-in group-hover:transition group-hover:duration-300'
+    'group-hover:opacity-0 group-hover:-z-10 group-hover:ease-in group-hover:transition group-hover:duration-300 group-active:opacity-0 group-active:-z-10 group-active:ease-in group-active:transition group-active:duration-300'
   const h3HoverStyles =
     'group-hover:opacity-0 group-hover:-z-10 group-hover:ease-in group-hover:transition group-hover:duration-300'
   const skillsHoverStyles =
