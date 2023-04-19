@@ -1,6 +1,11 @@
-import { useState, useRef, Suspense } from 'react'
+import { useRef, Suspense } from 'react'
+import { BufferGeometry, Material, Points } from 'three'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { PointMaterial, Points, Preload } from '@react-three/drei'
+import {
+  PointMaterial,
+  Points as PointsComponent,
+  Preload,
+} from '@react-three/drei'
 import { random } from 'maath'
 
 type elType = {
@@ -10,9 +15,12 @@ type elType = {
   }
 }
 
-const Stars = (props: any) => {
-  const ref = useRef()
-  const sphere = random.inSphere(new Float32Array(4500), { radius: 1.2 })
+const Stars = () => {
+  const ref = useRef<Points<BufferGeometry, Material | Material[]>>(null)
+
+  const sphere: Float32Array = new Float32Array(
+    random.inSphere(new Float64Array(4500), { radius: 1.2 })
+  )
 
   useFrame((state, delta) => {
     if (ref.current) {
@@ -24,7 +32,7 @@ const Stars = (props: any) => {
 
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
-      <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
+      <PointsComponent ref={ref} positions={sphere} stride={3} frustumCulled>
         <PointMaterial
           transparent
           color="#f272c8"
@@ -32,7 +40,7 @@ const Stars = (props: any) => {
           sizeAttenuation={true}
           depthWrite={false}
         />
-      </Points>
+      </PointsComponent>
     </group>
   )
 }

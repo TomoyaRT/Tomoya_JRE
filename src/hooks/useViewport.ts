@@ -8,10 +8,11 @@ function useViewport(): ViewportSize {
   const [height, setHeight] = useState(isClient ? window.innerHeight : 0)
 
   const handleResize = useCallback(
-    debounce(() => {
-      setWidth(window.innerWidth)
-      setHeight(window.innerHeight)
-    }, 100),
+    () =>
+      debounce(() => {
+        setWidth(window.innerWidth)
+        setHeight(window.innerHeight)
+      }, 100),
     []
   )
 

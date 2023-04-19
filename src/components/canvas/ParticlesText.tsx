@@ -132,7 +132,7 @@ const ParticlesText = (props: Props) => {
     })
 
     return () => window.cancelAnimationFrame(animationFrameId)
-  }, [text])
+  }, [text, color, font])
 
   return <canvas ref={canvasRef} />
 }

@@ -7,7 +7,6 @@ import { i18n } from 'next-i18next'
 import { setLoading } from '@/store/slices/loadingSlice'
 import { delay } from '@/plugins/Lodash'
 import { useAppDispatch } from '@/hooks/useStore'
-import { EN, TW } from '@/constants/Public'
 import { Type, Ease } from '@/types'
 
 const staggerConfig = {

@@ -10,8 +10,9 @@ import { Computer_Model } from '@/constants/Public'
 interface ComputerProps {
   computerScale: number
   computerPosition: number[]
-  lightPosition: number[] | any
+  lightPosition: [x: number, y: number, z: number]
 }
+
 const Computer = (props: ComputerProps) => {
   const { computerScale, computerPosition, lightPosition } = props
   const computer = useGLTF(Computer_Model)
