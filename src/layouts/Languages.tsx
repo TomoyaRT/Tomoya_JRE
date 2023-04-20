@@ -47,22 +47,25 @@ const variantsConfig = {
 const Languages = () => {
   const router = useRouter()
   const dispatch = useAppDispatch()
-  const lang = i18n?.language
-  const [language, setLanguage] = useState('en')
-  const [animation, setAnimation] = useState(false)
+  const lang = i18n.language
+  const [language, setLanguage] = useState(lang)
+  const [isAnimating, setIsAnimating] = useState(false)
+  const [animation, setAnimation] = useState('close')
   const activeIcon = Reflect.get(LanguageIcon, language)
   const languages = LanguageList.filter((item) => item.key !== language)
 
-  function handleParentButton() {
-    setAnimation(!animation)
+  function buttonToggleHandler() {
+    if (isAnimating) return
+    setAnimation(() => (animation === 'open' ? 'close' : 'open'))
   }
 
   function handleChildButton(language: string) {
     if (lang === language) return
-    handleParentButton()
+
     dispatch(setLoading({ loading: true, type: 'Page' }))
     delay(() => {
       setLanguage(language)
+      setAnimation('close')
       router.push(router.pathname, router.asPath, { locale: language })
     }, 850)
   }
@@ -70,13 +73,15 @@ const Languages = () => {
   return (
     <motion.div
       initial="hidden"
-      animate={`${animation ? 'open' : 'close'}`}
+      animate={animation}
       variants={staggerConfig}
+      onAnimationStart={() => setIsAnimating(true)}
+      onAnimationComplete={() => setIsAnimating(false)}
       className="relative flex flex-row-reverse overflow-x-hidden mr-6 rounded-full"
     >
       <button
         className="relative z-10 border-2 rounded-full cursor-pointer"
-        onClick={handleParentButton}
+        onClick={buttonToggleHandler}
       >
         <Image
           width={35}
