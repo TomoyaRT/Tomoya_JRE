@@ -7,8 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "compress-desktop-gltf-to-glb": "gltf-pipeline -i ./public/3d_model/desktop_pc/scene.gltf -o ./public/3d_model/desktop_pc/scene.glb -d",
-    "compress-planet-gltf-to-glb": "gltf-pipeline -i ./public/3d_model/planet/scene.gltf -o ./public/3d_model/planet/scene.glb -d"
+    "bundle-analyzer": "ANALYZE=true yarn build",
+    "compress-desktop-gltf-to-glb": "gltf-pipeline -i ./public/3d_model/desktop_pc/scene.gltf -o ./public/3d_model/desktop_pc/scene.glb -d --draco.compressionLevel 8",
+    "compress-planet-gltf-to-glb": "gltf-pipeline -i ./public/3d_model/planet/scene.gltf -o ./public/3d_model/planet/scene.glb -d --draco.compressionLevel 8"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.0.1",
@@ -48,6 +49,7 @@
     "yup": "^1.0.2"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^13.3.0",
     "@typescript-eslint/eslint-plugin": "^5.56.0",
     "autoprefixer": "^10.4.14",
     "eslint-config-prettier": "^8.8.0",
