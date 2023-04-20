@@ -1,6 +1,6 @@
 // 3d_model
-export const Computer_Model = './3d_model/desktop_pc/scene.glb'
-export const Planet_Model = './3d_model/planet/scene.glb'
+export const Computer_Model = './3d_model/desktop_pc/scene.gltf'
+export const Planet_Model = './3d_model/planet/scene.gltf'
 
 // assets - skills
 export const Front_End = '/assets/skills/Front_End.png'
