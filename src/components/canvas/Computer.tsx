@@ -1,6 +1,5 @@
 import { Suspense } from 'react'
-import { Canvas } from '@/plugins/Three'
-import { OrbitControls, Preload, useGLTF } from '@/plugins/Three'
+import { OrbitControls, Preload, useGLTF, Canvas } from '@/plugins/Three'
 
 import useViewport from '@/hooks/useViewport'
 import CanvasLoader from '@/components/canvas/Loader'

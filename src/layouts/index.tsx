@@ -1,9 +1,10 @@
 import React, { PropsWithChildren } from 'react'
+import dynamic from 'next/dynamic'
 
 import Head from '@/layouts/Head'
 import DesktopNavbar from '@/layouts/DesktopNavbar'
 import AppLoading from '@/layouts/AppLoading'
-import PageLoading from '@/layouts/PageLoading'
+const PageLoading = dynamic(() => import('@/layouts/PageLoading'))
 import { useAppSelector } from '@/hooks/useStore'
 
 const Layout = (props: PropsWithChildren) => {
