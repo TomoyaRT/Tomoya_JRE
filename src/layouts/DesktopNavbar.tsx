@@ -5,8 +5,6 @@ import { useTranslation } from 'next-i18next'
 import { Routes } from '@/constants/Routes'
 import Languages from '@/layouts/Languages'
 import Resume from '@/layouts/Resume'
-import type { GetStaticProps } from 'next'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const DesktopNavbar: React.FC = () => {
   const { t } = useTranslation('Home')
@@ -37,18 +35,6 @@ const DesktopNavbar: React.FC = () => {
       </div>
     </nav>
   )
-}
-
-export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  if (!locale) {
-    throw new Error('locale is undefined')
-  }
-
-  return {
-    props: {
-      ...(await serverSideTranslations(locale ?? 'en', ['Home'])),
-    },
-  }
 }
 
 export default DesktopNavbar

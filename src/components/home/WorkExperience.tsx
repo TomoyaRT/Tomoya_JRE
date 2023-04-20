@@ -4,8 +4,6 @@ import SectionHead from '@/components/animation/SectionHead'
 import WorkDescription from '@/components/home/WorkDescription'
 import { useTranslation } from 'next-i18next'
 import { WorkExperience as WorkExperienceText } from '@/constants/Home'
-import type { GetStaticProps } from 'next'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 const { title, subTitle, data } = WorkExperienceText
 
 const WorkExperience = () => {
@@ -25,18 +23,6 @@ const WorkExperience = () => {
       </div>
     </div>
   )
-}
-
-export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  if (!locale) {
-    throw new Error('locale is undefined')
-  }
-
-  return {
-    props: {
-      ...(await serverSideTranslations(locale ?? 'en', ['Home'])),
-    },
-  }
 }
 
 export default SectionWrapper(WorkExperience, '')

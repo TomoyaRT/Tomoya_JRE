@@ -4,8 +4,6 @@ import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { ReactNode } from 'react'
 import { useTranslation } from 'next-i18next'
-import type { GetStaticProps } from 'next'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 import { motion } from '@/plugins/FramerMotion'
 import SectionWrapper from '@/hoc/SectionWrapper'
@@ -133,18 +131,6 @@ const Contact = () => {
       </motion.div>
     </div>
   )
-}
-
-export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  if (!locale) {
-    throw new Error('locale is undefined')
-  }
-
-  return {
-    props: {
-      ...(await serverSideTranslations(locale ?? 'en', ['Home'])),
-    },
-  }
 }
 
 export default SectionWrapper(Contact, '')
