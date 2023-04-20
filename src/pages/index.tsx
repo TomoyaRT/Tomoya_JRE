@@ -67,11 +67,10 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   if (!locale) {
     throw new Error('locale is undefined')
   }
-  const Home = await serverSideTranslations(locale, ['Home', 'Blog'])
 
   return {
     props: {
-      ...Home,
+      ...(await serverSideTranslations(locale ?? 'en', ['Home'])),
     },
   }
 }
