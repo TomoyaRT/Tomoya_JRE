@@ -19,11 +19,10 @@ module.exports = {
         mobile: '500px',
       },
       backgroundImage: {
-        'home-pattern': "url('/assets/Hero_Background.png')",
+        'home-pattern': "url('/assets/Hero_Background.webp')",
       },
       cursor: {
-        'cards-stack':
-          "url('https://uploads.codesandbox.io/uploads/user/b3e56831-8b98-4fee-b941-0e27f39883ab/Ad1_-cursor.png') 39 39, auto",
+        'cards-stack': "url('/assets/Circle_Cursor.webp') 39 39, auto",
       },
       shadow: {
         'cards-stack':
