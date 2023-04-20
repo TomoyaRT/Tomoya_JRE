@@ -1,5 +1,7 @@
 import { useTranslation } from 'next-i18next'
 import { motion } from '@/plugins/FramerMotion'
+import type { GetStaticProps } from 'next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 import SectionHead from '@/components/animation/SectionHead'
 import { Portfolio as PortfolioText } from '@/constants/Home'
@@ -37,6 +39,18 @@ const Portfolio = () => {
       </div>
     </>
   )
+}
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  if (!locale) {
+    throw new Error('locale is undefined')
+  }
+
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? 'en', ['Home'])),
+    },
+  }
 }
 
 export default SectionWrapper(Portfolio, '')

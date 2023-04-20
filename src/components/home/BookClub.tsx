@@ -1,7 +1,9 @@
-import { motion } from '@/plugins/FramerMotion'
 import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
+import type { GetStaticProps } from 'next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
+import { motion } from '@/plugins/FramerMotion'
 import SectionHead from '@/components/animation/SectionHead'
 import { fadeIn } from '@/utils/FramerMotion'
 import { Direction, Type, Ease } from '@/types'
@@ -78,6 +80,18 @@ const BookClub = () => {
       </div>
     </div>
   )
+}
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  if (!locale) {
+    throw new Error('locale is undefined')
+  }
+
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? 'en', ['Home'])),
+    },
+  }
 }
 
 export default SectionWrapper(BookClub, '')

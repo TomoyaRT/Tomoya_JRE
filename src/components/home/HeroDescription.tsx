@@ -2,6 +2,8 @@ import { useTranslation } from 'next-i18next'
 import { Hero } from '@/constants/Home'
 import ParticlesText from '@/components/canvas/ParticlesText'
 import { i18n } from 'next-i18next'
+import type { GetStaticProps } from 'next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const HeroDescription = () => {
   const { t } = useTranslation('Home')
@@ -42,6 +44,18 @@ const HeroDescription = () => {
       </div>
     </div>
   )
+}
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  if (!locale) {
+    throw new Error('locale is undefined')
+  }
+
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? 'en', ['Home'])),
+    },
+  }
 }
 
 export default HeroDescription

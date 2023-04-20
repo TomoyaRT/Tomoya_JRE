@@ -1,8 +1,10 @@
 import Tilt from 'react-parallax-tilt'
-import { motion } from '@/plugins/FramerMotion'
 import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
+import type { GetStaticProps } from 'next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
+import { motion } from '@/plugins/FramerMotion'
 import SectionWrapper from '@/hoc/SectionWrapper'
 import SectionHead from '@/components/animation/SectionHead'
 import { fadeIn } from '@/utils/FramerMotion'
@@ -105,6 +107,18 @@ const About: React.FC = () => {
       </div>
     </>
   )
+}
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  if (!locale) {
+    throw new Error('locale is undefined')
+  }
+
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? 'en', ['Home'])),
+    },
+  }
 }
 
 export default SectionWrapper(About, 'about')
