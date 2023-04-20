@@ -47,11 +47,11 @@ const variantsConfig = {
 const Languages = () => {
   const router = useRouter()
   const dispatch = useAppDispatch()
-  const lang = i18n.language
+  const lang = i18n?.language
   const [language, setLanguage] = useState(lang)
   const [isAnimating, setIsAnimating] = useState(false)
   const [animation, setAnimation] = useState('close')
-  const activeIcon = Reflect.get(LanguageIcon, language)
+  const activeIcon = language && Reflect.get(LanguageIcon, language)
   const languages = LanguageList.filter((item) => item.key !== language)
 
   function buttonToggleHandler() {
