@@ -1,11 +1,11 @@
 import { useRef, Suspense } from 'react'
-import { BufferGeometry, Material, Points } from 'three'
-import { Canvas, useFrame } from '@react-three/fiber'
+import { BufferGeometry, Material, ThreePoints } from '@/plugins/Three'
+import { Canvas, useFrame } from '@/plugins/Three'
 import {
   PointMaterial,
   Points as PointsComponent,
   Preload,
-} from '@react-three/drei'
+} from '@/plugins/Three'
 import { random } from 'maath'
 
 type elType = {
@@ -16,7 +16,7 @@ type elType = {
 }
 
 const Stars = () => {
-  const ref = useRef<Points<BufferGeometry, Material | Material[]>>(null)
+  const ref = useRef<ThreePoints<BufferGeometry, Material | Material[]>>(null)
 
   const sphere: Float32Array = new Float32Array(
     random.inSphere(new Float64Array(4500), { radius: 1.2 })

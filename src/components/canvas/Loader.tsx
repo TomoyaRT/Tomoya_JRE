@@ -1,4 +1,4 @@
-import { Html, useProgress } from '@react-three/drei'
+import { Html, useProgress } from '@/plugins/Three'
 import React from 'react'
 
 const Loader = () => {
