@@ -11,6 +11,7 @@ import {
   Easy_Eat,
   Mask_Map,
   Tomoya_JRE,
+  Icon_Home,
 } from '@/constants/Public'
 
 const Colors = {
@@ -102,6 +103,7 @@ const Portfolio = {
         },
       ],
       image: Tomoya_JRE,
+      url: 'https://tomoya-fawn.vercel.app/',
     },
     {
       name: 'Mask-Map',
@@ -133,6 +135,7 @@ const Portfolio = {
         },
       ],
       image: Mask_Map,
+      url: 'https://tomoyart.github.io/Vue_Mask_Map/',
     },
     {
       name: 'Easy-Eat',
@@ -168,6 +171,7 @@ const Portfolio = {
         },
       ],
       image: Easy_Eat,
+      url: 'https://tomoyart.github.io/Easy_Eat/dist/#/',
     },
   ],
 }
@@ -178,7 +182,7 @@ const Journey = {
     {
       title: 'Journey.SelfTaught.Title',
       company_name: 'Journey.SelfTaught.CompanyName',
-      icon: Damai_Logo,
+      icon: Icon_Home,
       iconBg: Colors.white,
       date: 'Journey.SelfTaught.Date',
       points: [
@@ -203,7 +207,7 @@ const Journey = {
     {
       title: 'Journey.Relearning.Title',
       company_name: 'Journey.Relearning.CompanyName',
-      icon: Damai_Logo,
+      icon: Icon_Home,
       iconBg: Colors.white,
       date: 'Journey.Relearning.Date',
       points: [

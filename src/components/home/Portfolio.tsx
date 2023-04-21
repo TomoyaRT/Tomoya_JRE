@@ -18,10 +18,13 @@ const Portfolio = () => {
         subTitle={t(PortfolioText.subTitle)}
         styleType="hero"
       />
+      <a href=""></a>
       <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {PortfolioText.data.map((item, index) => (
-          <motion.div
-            className="mx-auto"
+          <motion.a
+            href={item.url}
+            target="_blank"
+            className="mx-auto block"
             key={item.name}
             variants={fadeIn(
               Direction.Down,
@@ -32,7 +35,7 @@ const Portfolio = () => {
             )}
           >
             <TiltImgCard {...item} description={t(item.description)} />
-          </motion.div>
+          </motion.a>
         ))}
       </div>
     </>

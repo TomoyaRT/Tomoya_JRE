@@ -32,6 +32,7 @@ export const Resume_EN = '/assets/resume/Resume_EN.pdf'
 // assets - other
 export const Hero_Background = '/assets/Hero_Background.webp'
 export const Circle_Cursor = '/assets/Circle_Cursor.webp'
+export const Icon_Home = '/assets/Icon_Home.webp'
 
 // app
 export const App_Icon = '/favicon.ico'
