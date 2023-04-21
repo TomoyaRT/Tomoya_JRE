@@ -14,9 +14,9 @@ export const Mask_Map = '/assets/portfolio/Mask_Map.webp'
 export const Tomoya_JRE = '/assets/portfolio/Tomoya_JRE.webp'
 
 // assets - language
-export const EN = '/assets/language/EN.webp'
-export const JP = '/assets/language/JP.webp'
-export const TW = '/assets/language/TW.webp'
+export const Icon_EN = '/assets/language/EN.webp'
+export const Icon_JP = '/assets/language/JP.webp'
+export const Icon_TW = '/assets/language/TW.webp'
 
 // assets - work
 export const Damai_Logo = '/assets/work/MaiFood.webp'
@@ -25,7 +25,9 @@ export const Damai_QR_Code_Page = '/assets/work/Damai_QR_Code_Page.webp'
 export const Damai_Wallet_Page = '/assets/work/Damai_Wallet_Page.webp'
 
 // assets - resume
-export const Resume = '/assets/resume/Resume.pdf'
+export const Resume_JP = '/assets/resume/Resume_JP.pdf'
+export const Resume_TW = '/assets/resume/Resume_TW.pdf'
+export const Resume_EN = '/assets/resume/Resume_EN.pdf'
 
 // assets - other
 export const Hero_Background = '/assets/Hero_Background.webp'
