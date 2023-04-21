@@ -42,6 +42,9 @@ const PageLoading = () => {
   const [animation, setAnimation] = useState('startLoading')
   const dispatch = useAppDispatch()
 
+  // 第一段動畫 -> 3.8
+  // 間隔時間 -> 0.5
+  // 第二段動畫 -> 3.8
   const lineNumber = 7
   const lineBgColor = '#000000'
   const lineWidth = '100vw'

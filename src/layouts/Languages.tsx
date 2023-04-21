@@ -89,7 +89,7 @@ const Languages = ({ isMobile }: LanguagesProps) => {
       setLanguage(language)
       setAnimation('close')
       router.push(router.pathname, router.asPath, { locale: language })
-    }, 850)
+    }, 380)
   }
 
   return (
