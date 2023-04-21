@@ -49,7 +49,7 @@ const PageLoading = () => {
 
   function onAnimationCompleteHandler(key: 'startLoading' | 'endLoading') {
     key === 'startLoading'
-      ? delay(() => setAnimation('endLoading'), 300)
+      ? delay(() => setAnimation('endLoading'), 500)
       : dispatch(setLoading({ loading: false, type: 'Page' }))
   }
 

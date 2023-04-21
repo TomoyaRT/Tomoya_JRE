@@ -13,38 +13,60 @@ const staggerConfig = {
   initial: {},
   open: {
     transition: {
-      staggerDirection: -1,
       staggerChildren: 0.15,
       ease: Ease.CircIn,
+      staggerDirection: -1,
     },
   },
   close: {
     transition: {
+      staggerDirection: 1,
       staggerChildren: 0.15,
       ease: Ease.CircOut,
     },
   },
 }
 
-const variantsConfig = {
+const mobileConfig = {
   initial: {
     opacity: 1,
   },
-  close: (custom: number) => ({
-    x: `${custom * 100}%`,
-    y: 0,
-  }),
-  open: {
+  open: (custom: number) => ({
     x: 0,
-    y: 0,
+    y: `${custom * 20}%`,
     transition: {
       type: Type.Spring,
       duration: 0.65,
     },
-  },
+  }),
+  close: (custom: number) => ({
+    x: 0,
+    y: `-${custom * 100}%`,
+  }),
 }
 
-const Languages = () => {
+const desktopConfig = {
+  initial: {
+    opacity: 1,
+  },
+  open: (custom: number) => ({
+    y: 0,
+    x: `-${custom * 20}%`,
+    transition: {
+      type: Type.Spring,
+      duration: 0.65,
+    },
+  }),
+  close: (custom: number) => ({
+    x: `${custom * 100}%`,
+    y: 0,
+  }),
+}
+
+type LanguagesProps = {
+  isMobile: boolean
+}
+const Languages = ({ isMobile }: LanguagesProps) => {
   const router = useRouter()
   const dispatch = useAppDispatch()
   const lang = i18n?.language
@@ -75,12 +97,14 @@ const Languages = () => {
       initial="hidden"
       animate={animation}
       variants={staggerConfig}
+      custom={isMobile}
       onAnimationStart={() => setIsAnimating(true)}
       onAnimationComplete={() => setIsAnimating(false)}
-      className="relative flex flex-row-reverse overflow-x-hidden mr-6 rounded-full"
+      className="absolute top-[22.5px] right-[140px] mobile:relative mobile:top-0 mobile:right-0 mobile:mr-5 flex h-[150px] px-1 flex-col mobile:w-[150px] mobile:px-0 mobile:py-1 mobile:h-auto mobile:flex-row-reverse 
+    overflow-x-hidden rounded-full"
     >
       <button
-        className="relative z-10 border-2 rounded-full cursor-pointer"
+        className="relative z-10 rounded-full cursor-pointer flex justify-center items-center"
         onClick={buttonToggleHandler}
       >
         <Image
@@ -88,31 +112,27 @@ const Languages = () => {
           height={35}
           alt="Language Icon"
           src={activeIcon}
-          className="h-[35px] w-[35px] rounded-full"
+          className="h-[35px] w-[35px] rounded-full border-2"
         />
       </button>
 
       {languages.map((item, index) => {
         return (
-          <motion.div
+          <motion.button
             key={item.key}
-            variants={variantsConfig}
-            className="relative flex flex-row-reverse z-0 box-border"
+            variants={isMobile ? mobileConfig : desktopConfig}
+            className="relative flex justify-center items-center z-0 box-border cursor-pointer"
             custom={index + 1}
+            onClick={() => handleChildButton(item.key)}
           >
-            <button
-              className="rounded-full mr-3 cursor-pointer hover:scale-110 duration-300 active:scale-90"
-              onClick={() => handleChildButton(item.key)}
-            >
-              <Image
-                width={35}
-                height={35}
-                alt="Language Icon"
-                src={item.icon}
-                className="h-[35px] w-[35px] rounded-full"
-              />
-            </button>
-          </motion.div>
+            <Image
+              width={35}
+              height={35}
+              alt="Language Icon"
+              src={item.icon}
+              className="h-[35px] w-[35px] rounded-full hover:scale-110 duration-300 active:scale-90"
+            />
+          </motion.button>
         )
       })}
     </motion.div>

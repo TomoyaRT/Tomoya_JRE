@@ -2,12 +2,14 @@ import Link from '@/components/Link'
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import { useTranslation } from 'next-i18next'
+import useMediaQuery from '@/hooks/useMediaQuery'
 import { Routes } from '@/constants/Routes'
 import Languages from '@/layouts/Languages'
 import Resume from '@/layouts/Resume'
 
 const DesktopNavbar: React.FC = () => {
   const { t } = useTranslation('Home')
+  const isDesktop = useMediaQuery('(min-width: 500px)')
   const router = useRouter()
   const { pathname } = router
   const [active, setActive] = useState(pathname)
@@ -29,7 +31,7 @@ const DesktopNavbar: React.FC = () => {
           })}
         </ul>
         <div className="flex items-center">
-          <Languages />
+          <Languages isMobile={!isDesktop} />
           <Resume />
         </div>
       </div>
