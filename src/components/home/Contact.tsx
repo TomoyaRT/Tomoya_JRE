@@ -2,7 +2,7 @@ import dynamic from 'next/dynamic'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
-import { ReactNode, useState, useEffect } from 'react'
+import { ReactNode, useState } from 'react'
 import { useTranslation } from 'next-i18next'
 
 import { sendEmail } from '@/plugins/EmailJS'
@@ -29,7 +29,7 @@ const schema = yup.object().shape({
 interface FormWrapperProps {
   children: ReactNode
   title: string
-  errorMessage: string | undefined | DefaultTFuncReturn
+  errorMessage: string | undefined | null
 }
 const FormWrapper = (props: FormWrapperProps) => {
   const { children, errorMessage, title } = props
@@ -52,16 +52,10 @@ const Form: React.FC = () => {
   const {
     register,
     handleSubmit,
-    reset,
     formState: { errors },
   } = useForm<FormFields>({
     resolver: yupResolver(schema),
   })
-
-  useEffect(() => {
-    reset()
-    return () => reset()
-  }, [])
 
   const onSubmit: SubmitHandler<FormFields> = async (formData) => {
     if (isSubmitted) return
