@@ -110,16 +110,19 @@
     "SubTitle": "如果您對我有任何問題，歡迎與我聯繫。",
     "Name": {
       "Title": "姓名",
-      "Placeholder": "輸入您的姓名"
+      "Placeholder": "輸入您的姓名",
+      "Error": "姓名為必填欄位"
     },
     "Email": {
       "Title": "信箱",
-      "Placeholder": "輸入您的信箱"
+      "Placeholder": "輸入您的信箱",
+      "Error": ["信箱為必填欄位", "信箱必須為有效格式"]
     },
     "Message": {
       "Title": "訊息",
-      "Placeholder": "輸入您的訊息"
+      "Placeholder": "輸入您的訊息",
+      "Error": "訊息為必填欄位"
     },
-    "Button": ["送出", "正在送出"]
+    "Button": ["送出", "感謝您的來信"]
   }
 }

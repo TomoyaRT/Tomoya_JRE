@@ -274,14 +274,18 @@ const Contact = {
     name: {
       title: 'Contact.Name.Title',
       placeholder: 'Contact.Name.Placeholder',
+      requiredError: 'Contact.Name.Error',
     },
     email: {
       title: 'Contact.Email.Title',
       placeholder: 'Contact.Email.Placeholder',
+      requiredError: 'Contact.Email.Error.0',
+      emailError: 'Contact.Email.Error.1',
     },
     message: {
       title: 'Contact.Message.Title',
       placeholder: 'Contact.Message.Placeholder',
+      requiredError: 'Contact.Message.Error',
     },
     button: ['Contact.Button.0', 'Contact.Button.1'],
   },

@@ -111,16 +111,19 @@
     "SubTitle": "If you have any questions for me, please feel free to contact me.",
     "Name": {
       "Title": "Name",
-      "Placeholder": "Enter your name"
+      "Placeholder": "Enter your name",
+      "Error": "name is a required field"
     },
     "Email": {
       "Title": "Email",
-      "Placeholder": "Enter your email"
+      "Placeholder": "Enter your email",
+      "Error": ["email is a required field", "email must be a valid email"]
     },
     "Message": {
       "Title": "Message",
-      "Placeholder": "Enter your message"
+      "Placeholder": "Enter your message",
+      "Error": "message is a required field"
     },
-    "Button": ["Send", "Sending..."]
+    "Button": ["Send", "Thank you for contacting me"]
   }
 }
