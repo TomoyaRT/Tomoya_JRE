@@ -1,6 +1,6 @@
 import { motion } from '@/plugins/FramerMotion'
 
-import { PostCardProps } from '@/types/blog'
+import { PostCardProps } from '@/types/Blog'
 import { fadeIn } from '@/utils/FramerMotion'
 import { Direction, Type, Ease } from '@/types'
 import TiltImgCard from '@/components/TiltImgCard'
