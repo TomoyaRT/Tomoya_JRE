@@ -131,6 +131,13 @@ const ParticlesText = (props: Props) => {
       Mouse.y = e.clientY - canvasRect.top
     })
 
+    window.addEventListener('touchmove', (e) => {
+      const canvasRect = canvas.getBoundingClientRect()
+      const touch = e.touches[0] as Touch // 使用型別斷言告訴編譯器 touch 是 Touch 類型
+      Mouse.x = touch.clientX - canvasRect.left
+      Mouse.y = touch.clientY - canvasRect.top
+    })
+
     return () => window.cancelAnimationFrame(animationFrameId)
   }, [text, color, font])
 

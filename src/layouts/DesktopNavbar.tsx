@@ -25,7 +25,7 @@ const DesktopNavbar: React.FC = () => {
                 key={path}
                 isActive={active === path}
                 route={{ name: t(name), path: path }}
-                clickEvent={() => setActive}
+                clickEvent={() => setActive(path)}
               />
             )
           })}

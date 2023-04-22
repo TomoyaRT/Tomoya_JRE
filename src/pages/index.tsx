@@ -38,9 +38,7 @@ const Home: React.FC = () => {
   return (
     <div className="relative z-0">
       <Hero />
-      <LazyWrapper>
-        <About />
-      </LazyWrapper>
+      <About />
       <LazyWrapper>
         <Portfolio />
       </LazyWrapper>
