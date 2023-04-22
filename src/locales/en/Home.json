@@ -52,10 +52,15 @@
       "IconBg": "#ffffff",
       "Date": "November 2021 - February 2023",
       "Points": [
-        "Responsible for developing and maintaining the front-end and back-end of a food ordering website project.",
-        "Develop a reservation service and integrate Line LIFF and calendar functions to provide users with a more convenient booking experience.",
-        "Integrate JKO Pay payment system with JKO APP service to provide a more diverse payment method.",
-        "Integrate Bank SinoPac's payment system and develop a stored value service that includes QR code scanning, stored value plans, and other related services."
+        "Developed and maintained front-end and back-end projects for ordering website.",
+        "Developed a reservation website and integrated it with Line LIFF.",
+        "Integrated JKO Pay and JKO APP for payment processing.",
+        "Integrated Bank SinoPac's payment system and developed a stored value service.",
+        "Optimized menu page images to increase the frame rate from 10-15 FPS to 55-60 FPS.",
+        "Optimized project packaging, reducing its size from 1719KB to 544KB",
+        "Developed and launched reservation website, which was utilized by 80 actual businesses.",
+        "Integrated JKO Pay and successfully deployed it to 40 businesses.",
+        "Integrated JKO APP and successfully deployed it to 121 businesses."
       ]
     },
     "Relearning": {

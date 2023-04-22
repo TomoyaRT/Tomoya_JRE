@@ -202,6 +202,11 @@ const Journey = {
         'Journey.FrontEndDeveloper.Points.1',
         'Journey.FrontEndDeveloper.Points.2',
         'Journey.FrontEndDeveloper.Points.3',
+        'Journey.FrontEndDeveloper.Points.4',
+        'Journey.FrontEndDeveloper.Points.5',
+        'Journey.FrontEndDeveloper.Points.6',
+        'Journey.FrontEndDeveloper.Points.7',
+        'Journey.FrontEndDeveloper.Points.8',
       ],
     },
     {
