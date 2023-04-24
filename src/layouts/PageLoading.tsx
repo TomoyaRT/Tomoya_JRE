@@ -4,6 +4,7 @@ import { motion } from '@/plugins/FramerMotion'
 import { range, delay } from '@/plugins/Lodash'
 import { useAppDispatch } from '@/hooks/useStore'
 import { setLoading } from '@/store/slices/loadingSlice'
+import useViewport from '@/hooks/useViewport'
 
 const staggerConfig = {
   initial: {},
@@ -41,14 +42,15 @@ const fadeInConfig = {
 const PageLoading = () => {
   const [animation, setAnimation] = useState('startLoading')
   const dispatch = useAppDispatch()
+  const { width, height } = useViewport()
 
   // 第一段動畫 -> 3.8
   // 間隔時間 -> 0.5
   // 第二段動畫 -> 3.8
   const lineNumber = 7
   const lineBgColor = '#000000'
-  const lineWidth = '100vw'
-  const lineHeight = '100vh'
+  const lineWidth = width
+  const lineHeight = height
 
   function onAnimationCompleteHandler(key: 'startLoading' | 'endLoading') {
     key === 'startLoading'
