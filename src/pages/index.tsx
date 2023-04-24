@@ -10,7 +10,7 @@ const About = dynamic(() => import('@/components/home/About'))
 const Portfolio = dynamic(() => import('@/components/home/Portfolio'))
 const Journey = dynamic(() => import('@/components/home/Journey'))
 const BookClub = dynamic(() => import('@/components/home/BookClub'))
-// const WorkExperience = dynamic(() => import('@/components/home/WorkExperience'))
+const WorkExperience = dynamic(() => import('@/components/home/WorkExperience'))
 const Contact = dynamic(() => import('@/components/home/Contact'))
 const StarsCanvas = dynamic(() => import('@/components/canvas/Stars'), {
   ssr: false,
@@ -45,9 +45,9 @@ const Home: React.FC = () => {
       <LazyWrapper>
         <Journey />
       </LazyWrapper>
-      {/* <LazyWrapper>
+      <LazyWrapper>
         <WorkExperience />
-      </LazyWrapper> */}
+      </LazyWrapper>
       <LazyWrapper>
         <BookClub />
       </LazyWrapper>
