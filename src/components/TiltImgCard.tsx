@@ -18,7 +18,7 @@ const TiltImgCard = (props: TiltImgCardProps) => {
   return (
     <Tilt
       tiltReverse={true}
-      className="bg-tertiary p-5 rounded-2xl max-w-[360px] w-full hover:border-[3px] hover:border-[white] hover:shadow-portfolio cursor-pointer box-border"
+      className="bg-tertiary p-5 rounded-2xl max-w-[360px] w-full hover:shadow-portfolio cursor-pointer box-border"
     >
       <div className="relative w-full max-h-[260px]">
         <Image
