@@ -34,7 +34,7 @@ const DisplayPanel = ({ data }: DisplayPanelProps) => {
   return (
     <Tilt
       tiltReverse={true}
-      scale={1.1}
+      scale={1.07}
       transitionSpeed={1000}
       perspective={500}
       tiltMaxAngleX={5}
