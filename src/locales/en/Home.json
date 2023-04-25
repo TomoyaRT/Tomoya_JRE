@@ -52,15 +52,11 @@
       "IconBg": "#ffffff",
       "Date": "November 2021 - February 2023",
       "Points": [
-        "Developed and maintained front-end and back-end projects for ordering website.",
-        "Developed a reservation website and integrated it with Line LIFF.",
-        "Integrated JKO Pay and JKO APP for payment processing.",
-        "Integrated Bank SinoPac's payment system and developed a stored value service.",
-        "Optimized menu page images to increase the frame rate from 10-15 FPS to 55-60 FPS.",
-        "Optimized project packaging, reducing its size from 1719KB to 544KB",
-        "Developed and launched reservation website, which was utilized by 80 actual businesses.",
-        "Integrated JKO Pay and successfully deployed it to 40 businesses.",
-        "Integrated JKO APP and successfully deployed it to 121 businesses."
+        "Responsible for developing and maintaining front-end and back-end projects of an online food ordering website.",
+        "Mainly using Vue2, Vuex, Element UI, Bootstrap and other related technologies.",
+        "Collaborated with UI/UX designers, project managers, back-end developers, and quality assurance team to complete project goals.",
+        "Confirmed project requirements, evaluated development timelines, and proceeded with development.",
+        "In charge of responding to operational and project management inquiries, as well as fixing any bugs that may occur after launch."
       ]
     },
     "Relearning": {
@@ -81,12 +77,12 @@
     "Title": "Work Experience",
     "SubTitle": "DAMAI Internet",
     "Description": [
-      "Developing and maintaining the front-end and back-end of an online food ordering system for approximately 3,000 restaurants.",
-      "Individually creating the iMenu reservation system and its back-end, currently used by approximately 80 restaurants.",
-      "Integrating StreetPay payment system for both web and app interfaces, currently used by approximately 161 restaurants.",
-      "Developing the front-end for integrating and working with E.SUN bank and MyWallet payment systems.",
-      "Optimizing iMenu's menu image rendering issue, improving FPS from 15 to 55.",
-      "Optimizing front-end project packaging, reducing size from 1719KiB to 544KiB."
+      "Developing and maintaining the online food ordering system for approximately 3,000 restaurants.",
+      "Developed a reservation service and integrated it with Line LIFF, which was used by 80 restaurants after launch.",
+      "Integrated JKO Pay and JKO APP services, which were adopted by 161 restaurants after launch.",
+      "Integrated the SinoPac Bank payment gateway and developed a prepaid card service, including QR code scanning.",
+      "Optimized the performance of menu pages (increased FPS from 10-15 to 55-60).",
+      "Optimized the front-end project packaging (reduced from 1719KiB to 544KiB)."
     ]
   },
   "BookClub": {
