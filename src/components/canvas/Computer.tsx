@@ -10,16 +10,18 @@ interface ComputerProps {
   computerScale: number
   computerPosition: number[]
   lightPosition: [x: number, y: number, z: number]
+  pointLightPosition: [x: number, y: number, z: number]
 }
 
 const Computer = (props: ComputerProps) => {
-  const { computerScale, computerPosition, lightPosition } = props
+  const { computerScale, computerPosition, lightPosition, pointLightPosition } =
+    props
   const computer = useGLTF(Computer_Model)
 
   return (
     <>
       <mesh>
-        <pointLight intensity={1} />
+        <pointLight intensity={1} position={pointLightPosition} />
         <hemisphereLight intensity={0.15} groundColor="black" />
         <spotLight
           position={lightPosition}
@@ -45,6 +47,7 @@ const ComputerCanvas = () => {
   const computerScale = computer.scale(width)
   const computerPosition = computer.position(width)
   const lightPosition = computer.lightPosition(width)
+  const pointLightPosition = computer.pointLightPosition(width)
 
   return (
     <Canvas
@@ -64,6 +67,7 @@ const ComputerCanvas = () => {
           computerScale={computerScale}
           computerPosition={computerPosition}
           lightPosition={lightPosition}
+          pointLightPosition={pointLightPosition}
         />
         <Preload all />
       </Suspense>

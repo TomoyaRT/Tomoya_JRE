@@ -13,7 +13,7 @@ const Item = ({ index, text }: ItemProps) => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.25 }}
-      className="text-slate-500 text-[16px] text-start hover:text-white hover:transition hover:duration-300"
+      className="text-slate-500 text-[16px] mobile:text-[18px]  text-start hover:text-white hover:transition hover:duration-300 sm:text-[20px] xl:text-[18px]"
       variants={fadeIn(
         Direction.Right,
         Type.Spring,
