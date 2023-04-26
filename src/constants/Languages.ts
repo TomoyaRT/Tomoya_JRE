@@ -1,16 +1,16 @@
 import {
-  Icon_EN,
-  Icon_TW,
-  Icon_JP,
+  Language_EN,
+  Language_TW,
+  Language_JP,
   Resume_JP,
   Resume_TW,
   Resume_EN,
 } from '@/constants/Public'
 
 const LanguageIcon = {}
-Reflect.set(LanguageIcon, 'en', Icon_EN)
-Reflect.set(LanguageIcon, 'tw', Icon_TW)
-Reflect.set(LanguageIcon, 'jp', Icon_JP)
+Reflect.set(LanguageIcon, 'en', Language_EN)
+Reflect.set(LanguageIcon, 'tw', Language_TW)
+Reflect.set(LanguageIcon, 'jp', Language_JP)
 
 const LanguageName = {}
 Reflect.set(LanguageName, 'en', 'English')
@@ -26,17 +26,17 @@ const LanguageList = [
   {
     key: 'en',
     name: 'English',
-    icon: Icon_EN,
+    icon: Language_EN,
   },
   {
     key: 'tw',
     name: 'Chinese',
-    icon: Icon_TW,
+    icon: Language_TW,
   },
   {
     key: 'jp',
     name: 'Japanese',
-    icon: Icon_JP,
+    icon: Language_JP,
   },
 ]
 

@@ -3,15 +3,12 @@ import {
   Animation,
   Back_End,
   Other,
-  Damai_Logo,
-  Damai_Menu_Page,
-  Damai_QR_Code_Page,
-  Damai_Wallet_Page,
+  Icon_Damai,
+  Icon_Home,
   App_Icon,
   Easy_Eat,
   Mask_Map,
   Tomoya_JRE,
-  Icon_Home,
 } from '@/constants/Public'
 
 const Colors = {
@@ -194,7 +191,7 @@ const Journey = {
     {
       title: 'Journey.FrontEndDeveloper.Title',
       company_name: 'Journey.FrontEndDeveloper.CompanyName',
-      icon: Damai_Logo,
+      icon: Icon_Damai,
       iconBg: Colors.white,
       date: 'Journey.FrontEndDeveloper.Date',
       points: [
@@ -223,23 +220,14 @@ const Journey = {
 const WorkExperience = {
   title: 'WorkExperience.Title',
   subTitle: 'WorkExperience.SubTitle',
-  data: {
-    images: [
-      Damai_Menu_Page,
-      Damai_QR_Code_Page,
-      Damai_Wallet_Page,
-      Damai_QR_Code_Page,
-      Damai_Wallet_Page,
-    ],
-    description: [
-      'WorkExperience.Description.0',
-      'WorkExperience.Description.1',
-      'WorkExperience.Description.2',
-      'WorkExperience.Description.3',
-      'WorkExperience.Description.4',
-      'WorkExperience.Description.5',
-    ],
-  },
+  description: [
+    'WorkExperience.Description.0',
+    'WorkExperience.Description.1',
+    'WorkExperience.Description.2',
+    'WorkExperience.Description.3',
+    'WorkExperience.Description.4',
+    'WorkExperience.Description.5',
+  ],
 }
 const BookClub = {
   title: 'BookClub.Title',
@@ -250,21 +238,21 @@ const BookClub = {
       name: 'BookClub.Roger.Name',
       designation: 'BookClub.Roger.Designation',
       company: 'BookClub.Roger.Company',
-      image: Damai_Logo,
+      image: Icon_Damai,
     },
     {
       testimonial: 'BookClub.Jim.Testimonial',
       name: 'BookClub.Jim.Name',
       designation: 'BookClub.Jim.Designation',
       company: 'BookClub.Jim.Company',
-      image: Damai_Logo,
+      image: Icon_Damai,
     },
     {
       testimonial: 'BookClub.Karol.Testimonial',
       name: 'BookClub.Karol.Name',
       designation: 'BookClub.Karol.Designation',
       company: 'BookClub.Karol.Company',
-      image: Damai_Logo,
+      image: Icon_Damai,
     },
   ],
 }

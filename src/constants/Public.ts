@@ -14,12 +14,12 @@ export const Mask_Map = '/assets/portfolio/Mask_Map.webp'
 export const Tomoya_JRE = '/assets/portfolio/Tomoya_JRE.webp'
 
 // assets - language
-export const Icon_EN = '/assets/language/EN.webp'
-export const Icon_JP = '/assets/language/JP.webp'
-export const Icon_TW = '/assets/language/TW.webp'
+export const Language_EN = '/assets/language/EN.webp'
+export const Language_JP = '/assets/language/JP.webp'
+export const Language_TW = '/assets/language/TW.webp'
 
 // assets - icon
-export const Damai_Logo = '/assets/icon/MaiFood.webp'
+export const Icon_Damai = '/assets/icon/MaiFood.webp'
 export const Icon_Home = '/assets/icon/Home.webp'
 
 // assets - resume
