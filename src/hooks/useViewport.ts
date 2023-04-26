@@ -1,6 +1,10 @@
 import { useState, useLayoutEffect, useCallback } from 'react'
 import { debounce } from '@/plugins/Lodash'
-import { ViewportSize } from '@/types'
+
+type ViewportSize = {
+  width: number
+  height: number
+}
 
 function useViewport(): ViewportSize {
   const isClient = typeof window === 'object'
