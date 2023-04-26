@@ -1,38 +1,18 @@
 import type { GetStaticProps } from 'next'
-import type { ReactNode } from 'react'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { useRef } from 'react'
 import dynamic from 'next/dynamic'
 
-import useOnScreen from '@/hooks/useOnScreen'
+import LazyWrapper from '@/components/LazyWrapper'
 import Hero from '@/components/home/Hero'
-const About = dynamic(() => import('@/components/home/About'))
+import About from '@/components/home/About'
 const Portfolio = dynamic(() => import('@/components/home/Portfolio'))
 const Journey = dynamic(() => import('@/components/home/Journey'))
-const BookClub = dynamic(() => import('@/components/home/BookClub'))
 const WorkExperience = dynamic(() => import('@/components/home/WorkExperience'))
+const BookClub = dynamic(() => import('@/components/home/BookClub'))
 const Contact = dynamic(() => import('@/components/home/Contact'))
 const StarsCanvas = dynamic(() => import('@/components/canvas/Stars'), {
   ssr: false,
 })
-
-type TargetProps = {
-  children: ReactNode
-}
-const LazyWrapper = (props: TargetProps) => {
-  const { children } = props
-  const targetRef = useRef(null)
-  const targetOnScreen = useOnScreen(targetRef)
-  const wrapperStyles = `w-full h-[500px]`
-  const wrapper = (
-    <div
-      ref={targetRef}
-      className={`${targetOnScreen ? '' : wrapperStyles}`}
-    ></div>
-  )
-
-  return <>{targetOnScreen ? children : wrapper}</>
-}
 
 const Home: React.FC = () => {
   return (
