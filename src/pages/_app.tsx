@@ -1,10 +1,12 @@
-import { appWithTranslation } from 'next-i18next'
 import type { AppProps } from 'next/app'
+import { appWithTranslation } from 'next-i18next'
 import { Provider } from 'react-redux'
+import { useEffect } from 'react'
+
+import { poppins } from '@/utils/Font'
 import store from '@/store/index'
 import Layout from '@/layouts'
 import '@/styles/globals.css'
-import { useEffect } from 'react'
 
 function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -16,9 +18,11 @@ function App({ Component, pageProps }: AppProps) {
 
   return (
     <Provider store={store}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <main className={poppins.className}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </main>
     </Provider>
   )
 }
