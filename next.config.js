@@ -5,9 +5,8 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = withBundleAnalyzer({
-  productionBrowserSourceMaps: true,
-  i18n,
   reactStrictMode: true,
+  i18n,
 })
 
 module.exports = nextConfig
