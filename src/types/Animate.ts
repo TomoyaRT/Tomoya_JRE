@@ -1,23 +1,3 @@
-export interface Route {
-  path: string
-  name: string
-}
-
-export interface ViewportSize {
-  width: number
-  height: number
-}
-
-export interface Transition {
-  duration: number
-  repeat: number
-  repeatType: 'loop' | 'reverse' | 'mirror' | undefined
-}
-
-export interface Animate {
-  y: number[]
-}
-
 export enum Direction {
   Left = 'left',
   Right = 'right',

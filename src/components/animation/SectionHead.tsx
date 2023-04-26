@@ -1,6 +1,6 @@
 import { motion } from '@/plugins/FramerMotion'
 import { fadeIn } from '@/utils/FramerMotion'
-import { Direction, Type, Ease } from '@/types'
+import { Direction, Type, Ease } from '@/types/Animate'
 import TextSpan from '@/components/animation/TextSpan'
 
 interface Props {

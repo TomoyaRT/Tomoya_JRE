@@ -4,7 +4,7 @@ import { useTranslation } from 'next-i18next'
 import { motion } from '@/plugins/FramerMotion'
 import SectionHead from '@/components/animation/SectionHead'
 import { fadeIn } from '@/utils/FramerMotion'
-import { Direction, Type, Ease } from '@/types'
+import { Direction, Type, Ease } from '@/types/Animate'
 import SectionWrapper from '@/hoc/SectionWrapper'
 import { BookClub as BookClubText } from '@/constants/Home'
 

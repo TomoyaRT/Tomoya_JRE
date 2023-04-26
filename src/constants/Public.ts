@@ -18,21 +18,14 @@ export const Icon_EN = '/assets/language/EN.webp'
 export const Icon_JP = '/assets/language/JP.webp'
 export const Icon_TW = '/assets/language/TW.webp'
 
-// assets - work
-export const Damai_Logo = '/assets/work/MaiFood.webp'
-export const Damai_Menu_Page = '/assets/work/Damai_Menu_Page.webp'
-export const Damai_QR_Code_Page = '/assets/work/Damai_QR_Code_Page.webp'
-export const Damai_Wallet_Page = '/assets/work/Damai_Wallet_Page.webp'
+// assets - icon
+export const Damai_Logo = '/assets/icon/MaiFood.webp'
+export const Icon_Home = '/assets/icon/Home.webp'
 
 // assets - resume
 export const Resume_JP = '/assets/resume/Resume_JP.pdf'
 export const Resume_TW = '/assets/resume/Resume_TW.pdf'
 export const Resume_EN = '/assets/resume/Resume_EN.pdf'
-
-// assets - other
-export const Hero_Background = '/assets/Hero_Background.webp'
-export const Circle_Cursor = '/assets/Circle_Cursor.webp'
-export const Icon_Home = '/assets/Icon_Home.webp'
 
 // app
 export const App_Icon = '/favicon.ico'

@@ -1,7 +1,7 @@
 import { motion } from '@/plugins/FramerMotion'
 import Tilt from 'react-parallax-tilt'
 import { fadeIn } from '@/utils/FramerMotion'
-import { Direction, Type, Ease } from '@/types'
+import { Direction, Type, Ease } from '@/types/Animate'
 
 type ItemProps = {
   index: number
@@ -27,10 +27,10 @@ const Item = ({ index, text }: ItemProps) => {
   )
 }
 
-type DisplayPanelProps = {
+type WorkDescriptionProps = {
   data: string[]
 }
-const DisplayPanel = ({ data }: DisplayPanelProps) => {
+const WorkDescription = ({ data }: WorkDescriptionProps) => {
   return (
     <Tilt
       tiltReverse={true}
@@ -52,4 +52,4 @@ const DisplayPanel = ({ data }: DisplayPanelProps) => {
   )
 }
 
-export default DisplayPanel
+export default WorkDescription

@@ -2,7 +2,11 @@ import { useAppDispatch } from '@/hooks/useStore'
 import { useRouter } from 'next/router'
 import { setLoading } from '@/store/slices/loadingSlice'
 import { delay } from '@/plugins/Lodash'
-import { Route } from '@/types'
+
+interface Route {
+  path: string
+  name: string
+}
 
 interface Props {
   route: Route

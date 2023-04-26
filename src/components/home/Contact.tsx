@@ -10,7 +10,7 @@ import { motion } from '@/plugins/FramerMotion'
 import SectionWrapper from '@/hoc/SectionWrapper'
 import SectionHead from '@/components/animation/SectionHead'
 import { fadeIn } from '@/utils/FramerMotion'
-import { Direction, Type, Ease } from '@/types'
+import { Direction, Type, Ease } from '@/types/Animate'
 import { FormFields } from '@/types/Form'
 import { Contact as ContactText } from '@/constants/Home'
 const EarthCanvas = dynamic(() => import('@/components/canvas/Earth'), {

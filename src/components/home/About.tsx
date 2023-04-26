@@ -6,7 +6,7 @@ import { motion } from '@/plugins/FramerMotion'
 import SectionWrapper from '@/hoc/SectionWrapper'
 import SectionHead from '@/components/animation/SectionHead'
 import { fadeIn } from '@/utils/FramerMotion'
-import { Direction, Type, Ease } from '@/types'
+import { Direction, Type, Ease } from '@/types/Animate'
 import { About as AboutText, AboutCards } from '@/constants/Home'
 
 interface CardProps {

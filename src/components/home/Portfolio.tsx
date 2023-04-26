@@ -6,7 +6,7 @@ import { Portfolio as PortfolioText } from '@/constants/Home'
 import SectionWrapper from '@/hoc/SectionWrapper'
 import TiltImgCard from '@/components/TiltImgCard'
 import { fadeIn } from '@/utils/FramerMotion'
-import { Direction, Type, Ease } from '@/types'
+import { Direction, Type, Ease } from '@/types/Animate'
 
 const Portfolio = () => {
   const { t } = useTranslation('Home')

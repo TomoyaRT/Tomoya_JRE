@@ -1,5 +1,5 @@
 import { constant, cond } from '@/plugins/Lodash'
-import { Direction, Ease, Type } from '@/types'
+import { Direction, Ease, Type } from '@/types/Animate'
 
 const getAxisValue = (value = 0) => {
   return cond([

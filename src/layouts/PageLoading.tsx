@@ -44,9 +44,9 @@ const PageLoading = () => {
   const dispatch = useAppDispatch()
   const { width, height } = useViewport()
 
-  // 第一段動畫 -> 3.8
+  // 第一段動畫 -> 3.55
   // 間隔時間 -> 0.5
-  // 第二段動畫 -> 3.8
+  // 第二段動畫 -> 3.55
   const lineNumber = 7
   const lineBgColor = '#000000'
   const lineWidth = width

@@ -2,7 +2,7 @@ import { motion } from '@/plugins/FramerMotion'
 
 import { PostCardProps } from '@/types/Blog'
 import { fadeIn } from '@/utils/FramerMotion'
-import { Direction, Type, Ease } from '@/types'
+import { Direction, Type, Ease } from '@/types/Animate'
 import TiltImgCard from '@/components/TiltImgCard'
 
 const PostCard = (props: PostCardProps) => {
