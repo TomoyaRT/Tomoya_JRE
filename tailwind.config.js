@@ -18,9 +18,6 @@ module.exports = {
       screens: {
         mobile: '500px',
       },
-      backgroundImage: {
-        'home-pattern': "url('/assets/Hero_Background.webp')",
-      },
     },
   },
   plugins: [require('@tailwindcss/line-clamp')],
