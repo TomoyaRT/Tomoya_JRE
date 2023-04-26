@@ -44,9 +44,7 @@
 
 // ----------------------------------------------------------------
 
-// TODO Font 字型優化
 // TODO locals 文案優化
-// TODO 用 Web Worker 優化粒子文字的效能
 // TODO 日文履歷表 數據化結果有一行有錯（多餘的）
 
 // NOTE Navbar 避免不必要的 re-render (React.memo, useCallback, useMemo)
