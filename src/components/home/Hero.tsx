@@ -1,6 +1,3 @@
-// import ScrollDownButton from '@/components/home/ScrollDownButton'
-// import HeroDescription from '@/components/home/HeroDescription'
-// import ParticlesImage from '@/components/canvas/ParticlesImage'
 import dynamic from 'next/dynamic'
 import ParticlesText from '@/components/canvas/ParticlesText'
 const Firework = dynamic(() => import('@/p5/Firework'), {
@@ -10,9 +7,6 @@ const Firework = dynamic(() => import('@/p5/Firework'), {
 const Hero: React.FC = () => {
   return (
     <section className="w-full h-screen mx-auto">
-      {/* <HeroDescription /> */}
-      {/* <ParticlesImage /> */}
-      {/* <ScrollDownButton /> */}
       <Firework />
       <div className="relative inline-block inset-1/2 transform -translate-y-1/2 -translate-x-1/2 z-30">
         <ParticlesText text={'Roger'} color={'#7737ff'} font={'Arial'} />

@@ -1,10 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit'
-import pageTransitionReducer from '@/store/slices/pageTransitionSlice'
 import loadingReducer from '@/store/slices/loadingSlice'
 
 export const store = configureStore({
   reducer: {
-    pageTransitionReducer,
     loadingReducer,
   },
 })
