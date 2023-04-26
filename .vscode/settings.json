@@ -11,7 +11,7 @@
   "css.validate": false,
   // Todo Tree configuration
   "todo-tree.general.showActivityBarBadge": true,
-  "todo-tree.general.tags": ["NOTE", "TODO", "FIXME"],
+  "todo-tree.general.tags": ["NOTE", "TODO", "FIXME", "INTERVIEW"],
   "todo-tree.highlights.defaultHighlight": {
     "type": "tag",
     "fontWeight": "bold",
@@ -22,6 +22,11 @@
     "NOTE": {
       "background": "#bd71ff",
       "iconColour": "#bd71ff",
+      "icon": "file"
+    },
+    "INTERVIEW": {
+      "background": "#1cf8b2",
+      "iconColour": "#1cf8b2",
       "icon": "file"
     },
     "TODO": {
