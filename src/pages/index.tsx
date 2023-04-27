@@ -7,7 +7,7 @@ import Hero from '@/components/home/Hero'
 import About from '@/components/home/About'
 const Portfolio = dynamic(() => import('@/components/home/Portfolio'))
 const Journey = dynamic(() => import('@/components/home/Journey'))
-const WorkExperience = dynamic(() => import('@/components/home/WorkExperience'))
+// const WorkExperience = dynamic(() => import('@/components/home/WorkExperience'))
 const BookClub = dynamic(() => import('@/components/home/BookClub'))
 const Contact = dynamic(() => import('@/components/home/Contact'))
 const StarsCanvas = dynamic(() => import('@/components/canvas/Stars'), {
@@ -19,18 +19,9 @@ const Home: React.FC = () => {
     <div className="relative z-0">
       <Hero />
       <About />
-      <LazyWrapper>
-        <Portfolio />
-      </LazyWrapper>
-      <LazyWrapper>
-        <Journey />
-      </LazyWrapper>
-      <LazyWrapper>
-        <WorkExperience />
-      </LazyWrapper>
-      <LazyWrapper>
-        <BookClub />
-      </LazyWrapper>
+      <Portfolio />
+      <Journey />
+      <BookClub />
       <LazyWrapper>
         <div className="relative z-0">
           <Contact />
