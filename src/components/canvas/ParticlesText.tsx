@@ -1,5 +1,39 @@
 import React, { useRef, useEffect } from 'react'
 
+// Parent Props -> Setting Example
+// const English = {
+//   width: 350,
+//   height: 100,
+//   font: '25px Arial',
+//   text: ["Hi I'm Roger"],
+//   textX: [17.5],
+//   textY: [35],
+//   color: '#7737ff',
+//   mouseR: 30,
+// }
+
+// const Chinese = {
+//   width: 350,
+//   height: 100,
+//   font: '25px Arial',
+//   text: ['Hi 我是煒皓'],
+//   textX: [22],
+//   textY: [35],
+//   color: '#7737ff',
+//   mouseR: 30,
+// }
+
+// const Japanese = {
+//   width: 380,
+//   height: 175,
+//   font: '22.5px Arial',
+//   text: ['こんにちは', '私はともやです'],
+//   textX: [35, 16],
+//   textY: [35, 70],
+//   color: '#7737ff',
+//   mouseR: 30,
+// }
+
 type ParticlesTextProps = {
   setting: {
     width: number
@@ -17,7 +51,6 @@ type Mouse = {
   y: number
   radius: number
 }
-
 function draw(particle: Particle, context: CanvasRenderingContext2D) {
   context.beginPath()
   context.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)
