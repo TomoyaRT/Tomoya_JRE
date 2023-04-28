@@ -81,7 +81,7 @@ const Journey: React.FC = () => {
       <SectionHead
         title={t(JourneyText.title)}
         subTitle={t(JourneyText.subTitle)}
-        styleType="hero"
+        styleType="section"
       />
 
       <div className="mt-20 flex flex-col overflow-hidden">

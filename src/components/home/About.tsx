@@ -89,7 +89,7 @@ const About: React.FC = () => {
       <SectionHead
         title={t(AboutText.title)}
         subTitle={t(AboutText.subTitle)}
-        styleType="hero"
+        styleType="section"
       />
       <motion.p
         variants={fadeIn(Direction.None, Type.Spring, 0.1, 1, Ease.EaseOut)}
