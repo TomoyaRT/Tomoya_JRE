@@ -45,7 +45,7 @@ const PageLoading = () => {
   const { width, height } = useViewport()
 
   // 第一段動畫 -> 3.55
-  // 間隔時間 -> 0.5
+  // 間隔時間 -> 1
   // 第二段動畫 -> 3.55
   const lineNumber = 7
   const lineBgColor = '#000000'
@@ -54,7 +54,7 @@ const PageLoading = () => {
 
   function onAnimationCompleteHandler(key: 'startLoading' | 'endLoading') {
     key === 'startLoading'
-      ? delay(() => setAnimation('endLoading'), 500)
+      ? delay(() => setAnimation('endLoading'), 1000)
       : dispatch(setLoading({ loading: false, type: 'Page' }))
   }
 
