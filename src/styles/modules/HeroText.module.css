@@ -7,12 +7,12 @@
     flex-direction: row;
     justify-content: center;
     transform: translate(-50%, -50%);
-    font-size: calc(1.5rem + 3vw);
+    font-size: calc(2.5rem + 3vw);
 }
 
 .title span {
-    text-stroke: 2px white;
-    -webkit-text-stroke: 2px white;
+    text-stroke: 1px white;
+    -webkit-text-stroke: 1px white;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
