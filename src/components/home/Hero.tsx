@@ -11,7 +11,7 @@ const Hero = () => {
       <Firework />
       <div className={styles.title}>
         <span>Hi</span>
-        <span>I'm</span>
+        <span>I&apos;m</span>
         <h1>Roger</h1>
       </div>
     </section>
