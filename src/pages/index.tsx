@@ -2,13 +2,21 @@ import type { GetStaticProps } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import dynamic from 'next/dynamic'
 
-import Hero from '@/components/home/Hero'
-import About from '@/components/home/About'
-import Portfolio from '@/components/home/Portfolio'
-import Journey from '@/components/home/Journey'
-// const WorkExperience = dynamic(() => import('@/components/home/WorkExperience'))
-import BookClub from '@/components/home/BookClub'
 import LazyWrapper from '@/components/LazyWrapper'
+import Hero from '@/components/home/Hero'
+const About = dynamic(() => import('@/components/home/About'), {
+  ssr: false,
+})
+const Portfolio = dynamic(() => import('@/components/home/Portfolio'), {
+  ssr: false,
+})
+const Journey = dynamic(() => import('@/components/home/Journey'), {
+  ssr: false,
+})
+const BookClub = dynamic(() => import('@/components/home/BookClub'), {
+  ssr: false,
+})
+// const WorkExperience = dynamic(() => import('@/components/home/WorkExperience'))
 const Contact = dynamic(() => import('@/components/home/Contact'))
 const StarsCanvas = dynamic(() => import('@/components/canvas/Stars'), {
   ssr: false,

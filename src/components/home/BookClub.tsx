@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
 
+import useMediaQuery from '@/hooks/useMediaQuery'
 import { motion } from '@/plugins/FramerMotion'
 import SectionHead from '@/components/animation/SectionHead'
 import { fadeIn } from '@/utils/FramerMotion'
@@ -18,15 +19,20 @@ interface Props {
 }
 
 const Card = (props: Props) => {
-  const { testimonial, name, designation, company, image } = props
+  const { index, testimonial, name, designation, company, image } = props
   const { t } = useTranslation('Home')
+  const isDesktop = useMediaQuery('(min-width: 500px)')
+  const variants = (index: number) =>
+    isDesktop
+      ? fadeIn(Direction.Right, Type.Spring, index * 0.2, 0.65, Ease.EaseOut)
+      : fadeIn(Direction.Right, Type.Spring, 0.1, 0.65, Ease.EaseOut)
 
   return (
     <motion.div
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.25 }}
-      variants={fadeIn(Direction.None, Type.Spring, 0.1, 0.65, Ease.EaseOut)}
+      variants={variants(index)}
       className="bg-black-200 p-10 rounded-3xl w-full"
     >
       <p className="text-white font-black text-[48px]">&quot;</p>

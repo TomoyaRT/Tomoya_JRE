@@ -2,6 +2,7 @@ import Tilt from 'react-parallax-tilt'
 import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
 
+import useMediaQuery from '@/hooks/useMediaQuery'
 import { motion } from '@/plugins/FramerMotion'
 import SectionWrapper from '@/hoc/SectionWrapper'
 import SectionHead from '@/components/animation/SectionHead'
@@ -60,14 +61,20 @@ const CardContent = ({
 }
 
 const Card = (props: CardProps) => {
-  const { title, icon, description } = props
+  const { index, title, icon, description } = props
+  const isDesktop = useMediaQuery('(min-width: 500px)')
+  const variants = (index: number) =>
+    isDesktop
+      ? fadeIn(Direction.Right, Type.Spring, index * 0.2, 0.65, Ease.EaseOut)
+      : fadeIn(Direction.Right, Type.Spring, 0.1, 0.65, Ease.EaseOut)
+
   return (
     <Tilt tiltReverse={true} className="mx-auto max-w-[350px] w-full">
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.25 }}
-        variants={fadeIn(Direction.Right, Type.Spring, 0.1, 0.65, Ease.EaseOut)}
+        variants={variants(index)}
         className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
       >
         <CardContent title={title} icon={icon} description={description} />
