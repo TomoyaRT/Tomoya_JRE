@@ -18,18 +18,15 @@ interface Props {
 }
 
 const Card = (props: Props) => {
-  const { index, testimonial, name, designation, company, image } = props
+  const { testimonial, name, designation, company, image } = props
   const { t } = useTranslation('Home')
 
   return (
     <motion.div
-      variants={fadeIn(
-        Direction.None,
-        Type.Spring,
-        index * 0.5,
-        0.75,
-        Ease.EaseOut
-      )}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.25 }}
+      variants={fadeIn(Direction.None, Type.Spring, 0.1, 0.65, Ease.EaseOut)}
       className="bg-black-200 p-10 rounded-3xl w-full"
     >
       <p className="text-white font-black text-[48px]">&quot;</p>

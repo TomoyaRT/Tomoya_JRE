@@ -15,6 +15,9 @@ const Contact = () => {
         <ContactForm />
       </div>
       <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.25 }}
         variants={fadeIn(Direction.Left, Type.Tween, 0.2, 0.75, Ease.EaseOut)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
       >

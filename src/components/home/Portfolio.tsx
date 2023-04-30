@@ -25,12 +25,15 @@ const Portfolio = () => {
             target="_blank"
             className="mx-auto block"
             key={item.name}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.25 }}
             variants={fadeIn(
-              Direction.Down,
-              Type.Tween,
-              index * 0.2,
-              0.75,
-              Ease.BackOut
+              Direction.Right,
+              Type.Spring,
+              0.1,
+              0.65,
+              Ease.EaseOut
             )}
           >
             <TiltImgCard {...item} description={t(item.description)} />

@@ -60,17 +60,14 @@ const CardContent = ({
 }
 
 const Card = (props: CardProps) => {
-  const { index, title, icon, description } = props
+  const { title, icon, description } = props
   return (
     <Tilt tiltReverse={true} className="mx-auto max-w-[350px] w-full">
       <motion.div
-        variants={fadeIn(
-          Direction.Right,
-          Type.Spring,
-          0.5 * index,
-          0.75,
-          Ease.EaseOut
-        )}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.25 }}
+        variants={fadeIn(Direction.Right, Type.Spring, 0.1, 0.65, Ease.EaseOut)}
         className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
       >
         <CardContent title={title} icon={icon} description={description} />
@@ -93,7 +90,7 @@ const About: React.FC = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.25 }}
-        variants={fadeIn(Direction.None, Type.Spring, 0.1, 1, Ease.EaseOut)}
+        variants={fadeIn(Direction.None, Type.Spring, 0.1, 0.65, Ease.EaseOut)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
         {t(AboutText.description)}
@@ -108,4 +105,4 @@ const About: React.FC = () => {
   )
 }
 
-export default SectionWrapper(About, 'about')
+export default SectionWrapper(About, '')

@@ -25,7 +25,7 @@ const SectionHead = (props: Props) => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.25 }}
       className="select-none"
-      variants={fadeIn(Direction.Down, Type.Spring, 0, 1, Ease.EaseOut)}
+      variants={fadeIn(Direction.Down, Type.Spring, 0.1, 0.65, Ease.EaseOut)}
     >
       <p className={useStyles[1]}>
         {subTitleSplit.map((char, idx) => (
