@@ -1,8 +1,7 @@
 {
   "Routes": {
     "Home": "ホーム",
-    "Blog": "ブログ",
-    "Contact": "お問い合わせ"
+    "Blog": "ブログ"
   },
   "Head": {
     "Title": "JRE",

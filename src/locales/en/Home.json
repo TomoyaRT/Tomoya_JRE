@@ -1,8 +1,7 @@
 {
   "Routes": {
     "Home": "Home",
-    "Blog": "Blog",
-    "Contact": "Contact"
+    "Blog": "Blog"
   },
   "Head": {
     "Title": "JRE",

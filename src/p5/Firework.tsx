@@ -3,7 +3,7 @@ const Firework: React.FC = () => {
     <iframe
       src="./firework/index.html"
       title="Tomoya Firework"
-      className="absolute top-0 left-0 w-screen h-screen"
+      className="absolute top-0 left-0 w-full h-[100vh]"
     ></iframe>
   )
 }

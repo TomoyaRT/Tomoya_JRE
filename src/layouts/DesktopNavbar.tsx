@@ -15,7 +15,7 @@ const DesktopNavbar: React.FC = () => {
   const [active, setActive] = useState(pathname)
 
   return (
-    <nav className="w-full flex items-center px-[5%] lg:px-[7%] py-5 fixed top-0 z-30 bg-firework-primary">
+    <nav className="w-full flex items-center justify-center px-[5%] lg:px-[7%] py-5 fixed top-0 z-30 bg-firework-primary">
       <div className="w-full flex justify-between items-center max-w-7xl">
         <ul className="list-none flex flex-row gap-10">
           {Routes.map((route) => {
@@ -30,7 +30,7 @@ const DesktopNavbar: React.FC = () => {
             )
           })}
         </ul>
-        <div className="flex items-center">
+        <div className="flex items-center gap-3">
           <Languages isMobile={!isDesktop} />
           <Resume />
         </div>

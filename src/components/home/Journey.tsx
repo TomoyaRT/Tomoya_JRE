@@ -83,8 +83,8 @@ const Journey: React.FC = () => {
         subTitle={t(JourneyText.subTitle)}
         styleType="section"
       />
-
-      <div className="mt-20 flex flex-col overflow-hidden">
+      <div className="mb-20"></div>
+      <div className="flex flex-col overflow-hidden">
         <VerticalTimeline>
           {JourneyText.data.map((item, index) => (
             <JourneyCard key={index} {...item} />
