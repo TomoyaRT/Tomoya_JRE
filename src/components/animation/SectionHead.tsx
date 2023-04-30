@@ -21,6 +21,9 @@ const SectionHead = (props: Props) => {
 
   return (
     <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.25 }}
       className="select-none"
       variants={fadeIn(Direction.Down, Type.Spring, 0, 1, Ease.EaseOut)}
     >
